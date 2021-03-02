@@ -8,15 +8,48 @@ public class Slot : MonoBehaviour
     public bool isOccupied = false;
     public bool isRoad = false;
     const int adjacentsSize = 4;
-    public Slot[] adjacents = new Slot[adjacentsSize];
-    void Start()
+    private void Start()
     {
-
+        if (isRoad)
+        {
+            GetComponent<MeshRenderer>().enabled = true;
+        }
     }
-
-    // Update is called once per frame
-    void Update()
+    public void EnableMesh()
     {
-
+        GetComponent<MeshRenderer>().enabled = true;
+    }
+    public bool IsFree()
+    {
+        return !(isOccupied || isRoad);
+    }
+    public void Occupy()
+    {
+        EnableMesh();
+        isOccupied = true;
+    }
+    public Slot Left()
+    {
+        var matr = SlotGenerator.Instance.m_SlotsMatrix;
+        Vector2Int index = matr.FindSlotIndexInMatrix(this);
+        return matr[index.x - 1, index.y];
+    }
+    public Slot Right()
+    {
+        var matr = SlotGenerator.Instance.m_SlotsMatrix;
+        Vector2Int index = matr.FindSlotIndexInMatrix(this);
+        return matr[index.x + 1, index.y];
+    }
+    public Slot Up()
+    {
+        var matr = SlotGenerator.Instance.m_SlotsMatrix;
+        Vector2Int index = matr.FindSlotIndexInMatrix(this);
+        return matr[index.x, index.y + 1];
+    }
+    public Slot Down()
+    {
+        var matr = SlotGenerator.Instance.m_SlotsMatrix;
+        Vector2Int index = matr.FindSlotIndexInMatrix(this);
+        return matr[index.x, index.y - 1];
     }
 }
