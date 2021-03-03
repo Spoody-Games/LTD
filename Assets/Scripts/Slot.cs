@@ -8,6 +8,7 @@ public class Slot : MonoBehaviour
     public bool isOccupied = false;
     public bool isRoad = false;
     const int adjacentsSize = 4;
+    public Figure m_OccupyingFigure;
     private void Start()
     {
         if (isRoad)
@@ -23,9 +24,10 @@ public class Slot : MonoBehaviour
     {
         return !(isOccupied || isRoad);
     }
-    public void Occupy()
+    public void Occupy(Figure figure)
     {
-        EnableMesh();
+        m_OccupyingFigure = figure;
+        //EnableMesh();
         isOccupied = true;
     }
     public Slot Left()

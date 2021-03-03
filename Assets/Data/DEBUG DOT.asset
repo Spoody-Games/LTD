@@ -10,14 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e344d340ae0616441a0f1673113bcf28, type: 3}
-  m_Name: box
+  m_Name: DEBUG DOT
   m_EditorClassIdentifier: 
   Name: Line
-  figureType: 1
+  figureType: 2
   isTurret: 0
   isTimed: 0
   indexes:
   - {x: 0, y: 0}
-  - {x: 1, y: 1}
-  - {x: 0, y: 1}
-  - {x: 1, y: 0}

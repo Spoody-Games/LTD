@@ -6,6 +6,7 @@ using UnityEngine;
 public class FigureData : ScriptableObject
 {
     public string Name;
+    public FigureType figureType;
     public bool isTurret;
     public bool isTimed;
     public List<Vector2Int> indexes;
