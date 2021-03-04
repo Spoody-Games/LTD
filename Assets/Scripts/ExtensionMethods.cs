@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 static class ExtensionMethods
 {
     /// <summary>
@@ -43,6 +44,27 @@ static class ExtensionMethods
         }
         Debug.LogError("Not Found");
         return new Vector2Int(999, 999);
+    }
+    public static Transform GetClosestObject(this List<Transform> Objects, Transform self)
+    {
+        Transform bestTarget = null;
+        float closestDistanceSqr = Mathf.Infinity;
+        Vector3 currentPosition = self.position;
+        foreach (Transform potentialTarget in Objects)
+        {
+            Vector3 directionToTarget = potentialTarget.position - currentPosition;
+            float dSqrToTarget = directionToTarget.sqrMagnitude;
+            if (dSqrToTarget < closestDistanceSqr)
+            {
+                closestDistanceSqr = dSqrToTarget;
+                bestTarget = potentialTarget;
+            }
+        }
+        return bestTarget;
+    }
+    public static T GetRandom<T>(this List<T> list)
+    {
+        return list[Random.Range(0, list.Count)];
     }
 
 }

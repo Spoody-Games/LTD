@@ -10,4 +10,6 @@ public class FigureData : ScriptableObject
     public bool isTurret;
     public bool isTimed;
     public List<Vector2Int> indexes;
+
+
 }
