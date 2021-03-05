@@ -173,7 +173,13 @@ public class PlacementController : MonoBehaviour
             transform.position = StartPos;
         }
         else
+        {
+            var fig = GetComponent<Figure>();
             Destroy(this);
+            GameController.Instance.m_Buildings.Add(transform);
+            fig.findCenter();
+            fig.Activate();
+        }
     }
     void WrongPlacement(string reason)
     {

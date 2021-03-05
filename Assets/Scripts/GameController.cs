@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     public static GameController Instance;
-    public GameObject m_Target;
+    public GameObject m_MainBase;
     public List<Transform> m_Buildings;
     public List<Transform> m_SpawnPoints;
     public List<Transform> m_Enemies;

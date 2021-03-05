@@ -634,7 +634,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 025dbf8f6d9286c4ca802d75e2017ecb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_AttackRadius: 20
+  m_Damage: 1
+  m_ReloadTime: 1
+  m_Projectile: {fileID: 3021889279508843944, guid: 761e2935bbf99b741893e67d4449396b,
+    type: 3}
   m_Data: {fileID: 11400000, guid: 6225f05f291956c489789ed8836b997d, type: 2}
+  isActive: 0
+  center: {x: 0, y: 0, z: 0}
+  blocks:
+  - {fileID: 1973471851468462434}
+  - {fileID: 1973471850448585631}
+  - {fileID: 1973471851720456118}
+  - {fileID: 1973471850899515157}
 --- !u!1 &1973471851720456118
 GameObject:
   m_ObjectHideFlags: 0

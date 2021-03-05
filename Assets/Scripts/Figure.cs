@@ -13,34 +13,91 @@ public class Figure : MonoBehaviour
     public float m_AttackRadius;
     public float m_Damage;
     public float m_ReloadTime;
+
     public GameObject m_Projectile;
     public FigureData m_Data;
-    bool isActive = false;
-    GameObject m_Target;
+    public bool isActive = false;
+    EnemyBehaviour m_Target;
+    public Vector3 center;
+    public GameObject[] blocks;
     private void Start()
     {
 
     }
     private void Update()
     {
-        while (!m_Target)
-        {
-            var tmp = GameController.Instance.m_Enemies.GetClosestObject(transform);
-            if (Vector3.Distance(transform.position, tmp.position) < m_AttackRadius)
-            {
-                m_Target = tmp.gameObject;
-            }
-        }
+
+    }
+    public void Activate()
+    {
+        isActive = true;
+        StartCoroutine("Shoot");
     }
     IEnumerator Shoot()
     {
-        if (!m_Target) yield return null;
+        if (isActive)
+        {
+            if (m_Target)
+            {
+                var dist = Vector3.Distance(center, m_Target.transform.position);
+                if (dist > m_AttackRadius)
+                {
+                    m_Target = null;
+                }
+            }
+            else
+            {
+                var tmp = GameController.Instance.m_Enemies.GetClosestObject(transform);
+                if (tmp)
+                {
+                    var dist = Vector3.Distance(center, tmp.position);
+                    if (dist < m_AttackRadius)
+                    {
+                        SetTarget(tmp);
+                    }
+                }
+            }
+
+
+            if (!m_Target)
+            {
+                yield return null;
+            }
+            else
+            {
+                var projectile = Instantiate(m_Projectile, center, Quaternion.identity);
+                projectile.GetComponent<Projectile>().Init(m_Target);
+            }
+            yield return new WaitForSeconds(m_ReloadTime);
+            StartCoroutine("Shoot");
+        }
+    }
+    public void SetTarget(Transform target)
+    {
+        if (target != null)
+        {
+            m_Target = target.GetComponent<EnemyBehaviour>();
+            StartCoroutine("Shoot");
+        }
         else
         {
-            // var projectile = Instantiate(m_projectile);
-            // projectile.target = m_Target;
-            yield return new WaitForSeconds(m_ReloadTime);
-            StartCoroutine(Shoot());
+            m_Target = null;
+            StopCoroutine("Shoot");
         }
+    }
+
+
+    public void findCenter()
+    {
+        var totalX = 0f;
+        var totalZ = 0f;
+        foreach (var block in blocks)
+        {
+            totalX += block.transform.position.x;
+            totalZ += block.transform.position.z;
+        }
+        var centerX = totalX / blocks.Length;
+        var centerZ = totalZ / blocks.Length;
+        center = new Vector3(centerX, 0, centerZ);
     }
 }

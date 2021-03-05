@@ -11,5 +11,4 @@ public class FigureData : ScriptableObject
     public bool isTimed;
     public List<Vector2Int> indexes;
 
-
 }

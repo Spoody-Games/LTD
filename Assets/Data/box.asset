@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Line
   figureType: 1
-  isTurret: 0
+  isTurret: 1
   isTimed: 0
   indexes:
   - {x: 0, y: 0}

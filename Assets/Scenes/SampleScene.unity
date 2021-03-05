@@ -3038,6 +3038,9 @@ MonoBehaviour:
   m_ReloadTime: 0
   m_Projectile: {fileID: 0}
   m_Data: {fileID: 0}
+  isActive: 0
+  center: {x: 0, y: 0, z: 0}
+  blocks: []
 --- !u!1 &237453063
 GameObject:
   m_ObjectHideFlags: 0
@@ -4176,6 +4179,9 @@ MonoBehaviour:
   m_ReloadTime: 0
   m_Projectile: {fileID: 0}
   m_Data: {fileID: 11400000, guid: 5d0f2deeb2b6ac2498a112a484c1aadc, type: 2}
+  isActive: 0
+  center: {x: 0, y: 0, z: 0}
+  blocks: []
 --- !u!208 &372870738
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -4572,7 +4578,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebd63f2ccd487f942901de9866798d35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Target: {fileID: 1191275717}
+  m_MainBase: {fileID: 0}
   m_Buildings:
   - {fileID: 1191275722}
   m_SpawnPoints:
@@ -4580,7 +4586,7 @@ MonoBehaviour:
   - {fileID: 2092723718}
   - {fileID: 323388295}
   m_Enemies: []
-  EnemyCount: 5
+  EnemyCount: 300
   m_enemy: {fileID: 8234059442578061104, guid: 79cf78abad8262f469040439466f894a, type: 3}
 --- !u!1 &384404161
 GameObject:
@@ -7013,6 +7019,9 @@ MonoBehaviour:
   m_ReloadTime: 0
   m_Projectile: {fileID: 0}
   m_Data: {fileID: 11400000, guid: 5d0f2deeb2b6ac2498a112a484c1aadc, type: 2}
+  isActive: 0
+  center: {x: 0, y: 0, z: 0}
+  blocks: []
 --- !u!208 &638470654
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -11243,6 +11252,9 @@ MonoBehaviour:
   m_ReloadTime: 0
   m_Projectile: {fileID: 0}
   m_Data: {fileID: 11400000, guid: 5d0f2deeb2b6ac2498a112a484c1aadc, type: 2}
+  isActive: 0
+  center: {x: 0, y: 0, z: 0}
+  blocks: []
 --- !u!208 &1010076653
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -13615,6 +13627,9 @@ MonoBehaviour:
   m_ReloadTime: 0
   m_Projectile: {fileID: 0}
   m_Data: {fileID: 11400000, guid: 815ee63a1409c3f4590c5a3539eeea6b, type: 2}
+  isActive: 0
+  center: {x: 0, y: 0, z: 0}
+  blocks: []
 --- !u!1 &1255777150
 GameObject:
   m_ObjectHideFlags: 0
@@ -21136,6 +21151,9 @@ MonoBehaviour:
   m_ReloadTime: 0
   m_Projectile: {fileID: 0}
   m_Data: {fileID: 0}
+  isActive: 0
+  center: {x: 0, y: 0, z: 0}
+  blocks: []
 --- !u!1 &1840259136
 GameObject:
   m_ObjectHideFlags: 0
@@ -21677,6 +21695,9 @@ MonoBehaviour:
   m_ReloadTime: 0
   m_Projectile: {fileID: 0}
   m_Data: {fileID: 11400000, guid: 5d0f2deeb2b6ac2498a112a484c1aadc, type: 2}
+  isActive: 0
+  center: {x: 0, y: 0, z: 0}
+  blocks: []
 --- !u!208 &1876052468
 NavMeshObstacle:
   m_ObjectHideFlags: 0
