@@ -30,6 +30,11 @@ public class Slot : MonoBehaviour
         //EnableMesh();
         isOccupied = true;
     }
+    public void Deocuppy()
+    {
+        m_OccupyingFigure = null;
+        isOccupied = false;
+    }
     public Slot Left()
     {
         var matr = SlotGenerator.Instance.m_SlotsMatrix;

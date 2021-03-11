@@ -110,7 +110,7 @@ public class PlacementController : MonoBehaviour
                         var y = CoreIndex.y + figureData.indexes[i].y;
                         var slot = SlotGenerator.Instance.m_SlotsMatrix[x, y];
                         slot.Occupy(m_Figure);
-
+                        m_Figure.OccupyingSlots.Add(new Vector2Int(x, y));
                         GetComponent<NavMeshObstacle>().enabled = false;
                         transform.GetComponentsInChildren<NavMeshObstacle>().ToList().ForEach(n => n.enabled = true);
                     }
@@ -129,6 +129,7 @@ public class PlacementController : MonoBehaviour
                 if (SelectedSlot.m_OccupyingFigure.m_Data.figureType == m_Figure.m_Data.figureType)
                 {
                     Debug.Log("attempting merge");
+                    Figure fig = null;
                     for (int i = 0; i < figureData.indexes.Count; i++)
                     {
                         var x = CoreIndex.x + figureData.indexes[i].x;
@@ -151,8 +152,10 @@ public class PlacementController : MonoBehaviour
                             WrongPlacement("Figures not aligned");
                             return;
                         }
+                        fig = tmpslot.m_OccupyingFigure;
                     }
                     Debug.Log("Merged");
+                    fig.Merge();
                     hasPlaced = true;
                 }
                 else

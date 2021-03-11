@@ -10,30 +10,33 @@ public class EnemyBehaviour : MonoBehaviour
     public Transform m_Target;
     public Transform m_MainTarget;
     NavMeshPathStatus prevStatus = NavMeshPathStatus.PathComplete;
+    Vector3 targetpos;
+    bool inRange = false;
 
     void Start()
     {
-        m_MainTarget = GameController.Instance.m_Buildings[0];
-        m_NavAgent.SetDestination(m_MainTarget.position);
-        m_Target = m_MainTarget;
+        if (GameController.Instance.m_Buildings.Count > 0)
+
+            m_MainTarget = GameController.Instance.m_Buildings[0];
+        FindNewTarget();
         //m_NavAgent.speed = m_data.Speed;
     }
     public void Hit()
     {
         GameController.Instance.m_Enemies.Remove(transform);
-        //Destroy(gameObject);
+        Destroy(gameObject);
     }
 
     public void FindNewTarget()
     {
-        Debug.LogWarning("Changing Target");
-        if (m_NavAgent.path.status == NavMeshPathStatus.PathComplete)
+        if (GameController.Instance.m_Buildings.Count > 0)
         {
-            m_Target = m_MainTarget;
-        }
-        else
-        {
+            if (inRange) return;
+            inRange = false;
+            Debug.LogWarning("NEW TARGET");
             m_Target = GameController.Instance.m_Buildings.GetClosestObject(transform);
+            targetpos = m_Target.GetComponent<Collider>().ClosestPoint(transform.position);
+            m_NavAgent.SetDestination(targetpos);
         }
     }
 
@@ -45,8 +48,38 @@ public class EnemyBehaviour : MonoBehaviour
             prevStatus = m_NavAgent.path.status;
             FindNewTarget();
         }
-        //Debug.LogWarning(Vector3.Distance(transform.position, m_Target.position));
-
+        if (!m_Target)
+        {
+            FindNewTarget();
+        }
+        if (!inRange)
+        {
+            if (Vector3.Distance(transform.position, targetpos) < 2f)
+            {
+                inRange = true;
+                StartCoroutine("Attack");
+            }
+        }
     }
+    IEnumerator Attack()
+    {
+        if (m_Target)
+        {
+            if (m_Target == m_MainTarget)
+            {
+                m_Target.GetComponent<MainBase>().TakeDamage(m_data.Damage);
+            }
+            else
+                m_Target.GetComponent<Figure>().TakeDamage(m_data.Damage);
+        }
+        else
+        {
+            inRange = false;
+            FindNewTarget();
+        }
+        yield return new WaitForSeconds(m_data.ReloadTime);
 
+        if (inRange)
+            StartCoroutine("Attack");
+    }
 }

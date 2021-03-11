@@ -10,28 +10,35 @@ public enum FigureType
 }
 public class Figure : MonoBehaviour
 {
-    public float m_AttackRadius;
-    public float m_Damage;
-    public float m_ReloadTime;
-
+    int level = 1;
+    public float m_CurrentHealth;
     public GameObject m_Projectile;
     public FigureData m_Data;
+    public GameObject m_HealtBar;
     public bool isActive = false;
     EnemyBehaviour m_Target;
     public Vector3 center;
     public GameObject[] blocks;
+    int mergefactor = 1;
+    public List<Vector2Int> OccupyingSlots;
+
     private void Start()
     {
 
+        m_CurrentHealth = m_Data.m_Health;
+        Vector3 sc = new Vector3(m_CurrentHealth / m_Data.m_Health, 1, 1);
+        m_HealtBar.transform.localScale = sc;
     }
     private void Update()
     {
-
+        if (m_Data.isTimed)
+            TakeDamage(Time.deltaTime);
     }
     public void Activate()
     {
         isActive = true;
-        StartCoroutine("Shoot");
+        if (!m_Data.isTimed)
+            StartCoroutine("Shoot");
     }
     IEnumerator Shoot()
     {
@@ -40,7 +47,7 @@ public class Figure : MonoBehaviour
             if (m_Target)
             {
                 var dist = Vector3.Distance(center, m_Target.transform.position);
-                if (dist > m_AttackRadius)
+                if (dist > m_Data.m_AttackRadius)
                 {
                     m_Target = null;
                 }
@@ -51,7 +58,7 @@ public class Figure : MonoBehaviour
                 if (tmp)
                 {
                     var dist = Vector3.Distance(center, tmp.position);
-                    if (dist < m_AttackRadius)
+                    if (dist < m_Data.m_AttackRadius)
                     {
                         SetTarget(tmp);
                     }
@@ -68,7 +75,7 @@ public class Figure : MonoBehaviour
                 var projectile = Instantiate(m_Projectile, center, Quaternion.identity);
                 projectile.GetComponent<Projectile>().Init(m_Target);
             }
-            yield return new WaitForSeconds(m_ReloadTime);
+            yield return new WaitForSeconds(m_Data.m_ReloadTime / mergefactor);
             StartCoroutine("Shoot");
         }
     }
@@ -84,6 +91,30 @@ public class Figure : MonoBehaviour
             m_Target = null;
             StopCoroutine("Shoot");
         }
+    }
+    public void TakeDamage(float dmg)
+    {
+        if (!isActive) return;
+        m_CurrentHealth -= dmg;
+        Vector3 sc = new Vector3(m_CurrentHealth / m_Data.m_Health, 1, 1);
+        m_HealtBar.transform.localScale = sc;
+        if (m_CurrentHealth <= 0)
+        {
+            GameController.Instance.m_Buildings.Remove(transform);
+            foreach (Vector2Int pos in OccupyingSlots)
+            {
+                SlotGenerator.Instance.m_SlotsMatrix[pos.x, pos.y].Deocuppy();
+            }
+            Destroy(gameObject);
+        }
+    }
+    public void Merge()
+    {
+        Debug.LogWarning("merged");
+        mergefactor++;
+        m_CurrentHealth = m_Data.m_Health;
+        Vector3 sc = new Vector3(m_CurrentHealth / m_Data.m_Health, 1, 1);
+        m_HealtBar.transform.localScale = sc;
     }
 
 

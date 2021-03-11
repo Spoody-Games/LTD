@@ -11,4 +11,9 @@ public class FigureData : ScriptableObject
     public bool isTimed;
     public List<Vector2Int> indexes;
 
+    public float m_AttackRadius;
+    public float m_Damage;
+    public float m_ReloadTime;
+    public float m_Health;
+
 }

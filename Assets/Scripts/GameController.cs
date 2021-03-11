@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour
     public List<Transform> m_Buildings;
     public List<Transform> m_SpawnPoints;
     public List<Transform> m_Enemies;
+    bool started = false;
     public int EnemyCount;
     public GameObject m_enemy;
     private void Awake()
@@ -17,15 +18,28 @@ public class GameController : MonoBehaviour
     }
     private void Start()
     {
-        InvokeRepeating("Spawn", 1, 0.2f);
+        InvokeRepeating("Spawn", 3, 0.2f);
     }
     public void Spawn()
     {
+
         if (EnemyCount <= 0) { CancelInvoke("Spawn"); return; }
         EnemyCount--;
         var point = m_SpawnPoints.GetRandom();
         var enemy = Instantiate(m_enemy, point.position, Quaternion.identity);
         m_Enemies.Add(enemy.transform);
+        started = true;
+    }
+    private void Update()
+    {
+        if (started)
+        {
+            if (m_Enemies.Count == 0)
+            {
+                started = false;
+                UIController.Instance.GameOver(true);
+            }
+        }
     }
 
 
