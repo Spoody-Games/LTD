@@ -108,6 +108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DEBUG: 0
+  m_HoloMat: {fileID: 0}
 --- !u!208 &344824083080541030
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -232,6 +233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DEBUG: 0
+  m_HoloMat: {fileID: 0}
 --- !u!208 &344824083294464521
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -356,6 +358,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DEBUG: 0
+  m_HoloMat: {fileID: 0}
 --- !u!208 &344824083501174844
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -492,6 +495,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DEBUG: 0
+  m_HoloMat: {fileID: 2100000, guid: 59a965cc895d2d14cb71f69bd4a58035, type: 2}
 --- !u!208 &344824083967908266
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -523,7 +527,7 @@ MonoBehaviour:
   m_CurrentHealth: 0
   m_Projectile: {fileID: 3021889279508843944, guid: 761e2935bbf99b741893e67d4449396b,
     type: 3}
-  m_Data: {fileID: 11400000, guid: 815ee63a1409c3f4590c5a3539eeea6b, type: 2}
+  m_Data: {fileID: 11400000, guid: f2194c234a3e8c64e838b8468246d381, type: 2}
   m_HealtBar: {fileID: 7201160883654949862}
   isActive: 0
   center: {x: 0, y: 0, z: 0}
@@ -533,6 +537,12 @@ MonoBehaviour:
   - {fileID: 344824083080541028}
   - {fileID: 344824083501174834}
   OccupyingSlots: []
+  m_ArchersShootPos: []
+  m_meshes:
+  - {fileID: 1725101606851351455}
+  - {fileID: 1278000071601319487}
+  - {fileID: 3507655993270912889}
+  - {fileID: 3937651937661908015}
 --- !u!1 &1300884769767648832
 GameObject:
   m_ObjectHideFlags: 0

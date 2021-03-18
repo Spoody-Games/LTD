@@ -12,13 +12,18 @@ public class EnemyBehaviour : MonoBehaviour
     NavMeshPathStatus prevStatus = NavMeshPathStatus.PathComplete;
     Vector3 targetpos;
     bool inRange = false;
+    bool gameover = false;
 
     void Start()
     {
         if (GameController.Instance.m_Buildings.Count > 0)
-
             m_MainTarget = GameController.Instance.m_Buildings[0];
-        FindNewTarget();
+        if (m_Target)
+        {
+            m_NavAgent.SetDestination(m_Target.position);
+        }
+        else
+            FindNewTarget();
         //m_NavAgent.speed = m_data.Speed;
     }
     public void Hit()
@@ -31,18 +36,33 @@ public class EnemyBehaviour : MonoBehaviour
     {
         if (GameController.Instance.m_Buildings.Count > 0)
         {
-            if (inRange) return;
-            inRange = false;
-            Debug.LogWarning("NEW TARGET");
-            m_Target = GameController.Instance.m_Buildings.GetClosestObject(transform);
-            targetpos = m_Target.GetComponent<Collider>().ClosestPoint(transform.position);
+            NavMeshPath path = new NavMeshPath();
+            if (m_MainTarget)
+                m_NavAgent.CalculatePath(m_MainTarget.GetComponent<Collider>().ClosestPoint(transform.position), path);
+            else return;
+            if (path.status == NavMeshPathStatus.PathComplete)
+            {
+                m_Target = m_MainTarget;
+                targetpos = m_MainTarget.GetComponent<Collider>().ClosestPoint(transform.position);
+
+            }
+            else
+            {
+                m_Target = GameController.Instance.m_Buildings.GetClosestObject(transform);
+                targetpos = m_Target.GetComponent<Collider>().ClosestPoint(transform.position);
+            }
             m_NavAgent.SetDestination(targetpos);
+        }
+        else
+        {
+            gameover = true;
         }
     }
 
 
     void Update()
     {
+        if (gameover) return;
         if (m_NavAgent.path.status != prevStatus)
         {
             prevStatus = m_NavAgent.path.status;
@@ -67,10 +87,10 @@ public class EnemyBehaviour : MonoBehaviour
         {
             if (m_Target == m_MainTarget)
             {
-                m_Target.GetComponent<MainBase>().TakeDamage(m_data.Damage);
+                m_Target.GetComponent<MainBase>()?.TakeDamage(m_data.Damage);
             }
             else
-                m_Target.GetComponent<Figure>().TakeDamage(m_data.Damage);
+                m_Target.GetComponent<Figure>()?.TakeDamage(m_data.Damage);
         }
         else
         {

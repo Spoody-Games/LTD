@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line Vertical
   m_EditorClassIdentifier: 
   Name: Line
-  figureType: 0
+  figureType: 1
   isTurret: 0
   isTimed: 1
   indexes:

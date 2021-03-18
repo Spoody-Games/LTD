@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: L UpRight
   m_EditorClassIdentifier: 
   Name: Line
-  figureType: 0
-  isTurret: 0
+  figureType: 9
+  isTurret: 1
   isTimed: 0
   indexes:
   - {x: 0, y: 0}

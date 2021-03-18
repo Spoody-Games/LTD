@@ -6,6 +6,7 @@ public class Projectile : MonoBehaviour
 {
     public EnemyBehaviour m_Target;
     bool ready = false;
+    Vector3 target;
     public void Init(EnemyBehaviour target)
     {
         m_Target = target;
@@ -17,16 +18,20 @@ public class Projectile : MonoBehaviour
         {
             if (m_Target)
             {
-                var dist = Vector3.Distance(transform.position, m_Target.transform.position);
-                transform.position = Vector3.MoveTowards(transform.position, m_Target.transform.position, 0.1f);
-                if (dist < 0.1f)
-                {
-                    Debug.LogWarning("HIT");
-                    m_Target.Hit();
-                    Destroy(gameObject);
-                }
+                target = m_Target.transform.position;
             }
-            else Destroy(gameObject);
+            if (target == Vector3.zero) Destroy(gameObject);
+            var dist = Vector3.Distance(transform.position, target);
+
+
+            transform.position = Vector3.MoveTowards(transform.position, target, Mathf.Min(Time.deltaTime * 25f, dist));
+
+            if (dist < 0.1f)
+            {
+                if (m_Target)
+                    m_Target.Hit();
+                Destroy(gameObject);
+            }
         }
     }
 

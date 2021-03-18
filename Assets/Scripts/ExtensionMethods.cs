@@ -36,9 +36,9 @@ static class ExtensionMethods
         {
             for (int j = 0; j < width; j++)
             {
-                if (mx[i, j] == ob)
+                if (mx[j, i] == ob)
                 {
-                    return new Vector2Int(i, j);
+                    return new Vector2Int(j, i);
                 }
             }
         }

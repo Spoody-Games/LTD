@@ -3,7 +3,17 @@ guid: 38d1218eacdb27c4ba361ac549b95224
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Character_MAT1
+    second: {fileID: 2100000, guid: 75b5b05553ef4e04b909522edfec442b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Swordsman_MAT
+    second: {fileID: 2100000, guid: 34c45343c30829e4084fc113f706fa74, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

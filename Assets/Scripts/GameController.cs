@@ -12,13 +12,16 @@ public class GameController : MonoBehaviour
     bool started = false;
     public int EnemyCount;
     public GameObject m_enemy;
+    public Plane m_RayPlane;
+    public float interval;
     private void Awake()
     {
         Instance = this;
     }
     private void Start()
     {
-        InvokeRepeating("Spawn", 3, 0.2f);
+        m_RayPlane = new Plane(Vector3.up, Vector3.zero);
+        InvokeRepeating("Spawn", 3, interval);
     }
     public void Spawn()
     {

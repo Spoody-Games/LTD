@@ -108,6 +108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DEBUG: 0
+  m_HoloMat: {fileID: 0}
 --- !u!208 &1973471850448585629
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -232,6 +233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DEBUG: 0
+  m_HoloMat: {fileID: 0}
 --- !u!208 &1973471850899515163
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -369,6 +371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DEBUG: 0
+  m_HoloMat: {fileID: 2100000, guid: 59a965cc895d2d14cb71f69bd4a58035, type: 2}
 --- !u!208 &1973471851468462433
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -410,6 +413,12 @@ MonoBehaviour:
   - {fileID: 1973471851720456118}
   - {fileID: 1973471850899515157}
   OccupyingSlots: []
+  m_ArchersShootPos: []
+  m_meshes:
+  - {fileID: 5202603192737322188}
+  - {fileID: 3854696933992711166}
+  - {fileID: 2500375715735524862}
+  - {fileID: 4459315202060452437}
 --- !u!1 &1973471851720456118
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,6 +527,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DEBUG: 0
+  m_HoloMat: {fileID: 0}
 --- !u!208 &1973471851720456116
 NavMeshObstacle:
   m_ObjectHideFlags: 0

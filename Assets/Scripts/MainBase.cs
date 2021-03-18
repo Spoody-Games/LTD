@@ -21,7 +21,7 @@ public class MainBase : MonoBehaviour
         if (m_CurrentHealth <= 0)
         {
             GameController.Instance.m_Buildings.Remove(transform);
-            //gameover;
+            UIController.Instance.GameOver(false);
             Destroy(gameObject);
         }
     }
