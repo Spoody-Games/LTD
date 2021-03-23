@@ -9,5 +9,6 @@ public class EnemyData : ScriptableObject
     public float Health;
     public float Damage;
     public float ReloadTime;
+    public bool BasePriority;
 
 }

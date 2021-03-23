@@ -97,6 +97,4 @@ public class Figure : MonoBehaviour
         Vector3 sc = new Vector3(m_CurrentHealth / m_Data.m_Health, 1, 1);
         m_HealtBar.transform.localScale = sc;
     }
-
-
 }

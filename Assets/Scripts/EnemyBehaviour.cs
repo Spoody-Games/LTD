@@ -36,15 +36,22 @@ public class EnemyBehaviour : MonoBehaviour
     {
         if (GameController.Instance.m_Buildings.Count > 0)
         {
-            NavMeshPath path = new NavMeshPath();
-            if (m_MainTarget)
-                m_NavAgent.CalculatePath(m_MainTarget.GetComponent<Collider>().ClosestPoint(transform.position), path);
-            else return;
-            if (path.status == NavMeshPathStatus.PathComplete)
+            if (m_data.BasePriority)
             {
-                m_Target = m_MainTarget;
-                targetpos = m_MainTarget.GetComponent<Collider>().ClosestPoint(transform.position);
-
+                NavMeshPath path = new NavMeshPath();
+                if (m_MainTarget)
+                    m_NavAgent.CalculatePath(m_MainTarget.GetComponent<Collider>().ClosestPoint(transform.position), path);
+                else return;
+                if (path.status == NavMeshPathStatus.PathComplete)
+                {
+                    m_Target = m_MainTarget;
+                    targetpos = m_MainTarget.GetComponent<Collider>().ClosestPoint(transform.position);
+                }
+                else
+                {
+                    m_Target = GameController.Instance.m_Buildings.GetClosestObject(transform);
+                    targetpos = m_Target.GetComponent<Collider>().ClosestPoint(transform.position);
+                }
             }
             else
             {
@@ -90,7 +97,11 @@ public class EnemyBehaviour : MonoBehaviour
                 m_Target.GetComponent<MainBase>()?.TakeDamage(m_data.Damage);
             }
             else
-                m_Target.GetComponent<Figure>()?.TakeDamage(m_data.Damage);
+            {
+                if (m_Target.GetComponent<Figure>().m_Data.isTimed) yield return null;
+                else
+                    m_Target.GetComponent<Figure>()?.TakeDamage(m_data.Damage);
+            }
         }
         else
         {

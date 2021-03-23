@@ -16,3 +16,4 @@ MonoBehaviour:
   Health: 100
   Damage: 2
   ReloadTime: 1
+  BasePriority: 1
