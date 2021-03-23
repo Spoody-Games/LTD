@@ -98,9 +98,10 @@ public class EnemyBehaviour : MonoBehaviour
             }
             else
             {
-                if (m_Target.GetComponent<Figure>().m_Data.isTimed) yield return null;
-                else
-                    m_Target.GetComponent<Figure>()?.TakeDamage(m_data.Damage);
+                if (m_Target.GetComponent<Figure>())
+                    if (m_Target.GetComponent<Figure>().m_Data.isTimed) yield return null;
+                    else
+                        m_Target.GetComponent<Figure>()?.TakeDamage(m_data.Damage);
             }
         }
         else

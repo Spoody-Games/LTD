@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using DG.Tweening;
 
 public enum FigureType
 {
@@ -84,8 +85,19 @@ public class Figure : MonoBehaviour
             {
                 SlotGenerator.Instance.m_SlotsMatrix[pos.x, pos.y].Deocuppy();
             }
-            Destroy(gameObject);
+            StartCoroutine("Death");
+            isActive=false;
         }
+    }
+    IEnumerator Death()
+    {
+        if (m_Shooters.Count > 0)
+            for (int i = 0; i < m_Shooters.Count; i++)
+            {
+                Destroy(m_Shooters[i].gameObject);
+                yield return new WaitForSeconds(0.1f);
+            }
+        transform.DOMoveY(transform.position.y - 3, 0.5f).OnComplete(() => Destroy(gameObject));
     }
     public void Merge()
     {

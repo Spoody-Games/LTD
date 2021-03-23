@@ -109,6 +109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DEBUG: 0
   m_HoloMat: {fileID: 0}
+  m_MeshesToLift: []
 --- !u!208 &1973471850448585629
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -234,6 +235,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DEBUG: 0
   m_HoloMat: {fileID: 0}
+  m_MeshesToLift: []
 --- !u!208 &1973471850899515163
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -372,6 +374,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DEBUG: 0
   m_HoloMat: {fileID: 2100000, guid: 59a965cc895d2d14cb71f69bd4a58035, type: 2}
+  m_MeshesToLift:
+  - {fileID: 6881285749575194765}
+  - {fileID: 2249539613770610803}
+  - {fileID: 4297352626576560081}
+  - {fileID: 5231911524638181185}
 --- !u!208 &1973471851468462433
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -412,8 +419,9 @@ MonoBehaviour:
   - {fileID: 1973471850448585631}
   - {fileID: 1973471851720456118}
   - {fileID: 1973471850899515157}
+  mergefactor: 1
   OccupyingSlots: []
-  m_ArchersShootPos: []
+  m_Shooters: []
   m_meshes:
   - {fileID: 5202603192737322188}
   - {fileID: 3854696933992711166}
@@ -528,6 +536,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DEBUG: 0
   m_HoloMat: {fileID: 0}
+  m_MeshesToLift: []
 --- !u!208 &1973471851720456116
 NavMeshObstacle:
   m_ObjectHideFlags: 0

@@ -54,7 +54,7 @@ public class PlacementController : MonoBehaviour
         m_MeshesToLift.ForEach(x =>
         {
             var pos = x.transform.localPosition;
-            x.transform.DOLocalMoveY(pos.y + 1, 0.5f);
+            x.transform.DOLocalMoveY(pos.y + 1, 0.2f);
         });
     }
 
@@ -96,7 +96,7 @@ public class PlacementController : MonoBehaviour
         m_MeshesToLift.ForEach(x =>
 {
     var pos = x.transform.localPosition;
-    x.transform.DOLocalMoveY(pos.y - 1, 0.5f);
+    x.transform.DOLocalMoveY(pos.y - 1, 0.2f);
 });
         Destroy(ghost);
         if (SelectedSlot)
