@@ -3,6 +3,7 @@ using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using DG.Tweening;
 
 public class PlacementController : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class PlacementController : MonoBehaviour
     FigureSpawnSpot m_Spot;
     public bool DEBUG = false;
     public Material m_HoloMat;
-
+    public List<GameObject> m_MeshesToLift;
     bool canPlace = true;
     private void Start()
     {
@@ -37,6 +38,7 @@ public class PlacementController : MonoBehaviour
         screenPoint = CameraController.Instance.m_Camera.WorldToScreenPoint(gameObject.transform.position);
         hasPlaced = false;
         canPlace = true;
+
         // var prevobj = Instantiate(gameObject);
         // prevobj.name = figureData.Name;
 
@@ -46,8 +48,13 @@ public class PlacementController : MonoBehaviour
         m_Figure.m_meshes.ForEach(x =>
         {
             var msh = Instantiate(x.gameObject, ghost.transform);
-            msh.transform.localPosition += Vector3.down/2;
+            msh.transform.localPosition += Vector3.down / 2;
             msh.GetComponent<MeshRenderer>().material = m_HoloMat;
+        });
+        m_MeshesToLift.ForEach(x =>
+        {
+            var pos = x.transform.localPosition;
+            x.transform.DOLocalMoveY(pos.y + 1, 0.5f);
         });
     }
 
@@ -86,6 +93,11 @@ public class PlacementController : MonoBehaviour
     private void OnMouseUp()
     {
         transform.position = ghost.transform.position;
+        m_MeshesToLift.ForEach(x =>
+{
+    var pos = x.transform.localPosition;
+    x.transform.DOLocalMoveY(pos.y - 1, 0.5f);
+});
         Destroy(ghost);
         if (SelectedSlot)
         {
