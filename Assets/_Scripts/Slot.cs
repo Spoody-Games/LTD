@@ -7,14 +7,16 @@ public class Slot : MonoBehaviour
 {
     public bool isOccupied = false;
     public bool isRoad = false;
+    public bool isObstacle = false;
     const int adjacentsSize = 4;
     public Figure m_OccupyingFigure;
     private void Start()
     {
-        if (isRoad)
+        if (isObstacle)
         {
             GetComponent<MeshRenderer>().enabled = true;
         }
+
     }
     public void EnableMesh()
     {
@@ -30,11 +32,12 @@ public class Slot : MonoBehaviour
         //EnableMesh();
         isOccupied = true;
     }
-    public void Deocuppy()
+    public void Deocuppy()  
     {
         m_OccupyingFigure = null;
         isOccupied = false;
     }
+
     // public Slot Left()
     // {
     //     var matr = SlotGenerator.Instance.m_SlotsMatrix;

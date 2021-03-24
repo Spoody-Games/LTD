@@ -29,6 +29,7 @@ public enum FigureType
 }
 public class Figure : MonoBehaviour
 {
+
     public float m_CurrentHealth;
     public GameObject m_Projectile;
     public FigureData m_Data;
@@ -86,7 +87,7 @@ public class Figure : MonoBehaviour
                 SlotGenerator.Instance.m_SlotsMatrix[pos.x, pos.y].Deocuppy();
             }
             StartCoroutine("Death");
-            isActive=false;
+            isActive = false;
         }
     }
     IEnumerator Death()

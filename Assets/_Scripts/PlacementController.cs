@@ -30,7 +30,6 @@ public class PlacementController : MonoBehaviour
     {
         m_Spot = spot;
         StartPos = transform.position;
-
     }
     void OnMouseDown()
     {
