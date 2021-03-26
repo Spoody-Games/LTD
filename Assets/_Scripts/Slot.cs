@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 [System.Serializable]
 public class Slot : MonoBehaviour
@@ -15,8 +16,8 @@ public class Slot : MonoBehaviour
         if (isObstacle)
         {
             GetComponent<MeshRenderer>().enabled = true;
+            GetComponent<NavMeshObstacle>().enabled = true;
         }
-
     }
     public void EnableMesh()
     {
@@ -24,7 +25,7 @@ public class Slot : MonoBehaviour
     }
     public bool IsFree()
     {
-        return !(isOccupied || isRoad);
+        return !(isOccupied || isRoad || isObstacle);
     }
     public void Occupy(Figure figure)
     {
@@ -32,7 +33,7 @@ public class Slot : MonoBehaviour
         //EnableMesh();
         isOccupied = true;
     }
-    public void Deocuppy()  
+    public void Deocuppy()
     {
         m_OccupyingFigure = null;
         isOccupied = false;

@@ -31,8 +31,9 @@ public class PlacementController : MonoBehaviour
         m_Spot = spot;
         StartPos = transform.position;
     }
-    void OnMouseDown()
+    public void OnMouseDown()
     {
+        Debug.LogWarning("MOUSEDOWN");
 
         screenPoint = CameraController.Instance.m_Camera.WorldToScreenPoint(gameObject.transform.position);
         hasPlaced = false;
@@ -135,7 +136,10 @@ public class PlacementController : MonoBehaviour
                     }
                     hasPlaced = true;
                     Debug.Log("Placed");
-                    FigurePlaced?.Invoke(m_Spot);
+                    if (!GameController.Instance.DebugMode)
+                    {
+                        FigurePlaced?.Invoke(m_Spot);
+                    }
                 }
                 else
                 {
@@ -145,6 +149,11 @@ public class PlacementController : MonoBehaviour
             }
             else
             {
+                if (SelectedSlot.isObstacle)
+                {
+                    WrongPlacement("Placing on an Obstacle");
+                    return;
+                }
                 //MERGING 
                 if (SelectedSlot.m_OccupyingFigure.m_Data.figureType == m_Figure.m_Data.figureType)
                 {

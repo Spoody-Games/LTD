@@ -9,7 +9,8 @@ public class FigureSpawner : MonoBehaviour
     public List<FigureSpawnSpot> m_Spots;
     private void Start()
     {
-        m_Spots.ForEach(x => x.Spawnfigure(m_figures.GetRandom()));
+        if (!GameController.Instance.DebugMode)
+            m_Spots.ForEach(x => x.Spawnfigure(m_figures.GetRandom()));
     }
     private void Awake()
     {
@@ -19,7 +20,6 @@ public class FigureSpawner : MonoBehaviour
     {
         PlacementController.FigurePlaced -= OnFigurePlaced;
     }
-
     private void OnFigurePlaced(FigureSpawnSpot obj)
     {
         Debug.LogWarning("PLACED");

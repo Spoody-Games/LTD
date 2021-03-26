@@ -14,6 +14,8 @@ public class GameController : MonoBehaviour
     public GameObject m_enemy;
     public Plane m_RayPlane;
     public float interval;
+    public bool DebugMode = false;
+    public bool DrawRoad = false;
     private void Awake()
     {
         Instance = this;
@@ -41,6 +43,28 @@ public class GameController : MonoBehaviour
             {
                 started = false;
                 UIController.Instance.GameOver(true);
+            }
+        }
+        if (DebugMode)
+        {
+            if (DrawRoad)
+            {
+                if (Input.GetMouseButton(0))
+                {
+                    Ray ray = CameraController.Instance.m_Camera.ScreenPointToRay(Input.mousePosition);
+
+
+                    RaycastHit hit;
+                    Transform objectHit = null;
+                    if (Physics.Raycast(ray, out hit, 1000, 1 << 8))
+                    {
+                        objectHit = hit.transform;
+                        var SelectedSlot = hit.transform.GetComponent<Slot>();
+                        SelectedSlot.isRoad = true;
+                        SelectedSlot.GetComponent<MeshRenderer>().enabled = true;
+                    }
+                }
+
             }
         }
     }
