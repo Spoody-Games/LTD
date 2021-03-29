@@ -30,6 +30,10 @@ static class ExtensionMethods
         }
         return result;
     }
+    public static Slot GetSlotByIndex(this Slot[,] mx, Vector2Int indexVec)
+    {
+        return mx[indexVec.x, indexVec.y];
+    }
     public static Vector2Int FindSlotIndexInMatrix(this Slot[,] mx, Slot ob, int width = 12, int length = 14)
     {
         for (int i = 0; i < length; i++)

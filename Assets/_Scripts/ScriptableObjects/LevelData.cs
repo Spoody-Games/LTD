@@ -5,13 +5,31 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "LevelData", menuName = "ScriptableObjects/Level Data", order = 3)]
 public class LevelData : ScriptableObject
 {
-    public List<ObstacleData> m_ObstacleList;
     public List<FigureData> m_figures;
+    public List<RoadData> m_Road;
+    public List<ObstacleData> m_Obstacles;
 }
 
 [System.Serializable]
 public class ObstacleData
 {
+    public ObstacleData(Vector2Int a)
+    {
+        index = a;
+    }
     public Vector2Int index;
-    public float m_ObstacleId;
+}
+
+[System.Serializable]
+public class RoadData
+{
+    public Vector2Int index;
+    public RoadData(int a, int b)
+    {
+        index.x = a; index.y = b;
+    }
+    public RoadData(Vector2Int a)
+    {
+        index = a;
+    }
 }

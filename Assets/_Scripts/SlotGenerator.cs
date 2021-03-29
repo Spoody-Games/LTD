@@ -13,7 +13,7 @@ public class SlotGenerator : MonoBehaviour
     public Slot[] m_SlotsReferences;
     public Slot[,] m_SlotsMatrix;
 
-    
+
     private void Awake()
     {
         Instance = this;
@@ -35,6 +35,15 @@ public class SlotGenerator : MonoBehaviour
         // }
 
         m_SlotsMatrix = m_SlotsReferences.ConvertMatrix(width, lenght);
+
+        for (int i = 0; i < lenght; i++)
+        {
+            for (int j = 0; j < width; j++)
+            {
+                var x = (slotsize * j - width * slotsize / 2f) + slotsize / 2;
+                var z = (slotsize * i - lenght * slotsize / 2f) + slotsize / 2;
+            }
+        }
     }
 
 

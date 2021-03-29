@@ -16,6 +16,7 @@ public class GameController : MonoBehaviour
     public float interval;
     public bool DebugMode = false;
     public bool DrawRoad = false;
+    public List<GameObject> m_DebugBuildings;
     private void Awake()
     {
         Instance = this;
@@ -52,8 +53,6 @@ public class GameController : MonoBehaviour
                 if (Input.GetMouseButton(0))
                 {
                     Ray ray = CameraController.Instance.m_Camera.ScreenPointToRay(Input.mousePosition);
-
-
                     RaycastHit hit;
                     Transform objectHit = null;
                     if (Physics.Raycast(ray, out hit, 1000, 1 << 8))
@@ -64,10 +63,17 @@ public class GameController : MonoBehaviour
                         SelectedSlot.GetComponent<MeshRenderer>().enabled = true;
                     }
                 }
-
+            }
+            if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Z))
+            {
+                if (m_DebugBuildings.Count > 0)
+                {
+                    var last = m_DebugBuildings[m_DebugBuildings.Count - 1];
+                    m_DebugBuildings.Remove(last);
+                    m_Buildings.Remove(last.transform);
+                    Destroy(last);
+                }
             }
         }
     }
-
-
 }

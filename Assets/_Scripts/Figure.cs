@@ -50,7 +50,6 @@ public class Figure : MonoBehaviour
         m_CurrentHealth = m_Data.m_Health;
         Vector3 sc = new Vector3(m_CurrentHealth / m_Data.m_Health, 1, 1);
         m_HealtBar.transform.localScale = sc;
-        //GetComponentsInChildren<ShooPos>().ToList().ForEach(x => m_ArchersShootPos.Add(x.transform));
         m_Shooters = GetComponentsInChildren<ShooterController>().ToList();
 
 
