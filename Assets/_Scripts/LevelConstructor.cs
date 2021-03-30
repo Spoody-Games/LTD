@@ -137,6 +137,7 @@ public class LevelConstructor : MonoBehaviour
                 if (m_DebugBuildings.Count > 0)
                 {
                     var last = m_DebugBuildings[m_DebugBuildings.Count - 1];
+                    last.GetComponent<Figure>().ClearSlots();
                     m_DebugBuildings.Remove(last);
                     GameController.Instance.m_Buildings.Remove(last.transform);
                     Destroy(last);

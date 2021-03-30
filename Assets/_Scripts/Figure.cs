@@ -82,12 +82,16 @@ public class Figure : MonoBehaviour
         if (m_CurrentHealth <= 0)
         {
             GameController.Instance.m_Buildings.Remove(transform);
-            foreach (Vector2Int pos in OccupyingSlots)
-            {
-                SlotGenerator.Instance.m_SlotsMatrix[pos.x, pos.y].Deocuppy();
-            }
+            ClearSlots();
             StartCoroutine("Death");
             isActive = false;
+        }
+    }
+    public void ClearSlots()
+    {
+        foreach (Vector2Int pos in OccupyingSlots)
+        {
+            SlotGenerator.Instance.m_SlotsMatrix[pos.x, pos.y].Deocuppy();
         }
     }
     IEnumerator Death()
