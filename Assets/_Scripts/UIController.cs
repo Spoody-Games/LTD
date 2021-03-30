@@ -2,6 +2,7 @@
 using UnityEditor;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System.Linq;
 using UnityEngine.SceneManagement;
 
@@ -10,7 +11,8 @@ public class UIController : MonoBehaviour
     public static UIController Instance;
     public GameObject m_VictoryPanel;
     public GameObject m_LossPanel;
-     private void Awake()
+    public Text m_DrawText;
+    private void Awake()
     {
         Instance = this;
     }
@@ -34,7 +36,5 @@ public class UIController : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
-
-
 
 }

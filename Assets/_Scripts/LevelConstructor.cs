@@ -19,6 +19,7 @@ public class LevelConstructor : MonoBehaviour
     public bool bDebugMode = false;
     public bool bDrawRoad = false;
     public List<GameObject> m_DebugBuildings;
+    public List<Slot> m_Roads;
     public List<GameObject> m_ObstaclesPrefabs;
     public GameObject m_roadPrefab;
     public void SpawnFigure(GameObject _figure)
@@ -40,6 +41,7 @@ public class LevelConstructor : MonoBehaviour
     public void DrawRoad()
     {
         bDrawRoad = !bDrawRoad;
+        UIController.Instance.m_DrawText.text = "DRAW MODE : " + bDrawRoad;
     }
     public void SaveSlots()
     {
@@ -114,11 +116,24 @@ public class LevelConstructor : MonoBehaviour
                         var SelectedSlot = hit.transform.GetComponent<Slot>();
                         SelectedSlot.isRoad = true;
                         SelectedSlot.GetComponent<MeshRenderer>().enabled = true;
+                        if (!m_Roads.Contains(SelectedSlot))
+                            m_Roads.Add(SelectedSlot);
                     }
                 }
             }
             if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Z))
             {
+                if (bDrawRoad)
+                {
+                    if (m_Roads.Count > 0)
+                    {
+                        var last = m_Roads[m_Roads.Count - 1];
+                        m_Roads.Remove(last);
+                        last.isRoad = false;
+                        last.GetComponent<MeshRenderer>().enabled = false;
+                    }
+                }
+                else
                 if (m_DebugBuildings.Count > 0)
                 {
                     var last = m_DebugBuildings[m_DebugBuildings.Count - 1];
