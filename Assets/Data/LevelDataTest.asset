@@ -13,31 +13,51 @@ MonoBehaviour:
   m_Name: LevelDataTest
   m_EditorClassIdentifier: 
   m_figures:
-  - {fileID: 11400000, guid: 06b2f14cfecd0f04ca538f8bded1e887, type: 2}
+  - {fileID: 11400000, guid: 815ee63a1409c3f4590c5a3539eeea6b, type: 2}
+  - {fileID: 11400000, guid: ebbcd46c4f2126146a2bb5ad77c3fd22, type: 2}
   m_Road:
+  - index: {x: 6, y: 0}
+  - index: {x: 7, y: 0}
   - index: {x: 6, y: 1}
   - index: {x: 7, y: 1}
-  - index: {x: 7, y: 2}
-  - index: {x: 7, y: 3}
-  - index: {x: 7, y: 4}
+  - index: {x: 8, y: 1}
+  - index: {x: 9, y: 1}
+  - index: {x: 9, y: 2}
+  - index: {x: 9, y: 3}
   - index: {x: 8, y: 4}
+  - index: {x: 9, y: 4}
+  - index: {x: 1, y: 5}
+  - index: {x: 2, y: 5}
+  - index: {x: 3, y: 5}
+  - index: {x: 4, y: 5}
+  - index: {x: 5, y: 5}
+  - index: {x: 6, y: 5}
+  - index: {x: 7, y: 5}
   - index: {x: 8, y: 5}
-  - index: {x: 8, y: 6}
-  - index: {x: 8, y: 7}
-  - index: {x: 8, y: 8}
-  - index: {x: 7, y: 9}
-  - index: {x: 8, y: 9}
-  - index: {x: 7, y: 10}
-  - index: {x: 6, y: 11}
-  - index: {x: 7, y: 11}
+  - index: {x: 1, y: 6}
+  - index: {x: 1, y: 7}
+  - index: {x: 1, y: 8}
+  - index: {x: 1, y: 9}
+  - index: {x: 1, y: 10}
+  - index: {x: 1, y: 11}
+  - index: {x: 1, y: 12}
+  - index: {x: 2, y: 12}
+  - index: {x: 3, y: 12}
+  - index: {x: 4, y: 12}
+  - index: {x: 5, y: 12}
   - index: {x: 6, y: 12}
+  - index: {x: 7, y: 12}
+  - index: {x: 8, y: 12}
+  - index: {x: 9, y: 12}
+  - index: {x: 10, y: 12}
+  - index: {x: 9, y: 13}
+  - index: {x: 10, y: 13}
   m_Obstacles:
   - index: {x: 0, y: 0}
   - index: {x: 1, y: 0}
   - index: {x: 2, y: 0}
   - index: {x: 3, y: 0}
   - index: {x: 4, y: 0}
-  - index: {x: 7, y: 0}
   - index: {x: 8, y: 0}
   - index: {x: 9, y: 0}
   - index: {x: 10, y: 0}
@@ -47,9 +67,6 @@ MonoBehaviour:
   - index: {x: 2, y: 1}
   - index: {x: 3, y: 1}
   - index: {x: 4, y: 1}
-  - index: {x: 5, y: 1}
-  - index: {x: 8, y: 1}
-  - index: {x: 9, y: 1}
   - index: {x: 10, y: 1}
   - index: {x: 11, y: 1}
   - index: {x: 0, y: 2}
@@ -57,10 +74,7 @@ MonoBehaviour:
   - index: {x: 2, y: 2}
   - index: {x: 3, y: 2}
   - index: {x: 4, y: 2}
-  - index: {x: 5, y: 2}
-  - index: {x: 6, y: 2}
   - index: {x: 8, y: 2}
-  - index: {x: 9, y: 2}
   - index: {x: 10, y: 2}
   - index: {x: 11, y: 2}
   - index: {x: 0, y: 3}
@@ -68,10 +82,7 @@ MonoBehaviour:
   - index: {x: 2, y: 3}
   - index: {x: 3, y: 3}
   - index: {x: 4, y: 3}
-  - index: {x: 5, y: 3}
   - index: {x: 6, y: 3}
-  - index: {x: 8, y: 3}
-  - index: {x: 9, y: 3}
   - index: {x: 10, y: 3}
   - index: {x: 11, y: 3}
   - index: {x: 0, y: 4}
@@ -79,92 +90,81 @@ MonoBehaviour:
   - index: {x: 2, y: 4}
   - index: {x: 3, y: 4}
   - index: {x: 4, y: 4}
-  - index: {x: 5, y: 4}
   - index: {x: 6, y: 4}
-  - index: {x: 9, y: 4}
+  - index: {x: 7, y: 4}
   - index: {x: 10, y: 4}
   - index: {x: 11, y: 4}
   - index: {x: 0, y: 5}
-  - index: {x: 1, y: 5}
-  - index: {x: 2, y: 5}
-  - index: {x: 3, y: 5}
-  - index: {x: 4, y: 5}
-  - index: {x: 5, y: 5}
-  - index: {x: 6, y: 5}
-  - index: {x: 7, y: 5}
   - index: {x: 9, y: 5}
   - index: {x: 10, y: 5}
   - index: {x: 11, y: 5}
   - index: {x: 0, y: 6}
-  - index: {x: 1, y: 6}
   - index: {x: 2, y: 6}
   - index: {x: 3, y: 6}
   - index: {x: 4, y: 6}
   - index: {x: 5, y: 6}
   - index: {x: 6, y: 6}
   - index: {x: 7, y: 6}
+  - index: {x: 8, y: 6}
   - index: {x: 9, y: 6}
   - index: {x: 10, y: 6}
   - index: {x: 11, y: 6}
   - index: {x: 0, y: 7}
-  - index: {x: 1, y: 7}
   - index: {x: 2, y: 7}
+  - index: {x: 3, y: 7}
+  - index: {x: 4, y: 7}
+  - index: {x: 5, y: 7}
   - index: {x: 6, y: 7}
   - index: {x: 7, y: 7}
+  - index: {x: 8, y: 7}
   - index: {x: 9, y: 7}
   - index: {x: 10, y: 7}
   - index: {x: 11, y: 7}
   - index: {x: 0, y: 8}
-  - index: {x: 1, y: 8}
   - index: {x: 2, y: 8}
   - index: {x: 3, y: 8}
+  - index: {x: 4, y: 8}
   - index: {x: 5, y: 8}
   - index: {x: 6, y: 8}
   - index: {x: 7, y: 8}
+  - index: {x: 8, y: 8}
   - index: {x: 9, y: 8}
   - index: {x: 10, y: 8}
   - index: {x: 11, y: 8}
   - index: {x: 0, y: 9}
-  - index: {x: 1, y: 9}
   - index: {x: 2, y: 9}
   - index: {x: 3, y: 9}
   - index: {x: 4, y: 9}
   - index: {x: 5, y: 9}
   - index: {x: 6, y: 9}
+  - index: {x: 7, y: 9}
+  - index: {x: 8, y: 9}
   - index: {x: 9, y: 9}
   - index: {x: 10, y: 9}
   - index: {x: 11, y: 9}
   - index: {x: 0, y: 10}
-  - index: {x: 1, y: 10}
   - index: {x: 2, y: 10}
   - index: {x: 3, y: 10}
   - index: {x: 4, y: 10}
   - index: {x: 5, y: 10}
   - index: {x: 6, y: 10}
+  - index: {x: 7, y: 10}
   - index: {x: 8, y: 10}
   - index: {x: 9, y: 10}
   - index: {x: 10, y: 10}
   - index: {x: 11, y: 10}
   - index: {x: 0, y: 11}
-  - index: {x: 1, y: 11}
   - index: {x: 2, y: 11}
   - index: {x: 3, y: 11}
   - index: {x: 4, y: 11}
   - index: {x: 5, y: 11}
+  - index: {x: 6, y: 11}
+  - index: {x: 7, y: 11}
   - index: {x: 8, y: 11}
   - index: {x: 9, y: 11}
   - index: {x: 10, y: 11}
   - index: {x: 11, y: 11}
   - index: {x: 0, y: 12}
-  - index: {x: 1, y: 12}
-  - index: {x: 2, y: 12}
-  - index: {x: 3, y: 12}
-  - index: {x: 4, y: 12}
-  - index: {x: 5, y: 12}
-  - index: {x: 7, y: 12}
-  - index: {x: 8, y: 12}
-  - index: {x: 9, y: 12}
-  - index: {x: 10, y: 12}
   - index: {x: 11, y: 12}
   - index: {x: 0, y: 13}
   - index: {x: 3, y: 13}

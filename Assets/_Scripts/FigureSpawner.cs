@@ -9,7 +9,7 @@ public class FigureSpawner : MonoBehaviour
     public List<FigureSpawnSpot> m_Spots;
     private void Start()
     {
-        if (!GameController.Instance.DebugMode)
+        if (!LevelConstructor.Instance.bDebugMode)
             m_Spots.ForEach(x => x.Spawnfigure(m_figures.GetRandom()));
     }
     private void Awake()

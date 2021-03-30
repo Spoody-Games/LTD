@@ -136,7 +136,7 @@ public class PlacementController : MonoBehaviour
                     }
                     hasPlaced = true;
                     Debug.Log("Placed");
-                    if (!GameController.Instance.DebugMode)
+                    if (!LevelConstructor.Instance.bDebugMode)
                     {
                         FigurePlaced?.Invoke(m_Spot);
                     }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class WaterAnim : MonoBehaviour
 {
     public Material m_Mat;
-    public float speed = 1f;
+    public float speed = 0.1f;
     private void Update()
     {
         var offset = m_Mat.mainTextureOffset;
