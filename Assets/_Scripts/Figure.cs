@@ -75,6 +75,7 @@ public class Figure : MonoBehaviour
     public void TakeDamage(float dmg)
     {
         if (!isActive) return;
+        if (LevelConstructor.Instance.bDebugMode) return;
         m_CurrentHealth -= dmg;
         Vector3 sc = new Vector3(m_CurrentHealth / m_Data.m_Health, 1, 1);
         m_HealtBar.transform.localScale = sc;
