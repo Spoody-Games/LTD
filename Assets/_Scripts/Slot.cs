@@ -39,7 +39,7 @@ public class Slot : MonoBehaviour
         isOccupied = false;
     }
 
-    // public Slot Left()
+    // public Slot Left().up
     // {
     //     var matr = SlotGenerator.Instance.m_SlotsMatrix;
     //     Vector2Int index = matr.FindSlotIndexInMatrix(this);
@@ -63,4 +63,6 @@ public class Slot : MonoBehaviour
     //     Vector2Int index = matr.FindSlotIndexInMatrix(this);
     //     return matr[index.x, index.y - 1];
     // }
+    
+    //recursively check neighboring slots for placement;
 }

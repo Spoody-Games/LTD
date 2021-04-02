@@ -36,6 +36,13 @@ public class PlacementController : MonoBehaviour
         screenPoint = CameraController.Instance.m_Camera.WorldToScreenPoint(gameObject.transform.position);
         hasPlaced = false;
         canPlace = true;
+        foreach (Slot slot in SlotGenerator.Instance.m_SlotsReferences)
+        {
+            if (slot.IsFree())
+            {
+                slot.GetComponent<MeshRenderer>().enabled = true;
+            }
+        }
 
         // var prevobj = Instantiate(gameObject);
         // prevobj.name = figureData.Name;
@@ -91,7 +98,10 @@ public class PlacementController : MonoBehaviour
     {
         var spawnpoints = FigureSpawner.Instance.m_Spots;
         FigureSpawnSpot closest = null;
-
+        foreach (Slot slot in SlotGenerator.Instance.m_SlotsReferences)
+        {
+            slot.GetComponent<MeshRenderer>().enabled = false;
+        }
         for (int i = 0; i < spawnpoints.Count; i++)
         {
             float dist = 9999;
