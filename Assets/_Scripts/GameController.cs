@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
+    public List<LevelData> LevelDatas;
     public static GameController Instance;
     public GameObject m_MainBase;
     public List<Transform> m_Buildings;
@@ -19,20 +20,43 @@ public class GameController : MonoBehaviour
     {
         Instance = this;
     }
-    private void Start()
+    private IEnumerator Start()
     {
         m_RayPlane = new Plane(Vector3.up, Vector3.zero);
-        InvokeRepeating("Spawn", 3, interval);
+
+        //getData
+        if (!LevelConstructor.Instance.bDebugMode)
+        {
+            if (LevelManager.m_Level == LevelDatas.Count)
+                LevelManager.m_Level = 0;
+            Debug.LogWarning(LevelManager.m_Level);
+            var data = LevelDatas[LevelManager.m_Level];
+            LevelConstructor.Instance.leveltoload = data;
+            FigureSpawner.Instance.m_data = data;
+            EnemyCount = data.m_Enemies[0].Count;
+
+            LevelConstructor.Instance.Load();
+            FigureSpawner.Instance.SpawnFigures();
+            yield return new WaitForSeconds(3);
+            StartCoroutine(Spawn(m_enemy));
+            InvokeRepeating("Spawn", 3, interval);
+        }
+
+
     }
-    public void Spawn()
+    IEnumerator Spawn(GameObject _Prefab)
     {
 
-        if (EnemyCount <= 0) { CancelInvoke("Spawn"); return; }
-        EnemyCount--;
-        var point = m_SpawnPoints.GetRandom();
-        var enemy = Instantiate(m_enemy, point.position, Quaternion.identity);
-        m_Enemies.Add(enemy.transform);
-        started = true;
+        if (EnemyCount >= 0)
+        {
+            EnemyCount--;
+            var point = m_SpawnPoints.GetRandom();
+            var enemy = Instantiate(m_enemy, point.position, Quaternion.identity);
+            m_Enemies.Add(enemy.transform);
+            started = true;
+        }
+        yield return new WaitForSeconds(interval);
+        StartCoroutine(Spawn(_Prefab));
     }
     private void Update()
     {
@@ -41,7 +65,9 @@ public class GameController : MonoBehaviour
             if (m_Enemies.Count == 0)
             {
                 started = false;
+                LevelManager.AdvanceLevel();
                 UIController.Instance.GameOver(true);
+
             }
         }
 

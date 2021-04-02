@@ -5,24 +5,26 @@ using UnityEngine;
 
 public class FigureSpawner : MonoBehaviour
 {
-    public List<GameObject> m_figures;
+    public static FigureSpawner Instance;
+    public LevelData m_data;
     public List<FigureSpawnSpot> m_Spots;
-    private void Start()
+    public void SpawnFigures()
     {
         if (!LevelConstructor.Instance.bDebugMode)
-            m_Spots.ForEach(x => x.Spawnfigure(m_figures.GetRandom()));
+            m_Spots.ForEach(x => x.Spawnfigure(m_data.m_figures.GetRandom().m_Prefab));
     }
     private void Awake()
     {
+        Instance = this;
         PlacementController.FigurePlaced += OnFigurePlaced;
     }
     private void OnDestroy()
     {
         PlacementController.FigurePlaced -= OnFigurePlaced;
     }
-    private void OnFigurePlaced(FigureSpawnSpot obj)
+    private void OnFigurePlaced(FigureSpawnSpot obj, Figure figurePlaced)
     {
-        Debug.LogWarning("PLACED");
-        obj.Spawnfigure(m_figures.GetRandom());
+        Debug.Log("FigurePlaced");
+        obj.Spawnfigure(m_data.m_figures.GetRandom().m_Prefab);
     }
 }

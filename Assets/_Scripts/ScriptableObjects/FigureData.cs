@@ -15,5 +15,6 @@ public class FigureData : ScriptableObject
     public float m_Damage;
     public float m_ReloadTime;
     public float m_Health;
+    public GameObject m_Prefab;
 
 }

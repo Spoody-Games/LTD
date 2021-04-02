@@ -1,18 +1,37 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class EnemyBehaviour : MonoBehaviour
 {
+
     public EnemyData m_data;
     public NavMeshAgent m_NavAgent;
     public Transform m_Target;
     public Transform m_MainTarget;
     NavMeshPathStatus prevStatus = NavMeshPathStatus.PathComplete;
+    NavMeshPath prevPath;
     Vector3 targetpos;
     bool inRange = false;
     bool gameover = false;
+    public GameObject m_Alarm;
+    private void Awake()
+    {
+        PlacementController.FigurePlaced += OnFigurePlaced;
+    }
+    private void OnDestroy()
+    {
+        PlacementController.FigurePlaced -= OnFigurePlaced;
+    }
+
+    private void OnFigurePlaced(FigureSpawnSpot obj, Figure figurePlaced)
+    {
+        if(Vector3.Distance(figurePlaced.transform.position, this.transform.position) < figurePlaced.m_Data.m_AttackRadius)
+            ShowAlarm();
+        // ShowAlarm();
+    }
 
     void Start()
     {
@@ -64,12 +83,26 @@ public class EnemyBehaviour : MonoBehaviour
         {
             gameover = true;
         }
+        prevPath = m_NavAgent.path;
+    }
+    public void ShowAlarm()
+    {
+        StartCoroutine(ShowAlarmRoutine());
+    }
+
+    IEnumerator ShowAlarmRoutine()
+    {
+        m_Alarm.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        m_Alarm.SetActive(false);
     }
 
 
     void Update()
     {
+
         if (gameover) return;
+
         if (m_NavAgent.path.status != prevStatus)
         {
             prevStatus = m_NavAgent.path.status;

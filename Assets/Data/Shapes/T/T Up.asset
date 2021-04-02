@@ -25,3 +25,5 @@ MonoBehaviour:
   m_Damage: 1
   m_ReloadTime: 1
   m_Health: 100
+  m_Prefab: {fileID: 5036935802627664738, guid: aac087ba49efc534d9ef76d60e0187ee,
+    type: 3}

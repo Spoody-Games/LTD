@@ -76,6 +76,7 @@ public class Figure : MonoBehaviour
     {
         if (!isActive) return;
         if (LevelConstructor.Instance.bDebugMode) return;
+        if (!m_Data.isTimed) return;
         m_CurrentHealth -= dmg;
         Vector3 sc = new Vector3(m_CurrentHealth / m_Data.m_Health, 1, 1);
         m_HealtBar.transform.localScale = sc;
@@ -106,7 +107,7 @@ public class Figure : MonoBehaviour
     }
     public void Merge()
     {
-        Debug.LogWarning("merged");
+        Debug.LogWarning("Figures Merged");
         mergefactor++;
         m_CurrentHealth = m_Data.m_Health;
         if (m_Data.isTurret)

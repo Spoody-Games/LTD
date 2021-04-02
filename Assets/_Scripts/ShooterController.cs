@@ -47,8 +47,6 @@ public class ShooterController : MonoBehaviour
 
     IEnumerator Shoot()
     {
-        Debug.LogWarning("Shooting");
-
         if (m_Target)
         {
             var dist = Vector3.Distance(transform.position, m_Target.transform.position);

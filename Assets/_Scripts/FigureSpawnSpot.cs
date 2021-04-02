@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class FigureSpawnSpot : MonoBehaviour
 {
+    public Figure m_Figure;
     public void Spawnfigure(GameObject figure)
     {
-        var fg = Instantiate(figure, transform.position, Quaternion.identity);
-        fg.GetComponent<PlacementController>().SetSpot(this);
+        m_Figure = Instantiate(figure, transform.position, Quaternion.identity).GetComponent<Figure>();
+        m_Figure.GetComponent<PlacementController>().SetSpot(this);
+    }
+    public void RemoveFig()
+    {
+        m_Figure = null;
     }
 }

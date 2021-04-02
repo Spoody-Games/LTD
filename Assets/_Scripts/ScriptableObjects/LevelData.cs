@@ -7,6 +7,7 @@ public class LevelData : ScriptableObject
 {
     public List<FigureData> m_figures;
     public List<RoadData> m_Road;
+    public List<EnemiesData> m_Enemies;
     public List<ObstacleData> m_Obstacles;
 }
 
@@ -32,4 +33,11 @@ public class RoadData
     {
         index = a;
     }
+}
+[System.Serializable]
+public class EnemiesData
+{
+    public GameObject Prefab;
+    public int Count;
+
 }
