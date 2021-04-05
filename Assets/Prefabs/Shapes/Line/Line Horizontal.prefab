@@ -409,7 +409,7 @@ Transform:
   m_GameObject: {fileID: 344824083967908268}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.5, y: 1, z: 3.5}
+  m_LocalScale: {x: 3.5, y: 3.5, z: 3.5}
   m_Children:
   - {fileID: 344824083501174845}
   - {fileID: 344824083080541031}
@@ -552,6 +552,7 @@ MonoBehaviour:
   - {fileID: 1278000071601319487}
   - {fileID: 3507655993270912889}
   - {fileID: 3937651937661908015}
+  m_MergeMaterials: []
 --- !u!1 &1300884769767648832
 GameObject:
   m_ObjectHideFlags: 0

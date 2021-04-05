@@ -29,7 +29,6 @@ public class GameController : MonoBehaviour
         {
             if (LevelManager.m_Level == LevelDatas.Count)
                 LevelManager.m_Level = 0;
-            Debug.LogWarning(LevelManager.m_Level);
             var data = LevelDatas[LevelManager.m_Level];
             LevelConstructor.Instance.leveltoload = data;
             FigureSpawner.Instance.m_data = data;
@@ -41,8 +40,6 @@ public class GameController : MonoBehaviour
             StartCoroutine(Spawn(m_enemy));
             InvokeRepeating("Spawn", 3, interval);
         }
-
-
     }
     IEnumerator Spawn(GameObject _Prefab)
     {

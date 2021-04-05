@@ -42,8 +42,8 @@ public class Figure : MonoBehaviour
     public List<Vector2Int> OccupyingSlots;
     public List<ShooterController> m_Shooters;
     public List<MeshRenderer> m_meshes;
-
-
+    public List<Material> m_MergeMaterials;
+    public List<GameObject> m_Levels;
 
     private IEnumerator Start()
     {
@@ -108,7 +108,10 @@ public class Figure : MonoBehaviour
     public void Merge()
     {
         Debug.LogWarning("Figures Merged");
+        m_Levels[mergefactor-1].SetActive(false);
         mergefactor++;
+        m_Levels[mergefactor-1].SetActive(true);
+
         m_CurrentHealth = m_Data.m_Health;
         if (m_Data.isTurret)
             GetComponentsInChildren<ShooterController>().ToList().ForEach(x => x.Upgrade());
