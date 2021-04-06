@@ -98,6 +98,7 @@ public class PlacementController : MonoBehaviour
     {
         var spawnpoints = FigureSpawner.Instance.m_Spots;
         FigureSpawnSpot closest = null;
+
         foreach (Slot slot in SlotGenerator.Instance.m_SlotsReferences)
         {
             slot.GetComponent<MeshRenderer>().enabled = false;
@@ -126,6 +127,7 @@ public class PlacementController : MonoBehaviour
                 }
             }
         }
+
         transform.position = ghost.transform.position;
         m_MeshesToLift.ForEach(x =>
         {
@@ -133,29 +135,31 @@ public class PlacementController : MonoBehaviour
             x.transform.DOLocalMoveY(pos.y - 1, 0.2f);
         });
         Destroy(ghost);
+
         if (SelectedSlot)
         {
             Vector2Int CoreIndex = SlotGenerator.Instance.m_SlotsMatrix.FindSlotIndexInMatrix(SelectedSlot);
 
-            if (SelectedSlot.IsFree())
+
+            if (CheckSlot(SelectedSlot, m_Figure))
             {
-                //PLACING
-                Debug.Log("attempting Placement");
-                for (int i = 0; i < figureData.indexes.Count; i++)
-                {
-                    var x = CoreIndex.x + figureData.indexes[i].x;
-                    var y = CoreIndex.y + figureData.indexes[i].y;
+                // //PLACING
+                // Debug.Log("attempting Placement");
+                // for (int i = 0; i < figureData.indexes.Count; i++)
+                // {
+                //     var x = CoreIndex.x + figureData.indexes[i].x;
+                //     var y = CoreIndex.y + figureData.indexes[i].y;
 
-                    if (x < 0 || x >= 12) { WrongPlacement("wrong X pos"); return; }
-                    if (y < 0 || y >= 14) { WrongPlacement("wrong Y pos"); return; }
+                //     if (x < 0 || x >= 12) { WrongPlacement("wrong X pos"); return; }
+                //     if (y < 0 || y >= 14) { WrongPlacement("wrong Y pos"); return; }
 
-                    var tmpslot = SlotGenerator.Instance.m_SlotsMatrix[x, y];
-                    if (!tmpslot.IsFree())
-                    {
-                        WrongPlacement("One of the Slots is occupied");
-                        return;
-                    }
-                }
+                //     var tmpslot = SlotGenerator.Instance.m_SlotsMatrix[x, y];
+                //     if (!tmpslot.IsFree())
+                //     {
+                //         WrongPlacement("One of the Slots is occupied");
+                //         return;
+                //     }
+                // }
                 if (canPlace)
                 {
                     for (int i = 0; i < figureData.indexes.Count; i++)
@@ -263,7 +267,6 @@ public class PlacementController : MonoBehaviour
             WrongPlacement("Slot Not Found");
             return;
         }
-
         if (!hasPlaced)
         {
             transform.position = StartPos;
@@ -275,6 +278,36 @@ public class PlacementController : MonoBehaviour
             GameController.Instance.m_Buildings.Add(transform);
             fig.Activate();
         }
+    }
+    public void CheckNeighboringSlots(Slot _Origin, Figure _fig)
+    {
+
+    }
+    public bool CheckSlot(Slot _slot, Figure _fig)
+    {
+        Vector2Int CoreIndex = SlotGenerator.Instance.m_SlotsMatrix.FindSlotIndexInMatrix(_slot);
+        if (_slot.IsFree())
+        {
+            //PLACING
+            Debug.Log("attempting Placement");
+            for (int i = 0; i < _fig.m_Data.indexes.Count; i++)
+            {
+                var x = CoreIndex.x + _fig.m_Data.indexes[i].x;
+                var y = CoreIndex.y + _fig.m_Data.indexes[i].y;
+
+                if (x < 0 || x >= 12) { WrongPlacement("wrong X pos"); return false; }
+                if (y < 0 || y >= 14) { WrongPlacement("wrong Y pos"); return false; }
+
+                var tmpslot = SlotGenerator.Instance.m_SlotsMatrix[x, y];
+                if (!tmpslot.IsFree())
+                {
+                    WrongPlacement("One of the Slots is occupied");
+                    return false;
+                }
+            }
+            return true;
+        }
+        else return false;
     }
     IEnumerator DelayedDestroy(float time)
     {

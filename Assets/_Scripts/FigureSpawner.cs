@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -24,7 +24,7 @@ public class FigureSpawner : MonoBehaviour
     }
     private void OnFigurePlaced(FigureSpawnSpot obj, Figure figurePlaced)
     {
-        Debug.Log("FigurePlaced");
+        Debug.Log("Figure Placed");
         obj.Spawnfigure(m_data.m_figures.GetRandom().m_Prefab);
     }
 }
