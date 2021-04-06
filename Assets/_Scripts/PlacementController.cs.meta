@@ -5,6 +5,8 @@ MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - m_HoloMat: {fileID: 2100000, guid: 59a965cc895d2d14cb71f69bd4a58035, type: 2}
+  - m_HoloCannotPlaceMat: {fileID: 2100000, guid: da30e0b3a53d4b94cbb4b3f52760a870,
+      type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

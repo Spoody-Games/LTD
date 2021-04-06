@@ -1369,6 +1369,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DEBUG: 0
   m_HoloMat: {fileID: 2100000, guid: 59a965cc895d2d14cb71f69bd4a58035, type: 2}
+  m_HoloCannotPlaceMat: {fileID: 2100000, guid: da30e0b3a53d4b94cbb4b3f52760a870,
+    type: 2}
   m_MeshesToLift:
   - {fileID: 3556854748286032082}
   - {fileID: 1599373212993451112}
@@ -1542,6 +1544,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DEBUG: 0
   m_HoloMat: {fileID: 0}
+  m_HoloCannotPlaceMat: {fileID: 0}
   m_MeshesToLift: []
 --- !u!208 &6069158513722478811
 NavMeshObstacle:
@@ -1668,6 +1671,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DEBUG: 0
   m_HoloMat: {fileID: 0}
+  m_HoloCannotPlaceMat: {fileID: 0}
   m_MeshesToLift: []
 --- !u!208 &6069158514221172616
 NavMeshObstacle:
@@ -1794,6 +1798,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DEBUG: 0
   m_HoloMat: {fileID: 0}
+  m_HoloCannotPlaceMat: {fileID: 0}
   m_MeshesToLift: []
 --- !u!208 &6069158514465606032
 NavMeshObstacle:

@@ -19,6 +19,7 @@ public class PlacementController : MonoBehaviour
     FigureSpawnSpot m_Spot;
     public bool DEBUG = false;
     public Material m_HoloMat;
+    public Material m_HoloCannotPlaceMat;
     public List<GameObject> m_MeshesToLift;
     bool canPlace = true;
     private void Start()
@@ -62,6 +63,7 @@ public class PlacementController : MonoBehaviour
             x.transform.DOLocalMoveY(pos.y + 1, 0.2f);
         });
     }
+    Slot TmpSlot = null;
 
     void OnMouseDrag()
     {
@@ -84,6 +86,30 @@ public class PlacementController : MonoBehaviour
         {
             objectHit = hit.transform;
             SelectedSlot = hit.transform.GetComponent<Slot>();
+            if (TmpSlot != SelectedSlot)
+            {
+                TmpSlot = SelectedSlot;
+                canPlace = CheckSlot(SelectedSlot, m_Figure);
+
+                if (canPlace)
+                {
+                    ghost.GetComponentsInChildren<MeshRenderer>().ToList().ForEach(x => x.material = m_HoloMat);
+                }
+                else
+                {
+                    if (SelectedSlot.m_OccupyingFigure)
+                    {
+                        if (SelectedSlot.m_OccupyingFigure.m_Data == m_Figure.m_Data && SelectedSlot.m_OccupyingFigure.mergefactor == m_Figure.mergefactor)
+                        {
+                            ghost.GetComponentsInChildren<MeshRenderer>().ToList().ForEach(x => x.material = m_HoloMat);
+                        }
+                        else
+                            ghost.GetComponentsInChildren<MeshRenderer>().ToList().ForEach(x => x.material = m_HoloCannotPlaceMat);
+                    }
+                    else
+                        ghost.GetComponentsInChildren<MeshRenderer>().ToList().ForEach(x => x.material = m_HoloCannotPlaceMat);
+                }
+            }
         }
         if (objectHit)
             ghost.transform.position = objectHit.position;
@@ -96,6 +122,7 @@ public class PlacementController : MonoBehaviour
     }
     private void OnMouseUp()
     {
+        #region BaseMerging
         var spawnpoints = FigureSpawner.Instance.m_Spots;
         FigureSpawnSpot closest = null;
 
@@ -121,12 +148,16 @@ public class PlacementController : MonoBehaviour
             {
                 if (closest.m_Figure.mergefactor == m_Figure.mergefactor)
                 {
+                    ghost.transform.position = closest.transform.position;
+                    transform.position = closest.transform.position;
+
                     closest.m_Figure.Merge();
                     StartCoroutine(DelayedDestroy(0.2f));
                     return;
                 }
             }
         }
+        #endregion
 
         transform.position = ghost.transform.position;
         m_MeshesToLift.ForEach(x =>
@@ -139,107 +170,31 @@ public class PlacementController : MonoBehaviour
         if (SelectedSlot)
         {
             Vector2Int CoreIndex = SlotGenerator.Instance.m_SlotsMatrix.FindSlotIndexInMatrix(SelectedSlot);
-
-
-            if (CheckSlot(SelectedSlot, m_Figure))
+            if (canPlace)
             {
-                // //PLACING
-                // Debug.Log("attempting Placement");
-                // for (int i = 0; i < figureData.indexes.Count; i++)
-                // {
-                //     var x = CoreIndex.x + figureData.indexes[i].x;
-                //     var y = CoreIndex.y + figureData.indexes[i].y;
-
-                //     if (x < 0 || x >= 12) { WrongPlacement("wrong X pos"); return; }
-                //     if (y < 0 || y >= 14) { WrongPlacement("wrong Y pos"); return; }
-
-                //     var tmpslot = SlotGenerator.Instance.m_SlotsMatrix[x, y];
-                //     if (!tmpslot.IsFree())
-                //     {
-                //         WrongPlacement("One of the Slots is occupied");
-                //         return;
-                //     }
-                // }
-                if (canPlace)
+                for (int i = 0; i < figureData.indexes.Count; i++)
                 {
-                    for (int i = 0; i < figureData.indexes.Count; i++)
-                    {
-                        var x = CoreIndex.x + figureData.indexes[i].x;
-                        var y = CoreIndex.y + figureData.indexes[i].y;
-                        var slot = SlotGenerator.Instance.m_SlotsMatrix[x, y];
-                        slot.Occupy(m_Figure);
-                        m_Figure.OccupyingSlots.Add(new Vector2Int(x, y));
-                        transform.GetComponentsInChildren<NavMeshObstacle>().ToList().ForEach(n => n.enabled = true);
-                    }
-                    hasPlaced = true;
-                    Debug.Log("Placed");
-                    if (!LevelConstructor.Instance.bDebugMode)
-                    {
-                        FigurePlaced?.Invoke(m_Spot, m_Figure);
-                    }
+                    var x = CoreIndex.x + figureData.indexes[i].x;
+                    var y = CoreIndex.y + figureData.indexes[i].y;
+                    var slot = SlotGenerator.Instance.m_SlotsMatrix[x, y];
+                    slot.Occupy(m_Figure);
+                    m_Figure.OccupyingSlots.Add(new Vector2Int(x, y));
+                    transform.GetComponentsInChildren<NavMeshObstacle>().ToList().ForEach(n => n.enabled = true);
                 }
-                else
+                hasPlaced = true;
+                Debug.Log("Placed");
+                if (!LevelConstructor.Instance.bDebugMode)
                 {
-                    WrongPlacement("Cannot place");
-                    return;
+                    FigurePlaced?.Invoke(m_Spot, m_Figure);
                 }
             }
             else
             {
-                if (SelectedSlot.isObstacle)
+                if (!SelectedSlot.m_OccupyingFigure)
                 {
-                    WrongPlacement("Placing on an Obstacle");
+                    WrongPlacement("Cannot Place");
                     return;
                 }
-
-                if (SelectedSlot.isRoad)
-                {
-                    WrongPlacement("Placing on an Road");
-                    return;
-                }
-                #region oldMerging
-
-                //MERGING ALL SPOTS ALIGNED
-                // if (SelectedSlot.m_OccupyingFigure.m_Data.figureType == m_Figure.m_Data.figureType)
-                // {
-                //     Debug.Log("attempting merge");
-                //     Figure fig = null;
-                //     for (int i = 0; i < figureData.indexes.Count; i++)
-                //     {
-                //         var x = CoreIndex.x + figureData.indexes[i].x;
-                //         var y = CoreIndex.y + figureData.indexes[i].y;
-
-                //         if (x < 0 || x >= 12) { WrongPlacement("wrong X pos"); return; }
-                //         if (y < 0 || y >= 14) { WrongPlacement("wrong Y pos"); return; }
-
-                //         var tmpslot = SlotGenerator.Instance.m_SlotsMatrix[x, y];
-                //         if (tmpslot.isOccupied)
-                //         {
-                //             if (tmpslot.m_OccupyingFigure.m_Data.figureType != m_Figure.m_Data.figureType)
-                //             {
-                //                 WrongPlacement("Merging different figures");
-                //                 return;
-                //             }
-                //         }
-                //         else
-                //         {
-                //             WrongPlacement("Figures not aligned");
-                //             return;
-                //         }
-                //         fig = tmpslot.m_OccupyingFigure;
-                //     }
-                //     Debug.Log("Merged");
-                //     FigurePlaced?.Invoke(m_Spot);
-                //     fig.Merge();
-                //     Destroy(gameObject);
-                //     return;
-                // }
-                // else
-                // {
-                //     WrongPlacement("Merging different figures");
-                //     return;
-                // }
-                #endregion
 
                 //Merging Version 2 (no aliment + mergefactor equal)
                 if (SelectedSlot.m_OccupyingFigure.m_Data.figureType == m_Figure.m_Data.figureType)
@@ -253,6 +208,7 @@ public class PlacementController : MonoBehaviour
                     else
                     {
                         WrongPlacement("Merging different leveled figures");
+                        return;
                     }
                 }
                 else
@@ -279,29 +235,43 @@ public class PlacementController : MonoBehaviour
             fig.Activate();
         }
     }
-    public void CheckNeighboringSlots(Slot _Origin, Figure _fig)
+    public Slot CheckNeighboringSlots(Slot _Origin, Figure _fig)
     {
-
+        List<Slot> adjacentSlots = new List<Slot>();
+        adjacentSlots.Add(_Origin.Left());
+        adjacentSlots.Add(_Origin.Right());
+        adjacentSlots.Add(_Origin.Up());
+        adjacentSlots.Add(_Origin.Down());
+        adjacentSlots.Add(_Origin.Left().Up());
+        adjacentSlots.Add(_Origin.Left().Down());
+        adjacentSlots.Add(_Origin.Right().Up());
+        adjacentSlots.Add(_Origin.Right().Down());
+        for (int i = 0; i < adjacentSlots.Count; i++)
+        {
+            if (CheckSlot(adjacentSlots[i], m_Figure))
+            {
+                return adjacentSlots[i];
+            }
+        }
+        return null;
     }
     public bool CheckSlot(Slot _slot, Figure _fig)
     {
         Vector2Int CoreIndex = SlotGenerator.Instance.m_SlotsMatrix.FindSlotIndexInMatrix(_slot);
         if (_slot.IsFree())
         {
-            //PLACING
-            Debug.Log("attempting Placement");
+            Debug.LogWarning("CheckingSlot");
             for (int i = 0; i < _fig.m_Data.indexes.Count; i++)
             {
                 var x = CoreIndex.x + _fig.m_Data.indexes[i].x;
                 var y = CoreIndex.y + _fig.m_Data.indexes[i].y;
 
-                if (x < 0 || x >= 12) { WrongPlacement("wrong X pos"); return false; }
-                if (y < 0 || y >= 14) { WrongPlacement("wrong Y pos"); return false; }
+                if (x < 0 || x >= 12) { return false; }
+                if (y < 0 || y >= 14) { return false; }
 
                 var tmpslot = SlotGenerator.Instance.m_SlotsMatrix[x, y];
                 if (!tmpslot.IsFree())
                 {
-                    WrongPlacement("One of the Slots is occupied");
                     return false;
                 }
             }

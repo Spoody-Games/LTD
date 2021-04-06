@@ -1149,6 +1149,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DEBUG: 0
   m_HoloMat: {fileID: 2100000, guid: 59a965cc895d2d14cb71f69bd4a58035, type: 2}
+  m_HoloCannotPlaceMat: {fileID: 2100000, guid: da30e0b3a53d4b94cbb4b3f52760a870,
+    type: 2}
   m_MeshesToLift:
   - {fileID: 3556854748286032082}
   - {fileID: 1599373212993451112}
@@ -1322,6 +1324,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DEBUG: 0
   m_HoloMat: {fileID: 0}
+  m_HoloCannotPlaceMat: {fileID: 0}
   m_MeshesToLift: []
 --- !u!208 &6069158513722478811
 NavMeshObstacle:
@@ -1448,6 +1451,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DEBUG: 0
   m_HoloMat: {fileID: 0}
+  m_HoloCannotPlaceMat: {fileID: 0}
   m_MeshesToLift: []
 --- !u!208 &6069158514221172616
 NavMeshObstacle:
@@ -1574,6 +1578,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DEBUG: 0
   m_HoloMat: {fileID: 0}
+  m_HoloCannotPlaceMat: {fileID: 0}
   m_MeshesToLift: []
 --- !u!208 &6069158514465606032
 NavMeshObstacle:
@@ -3133,6 +3138,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6069158512966184265}
     m_Modifications:
+    - target: {fileID: 698848380069777237, guid: bcaaeb9d476b1a741b781376f9f3bc29,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1670125063981892299, guid: bcaaeb9d476b1a741b781376f9f3bc29,
         type: 3}
       propertyPath: m_RootOrder
@@ -3202,6 +3212,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Archer (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2012000950666166486, guid: bcaaeb9d476b1a741b781376f9f3bc29,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2012000951001257297, guid: bcaaeb9d476b1a741b781376f9f3bc29,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3264659141582921692, guid: bcaaeb9d476b1a741b781376f9f3bc29,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcaaeb9d476b1a741b781376f9f3bc29, type: 3}

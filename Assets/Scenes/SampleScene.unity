@@ -157,7 +157,7 @@ Transform:
   m_GameObject: {fileID: 3339680}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.75, y: 0, z: -12.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 42
@@ -236,7 +236,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &3339686
 NavMeshObstacle:
@@ -353,7 +353,7 @@ Transform:
   m_GameObject: {fileID: 13314867}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.75, y: 0, z: -19.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 18
@@ -432,7 +432,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &13314873
 NavMeshObstacle:
@@ -705,7 +705,7 @@ Transform:
   m_GameObject: {fileID: 39999039}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.75, y: 0, z: -22.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 5
@@ -784,7 +784,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &39999045
 NavMeshObstacle:
@@ -832,7 +832,7 @@ Transform:
   m_GameObject: {fileID: 42647499}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 19.25, y: 0, z: 19.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 155
@@ -911,7 +911,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &42647505
 NavMeshObstacle:
@@ -959,7 +959,7 @@ Transform:
   m_GameObject: {fileID: 42922306}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 12.25, y: 0, z: 8.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 117
@@ -1038,7 +1038,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &42922312
 NavMeshObstacle:
@@ -1241,7 +1241,7 @@ Transform:
   m_GameObject: {fileID: 53316373}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.75, y: 0, z: -12.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 41
@@ -1320,7 +1320,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &53316379
 NavMeshObstacle:
@@ -1848,7 +1848,7 @@ Transform:
   m_GameObject: {fileID: 77999160}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.75, y: 0, z: 15.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 138
@@ -1927,7 +1927,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &77999166
 NavMeshObstacle:
@@ -1975,7 +1975,7 @@ Transform:
   m_GameObject: {fileID: 78276561}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -5.25, y: 0, z: -15.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 28
@@ -2054,7 +2054,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &78276567
 NavMeshObstacle:
@@ -2108,7 +2108,7 @@ Transform:
   m_GameObject: {fileID: 82135362}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 15.75, y: 0, z: 22.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 166
@@ -2187,7 +2187,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &82135368
 NavMeshObstacle:
@@ -2310,7 +2310,7 @@ Transform:
   m_GameObject: {fileID: 87584586}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -19.25, y: 0, z: 8.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 108
@@ -2389,7 +2389,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &87584592
 NavMeshObstacle:
@@ -2586,7 +2586,7 @@ Transform:
   m_GameObject: {fileID: 96250855}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.75, y: 0, z: 1.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 90
@@ -2665,7 +2665,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &96250861
 NavMeshObstacle:
@@ -3012,7 +3012,7 @@ Transform:
   m_GameObject: {fileID: 110370847}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -8.75, y: 0, z: -22.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 3
@@ -3091,7 +3091,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &110370853
 NavMeshObstacle:
@@ -3208,7 +3208,7 @@ Transform:
   m_GameObject: {fileID: 114921411}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 15.75, y: 0, z: 1.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 94
@@ -3287,7 +3287,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &114921417
 NavMeshObstacle:
@@ -3427,7 +3427,7 @@ Transform:
   m_GameObject: {fileID: 122543515}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -5.25, y: 0, z: -19.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 16
@@ -3506,7 +3506,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &122543521
 NavMeshObstacle:
@@ -3712,7 +3712,7 @@ Transform:
   m_GameObject: {fileID: 130767400}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 8.75, y: 0, z: -1.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 80
@@ -3791,7 +3791,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &130767406
 NavMeshObstacle:
@@ -4407,7 +4407,7 @@ Transform:
   m_GameObject: {fileID: 155508610}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 8.75, y: 0, z: 22.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 164
@@ -4486,7 +4486,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &155508616
 NavMeshObstacle:
@@ -4678,7 +4678,7 @@ Transform:
   m_GameObject: {fileID: 168103524}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 12.25, y: 0, z: -5.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 69
@@ -4757,7 +4757,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &168103530
 NavMeshObstacle:
@@ -4954,7 +4954,7 @@ Transform:
   m_GameObject: {fileID: 183233877}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -19.25, y: 0, z: -15.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 24
@@ -5033,7 +5033,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &183233883
 NavMeshObstacle:
@@ -5179,7 +5179,7 @@ Transform:
   m_GameObject: {fileID: 195811774}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 8.75, y: 0, z: -5.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 68
@@ -5258,7 +5258,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &195811780
 NavMeshObstacle:
@@ -5306,7 +5306,7 @@ Transform:
   m_GameObject: {fileID: 198111885}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 8.75, y: 0, z: 15.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 140
@@ -5385,7 +5385,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &198111891
 NavMeshObstacle:
@@ -5651,7 +5651,7 @@ Transform:
   m_GameObject: {fileID: 206113031}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 19.25, y: 0, z: 1.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 95
@@ -5730,7 +5730,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &206113037
 NavMeshObstacle:
@@ -5984,7 +5984,7 @@ Transform:
   m_GameObject: {fileID: 211788930}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -5.25, y: 0, z: -1.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 76
@@ -6063,7 +6063,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &211788936
 NavMeshObstacle:
@@ -6504,7 +6504,7 @@ Transform:
   m_GameObject: {fileID: 237453063}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 5.25, y: 0, z: 15.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 139
@@ -6583,7 +6583,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &237453069
 NavMeshObstacle:
@@ -6797,7 +6797,7 @@ Transform:
   m_GameObject: {fileID: 252784796}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 8.75, y: 0, z: 19.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 152
@@ -6876,7 +6876,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &252784802
 NavMeshObstacle:
@@ -7155,7 +7155,7 @@ Transform:
   m_GameObject: {fileID: 273314073}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -5.25, y: 0, z: -12.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 40
@@ -7234,7 +7234,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &273314079
 NavMeshObstacle:
@@ -7834,7 +7834,7 @@ Transform:
   m_GameObject: {fileID: 302563491}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 15.75, y: 0, z: -22.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 10
@@ -7913,7 +7913,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &302563497
 NavMeshObstacle:
@@ -7961,7 +7961,7 @@ Transform:
   m_GameObject: {fileID: 309841207}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.75, y: 0, z: -8.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 53
@@ -8040,7 +8040,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &309841213
 NavMeshObstacle:
@@ -8088,7 +8088,7 @@ Transform:
   m_GameObject: {fileID: 312605488}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -8.75, y: 0, z: -15.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 27
@@ -8167,7 +8167,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &312605494
 NavMeshObstacle:
@@ -8901,7 +8901,7 @@ Transform:
   m_GameObject: {fileID: 335622170}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 19.25, y: 0, z: 22.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 167
@@ -8980,7 +8980,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &335622176
 NavMeshObstacle:
@@ -10253,7 +10253,7 @@ Transform:
   m_GameObject: {fileID: 384404161}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -19.25, y: 0, z: -5.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 60
@@ -10332,7 +10332,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &384404167
 NavMeshObstacle:
@@ -10782,7 +10782,7 @@ Transform:
   m_GameObject: {fileID: 405871669}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 8.75, y: 0, z: -12.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 44
@@ -10861,7 +10861,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &405871675
 NavMeshObstacle:
@@ -11303,7 +11303,7 @@ Transform:
   m_GameObject: {fileID: 436541667}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 15.75, y: 0, z: 19.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 154
@@ -11382,7 +11382,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &436541673
 NavMeshObstacle:
@@ -11430,7 +11430,7 @@ Transform:
   m_GameObject: {fileID: 436678307}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.75, y: 0, z: 1.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 89
@@ -11509,7 +11509,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &436678313
 NavMeshObstacle:
@@ -12091,7 +12091,7 @@ Transform:
   m_GameObject: {fileID: 468072969}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -15.749999, y: 0, z: 1.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 85
@@ -12170,7 +12170,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &468072975
 NavMeshObstacle:
@@ -12230,7 +12230,7 @@ Transform:
   m_GameObject: {fileID: 480726653}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -8.75, y: 0, z: -5.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 63
@@ -12309,7 +12309,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &480726659
 NavMeshObstacle:
@@ -12977,7 +12977,7 @@ Transform:
   m_GameObject: {fileID: 504241932}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -12.25, y: 0, z: 8.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 110
@@ -13056,7 +13056,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &504241938
 NavMeshObstacle:
@@ -13110,7 +13110,7 @@ Transform:
   m_GameObject: {fileID: 504847168}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 15.75, y: 0, z: -1.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 82
@@ -13189,7 +13189,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &504847174
 NavMeshObstacle:
@@ -13381,7 +13381,7 @@ Transform:
   m_GameObject: {fileID: 521046564}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -15.749999, y: 0, z: -12.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 37
@@ -13460,7 +13460,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &521046570
 NavMeshObstacle:
@@ -13670,7 +13670,7 @@ Transform:
   m_GameObject: {fileID: 544228180}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 5.25, y: 0, z: -12.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 43
@@ -13749,7 +13749,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &544228186
 NavMeshObstacle:
@@ -14111,7 +14111,7 @@ Transform:
   m_GameObject: {fileID: 551126616}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -19.25, y: 0, z: 1.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 84
@@ -14190,7 +14190,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &551126622
 NavMeshObstacle:
@@ -14472,7 +14472,7 @@ Transform:
   m_GameObject: {fileID: 570514594}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -12.25, y: 0, z: -12.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 38
@@ -14551,7 +14551,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &570514600
 NavMeshObstacle:
@@ -14972,7 +14972,7 @@ Transform:
   m_GameObject: {fileID: 596078086}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -8.75, y: 0, z: 5.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 99
@@ -15051,7 +15051,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &596078092
 NavMeshObstacle:
@@ -15099,7 +15099,7 @@ Transform:
   m_GameObject: {fileID: 597982327}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 19.25, y: 0, z: -8.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 59
@@ -15178,7 +15178,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &597982333
 NavMeshObstacle:
@@ -15232,7 +15232,7 @@ Transform:
   m_GameObject: {fileID: 599634629}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 12.25, y: 0, z: -19.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 21
@@ -15311,7 +15311,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &599634635
 NavMeshObstacle:
@@ -15359,7 +15359,7 @@ Transform:
   m_GameObject: {fileID: 603185891}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 15.75, y: 0, z: -15.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 34
@@ -15438,7 +15438,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &603185897
 NavMeshObstacle:
@@ -15991,7 +15991,7 @@ Transform:
   m_GameObject: {fileID: 632287125}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 5.25, y: 0, z: -15.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 31
@@ -16070,7 +16070,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &632287131
 NavMeshObstacle:
@@ -16118,7 +16118,7 @@ Transform:
   m_GameObject: {fileID: 633639919}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 5.25, y: 0, z: -1.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 79
@@ -16197,7 +16197,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &633639925
 NavMeshObstacle:
@@ -16407,7 +16407,7 @@ Transform:
   m_GameObject: {fileID: 644968857}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 5.25, y: 0, z: 1.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 91
@@ -16486,7 +16486,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &644968863
 NavMeshObstacle:
@@ -16540,7 +16540,7 @@ Transform:
   m_GameObject: {fileID: 648077364}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.75, y: 0, z: -8.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 54
@@ -16619,7 +16619,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &648077370
 NavMeshObstacle:
@@ -16667,7 +16667,7 @@ Transform:
   m_GameObject: {fileID: 650007349}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 19.25, y: 0, z: -22.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 11
@@ -16746,7 +16746,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &650007355
 NavMeshObstacle:
@@ -16863,7 +16863,7 @@ Transform:
   m_GameObject: {fileID: 650788050}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.75, y: 0, z: 12.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 125
@@ -16942,7 +16942,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &650788056
 NavMeshObstacle:
@@ -16990,7 +16990,7 @@ Transform:
   m_GameObject: {fileID: 650807947}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 8.75, y: 0, z: 12.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 128
@@ -17069,7 +17069,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &650807953
 NavMeshObstacle:
@@ -17417,7 +17417,7 @@ Transform:
   m_GameObject: {fileID: 673778939}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -15.749999, y: 0, z: 15.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 133
@@ -17496,7 +17496,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &673778945
 NavMeshObstacle:
@@ -17848,7 +17848,7 @@ Transform:
   m_GameObject: {fileID: 702013279}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 15.75, y: 0, z: 8.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 118
@@ -17927,7 +17927,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &702013285
 NavMeshObstacle:
@@ -18211,7 +18211,7 @@ Transform:
   m_GameObject: {fileID: 707852743}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 12.25, y: 0, z: -8.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 57
@@ -18290,7 +18290,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &707852749
 NavMeshObstacle:
@@ -18344,7 +18344,7 @@ Transform:
   m_GameObject: {fileID: 712376158}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.75, y: 0, z: -22.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 6
@@ -18423,7 +18423,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &712376164
 NavMeshObstacle:
@@ -19054,7 +19054,7 @@ Transform:
   m_GameObject: {fileID: 737528705}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -5.25, y: 0, z: 15.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 136
@@ -19133,7 +19133,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &737528711
 NavMeshObstacle:
@@ -19580,7 +19580,7 @@ Transform:
   m_GameObject: {fileID: 773161049}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 8.75, y: 0, z: 8.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 116
@@ -19659,7 +19659,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &773161055
 NavMeshObstacle:
@@ -19707,7 +19707,7 @@ Transform:
   m_GameObject: {fileID: 773171567}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -12.25, y: 0, z: -1.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 74
@@ -19786,7 +19786,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &773171573
 NavMeshObstacle:
@@ -20125,7 +20125,7 @@ Transform:
   m_GameObject: {fileID: 785998638}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -15.749999, y: 0, z: 5.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 97
@@ -20204,7 +20204,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &785998644
 NavMeshObstacle:
@@ -20549,7 +20549,7 @@ Transform:
   m_GameObject: {fileID: 808684441}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 5.25, y: 0, z: -22.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 7
@@ -20628,7 +20628,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &808684447
 NavMeshObstacle:
@@ -21185,7 +21185,7 @@ Transform:
   m_GameObject: {fileID: 827050447}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 12.25, y: 0, z: 5.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 105
@@ -21264,7 +21264,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &827050453
 NavMeshObstacle:
@@ -21558,7 +21558,7 @@ Transform:
   m_GameObject: {fileID: 840051100}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.75, y: 0, z: -5.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 66
@@ -21637,7 +21637,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &840051106
 NavMeshObstacle:
@@ -21771,7 +21771,7 @@ Transform:
   m_GameObject: {fileID: 844480742}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.75, y: 0, z: -5.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 65
@@ -21850,7 +21850,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &844480748
 NavMeshObstacle:
@@ -22063,7 +22063,7 @@ Transform:
   m_GameObject: {fileID: 852504049}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -12.25, y: 0, z: 1.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 86
@@ -22142,7 +22142,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &852504055
 NavMeshObstacle:
@@ -22190,7 +22190,7 @@ Transform:
   m_GameObject: {fileID: 854901645}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 5.25, y: 0, z: -19.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 19
@@ -22269,7 +22269,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &854901651
 NavMeshObstacle:
@@ -22610,7 +22610,7 @@ Transform:
   m_GameObject: {fileID: 866842215}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -5.25, y: 0, z: -22.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 4
@@ -22689,7 +22689,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &866842221
 NavMeshObstacle:
@@ -23429,7 +23429,7 @@ Transform:
   m_GameObject: {fileID: 911832196}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 19.25, y: 0, z: -5.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 71
@@ -23508,7 +23508,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &911832202
 NavMeshObstacle:
@@ -23556,7 +23556,7 @@ Transform:
   m_GameObject: {fileID: 912993108}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -5.25, y: 0, z: 12.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 124
@@ -23635,7 +23635,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &912993114
 NavMeshObstacle:
@@ -23821,7 +23821,7 @@ Transform:
   m_GameObject: {fileID: 920969636}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -19.25, y: 0, z: 22.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 156
@@ -23900,7 +23900,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &920969642
 NavMeshObstacle:
@@ -24579,7 +24579,7 @@ Transform:
   m_GameObject: {fileID: 940455932}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 15.75, y: 0, z: 15.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 142
@@ -24658,7 +24658,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &940455938
 NavMeshObstacle:
@@ -24706,7 +24706,7 @@ Transform:
   m_GameObject: {fileID: 941481181}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 19.25, y: 0, z: -12.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 47
@@ -24785,7 +24785,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &941481187
 NavMeshObstacle:
@@ -25271,7 +25271,7 @@ Transform:
   m_GameObject: {fileID: 962656879}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 19.25, y: 0, z: 8.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 119
@@ -25350,7 +25350,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &962656885
 NavMeshObstacle:
@@ -25863,7 +25863,7 @@ Transform:
   m_GameObject: {fileID: 977666667}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -15.749999, y: 0, z: -5.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 61
@@ -25942,7 +25942,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &977666673
 NavMeshObstacle:
@@ -26819,7 +26819,7 @@ Transform:
   m_GameObject: {fileID: 1052516044}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -12.25, y: 0, z: 19.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 146
@@ -26898,7 +26898,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1052516050
 NavMeshObstacle:
@@ -26946,7 +26946,7 @@ Transform:
   m_GameObject: {fileID: 1055611185}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.75, y: 0, z: 8.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 114
@@ -27025,7 +27025,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1055611191
 NavMeshObstacle:
@@ -27258,7 +27258,7 @@ Transform:
   m_GameObject: {fileID: 1064675223}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -15.749999, y: 0, z: 19.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 145
@@ -27337,7 +27337,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1064675229
 NavMeshObstacle:
@@ -27465,7 +27465,7 @@ Transform:
   m_GameObject: {fileID: 1073377530}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 19.25, y: 0, z: -19.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 23
@@ -27544,7 +27544,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1073377536
 NavMeshObstacle:
@@ -28257,7 +28257,7 @@ Transform:
   m_GameObject: {fileID: 1103571791}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -15.749999, y: 0, z: -19.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 13
@@ -28336,7 +28336,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1103571797
 NavMeshObstacle:
@@ -28534,7 +28534,7 @@ Transform:
   m_GameObject: {fileID: 1128516536}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -15.749999, y: 0, z: 22.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 157
@@ -28613,7 +28613,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1128516542
 NavMeshObstacle:
@@ -28943,7 +28943,7 @@ Transform:
   m_GameObject: {fileID: 1142286036}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 12.25, y: 0, z: -22.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 9
@@ -29022,7 +29022,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1142286042
 NavMeshObstacle:
@@ -29070,7 +29070,7 @@ Transform:
   m_GameObject: {fileID: 1145139690}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.75, y: 0, z: 8.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 113
@@ -29149,7 +29149,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1145139696
 NavMeshObstacle:
@@ -29904,7 +29904,7 @@ Transform:
   m_GameObject: {fileID: 1156068214}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 5.25, y: 0, z: 19.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 151
@@ -29983,7 +29983,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1156068220
 NavMeshObstacle:
@@ -30399,7 +30399,7 @@ Transform:
   m_GameObject: {fileID: 1172889634}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -12.25, y: 0, z: -8.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 50
@@ -30478,7 +30478,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1172889640
 NavMeshObstacle:
@@ -30681,7 +30681,7 @@ Transform:
   m_GameObject: {fileID: 1178830779}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -19.25, y: 0, z: 19.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 144
@@ -30760,7 +30760,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1178830785
 NavMeshObstacle:
@@ -30820,7 +30820,7 @@ Transform:
   m_GameObject: {fileID: 1184322852}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -15.749999, y: 0, z: -15.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 25
@@ -30899,7 +30899,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1184322858
 NavMeshObstacle:
@@ -31241,7 +31241,7 @@ Transform:
   m_GameObject: {fileID: 1205402893}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 19.25, y: 0, z: 15.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 143
@@ -31320,7 +31320,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1205402899
 NavMeshObstacle:
@@ -31581,7 +31581,7 @@ Transform:
   m_GameObject: {fileID: 1215738011}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -8.75, y: 0, z: 19.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 147
@@ -31660,7 +31660,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1215738017
 NavMeshObstacle:
@@ -31858,7 +31858,7 @@ Transform:
   m_GameObject: {fileID: 1227701387}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -8.75, y: 0, z: 1.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 87
@@ -31937,7 +31937,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1227701393
 NavMeshObstacle:
@@ -32290,7 +32290,7 @@ Transform:
   m_GameObject: {fileID: 1255777150}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -15.749999, y: 0, z: 12.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 121
@@ -32369,7 +32369,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1255777156
 NavMeshObstacle:
@@ -32417,7 +32417,7 @@ Transform:
   m_GameObject: {fileID: 1263615625}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 8.75, y: 0, z: 1.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 92
@@ -32496,7 +32496,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1263615631
 NavMeshObstacle:
@@ -33427,7 +33427,7 @@ Transform:
   m_GameObject: {fileID: 1287070240}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -8.75, y: 0, z: 12.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 123
@@ -33506,7 +33506,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1287070246
 NavMeshObstacle:
@@ -33704,7 +33704,7 @@ Transform:
   m_GameObject: {fileID: 1292372564}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 15.75, y: 0, z: -19.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 22
@@ -33783,7 +33783,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1292372570
 NavMeshObstacle:
@@ -33973,7 +33973,7 @@ Transform:
   m_GameObject: {fileID: 1292495349}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 19.25, y: 0, z: -1.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 83
@@ -34052,7 +34052,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1292495355
 NavMeshObstacle:
@@ -34100,7 +34100,7 @@ Transform:
   m_GameObject: {fileID: 1292688138}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -8.75, y: 0, z: 8.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 111
@@ -34179,7 +34179,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1292688144
 NavMeshObstacle:
@@ -34509,7 +34509,7 @@ Transform:
   m_GameObject: {fileID: 1304888822}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 12.25, y: 0, z: 1.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 93
@@ -34588,7 +34588,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1304888828
 NavMeshObstacle:
@@ -34636,7 +34636,7 @@ Transform:
   m_GameObject: {fileID: 1305358856}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.75, y: 0, z: 12.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 126
@@ -34715,7 +34715,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1305358862
 NavMeshObstacle:
@@ -34769,7 +34769,7 @@ Transform:
   m_GameObject: {fileID: 1305904592}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.75, y: 0, z: -1.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 78
@@ -34848,7 +34848,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1305904598
 NavMeshObstacle:
@@ -35317,7 +35317,7 @@ Transform:
   m_GameObject: {fileID: 1318961921}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -12.25, y: 0, z: 5.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 98
@@ -35396,7 +35396,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1318961927
 NavMeshObstacle:
@@ -35444,7 +35444,7 @@ Transform:
   m_GameObject: {fileID: 1321906996}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -19.25, y: 0, z: 15.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 132
@@ -35523,7 +35523,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1321907002
 NavMeshObstacle:
@@ -36175,7 +36175,7 @@ Transform:
   m_GameObject: {fileID: 1344429704}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 8.75, y: 0, z: -19.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 20
@@ -36254,7 +36254,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1344429710
 NavMeshObstacle:
@@ -36570,7 +36570,7 @@ Transform:
   m_GameObject: {fileID: 1355096267}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -19.25, y: 0, z: 12.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 120
@@ -36649,7 +36649,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1355096273
 NavMeshObstacle:
@@ -37272,7 +37272,7 @@ Transform:
   m_GameObject: {fileID: 1408315378}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -12.25, y: 0, z: -5.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 62
@@ -37351,7 +37351,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1408315384
 NavMeshObstacle:
@@ -37485,7 +37485,7 @@ Transform:
   m_GameObject: {fileID: 1417235079}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 8.75, y: 0, z: 5.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 104
@@ -37564,7 +37564,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1417235085
 NavMeshObstacle:
@@ -37681,7 +37681,7 @@ Transform:
   m_GameObject: {fileID: 1419741913}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 19.25, y: 0, z: 5.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 107
@@ -37760,7 +37760,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1419741919
 NavMeshObstacle:
@@ -38423,7 +38423,7 @@ Transform:
   m_GameObject: {fileID: 1443306003}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 12.25, y: 0, z: -1.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 81
@@ -38502,7 +38502,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1443306009
 NavMeshObstacle:
@@ -38550,7 +38550,7 @@ Transform:
   m_GameObject: {fileID: 1446008637}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -19.25, y: 0, z: -22.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 0
@@ -38629,7 +38629,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1446008643
 NavMeshObstacle:
@@ -38677,7 +38677,7 @@ Transform:
   m_GameObject: {fileID: 1447281364}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -5.25, y: 0, z: -8.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 52
@@ -38756,7 +38756,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1447281370
 NavMeshObstacle:
@@ -39040,7 +39040,7 @@ Transform:
   m_GameObject: {fileID: 1459209843}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.75, y: 0, z: 22.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 162
@@ -39119,7 +39119,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1459209849
 NavMeshObstacle:
@@ -39316,7 +39316,7 @@ Transform:
   m_GameObject: {fileID: 1467698388}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -19.25, y: 0, z: -12.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 36
@@ -39395,7 +39395,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1467698394
 NavMeshObstacle:
@@ -39443,7 +39443,7 @@ Transform:
   m_GameObject: {fileID: 1467725334}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -12.25, y: 0, z: -22.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 2
@@ -39522,7 +39522,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1467725340
 NavMeshObstacle:
@@ -39570,7 +39570,7 @@ Transform:
   m_GameObject: {fileID: 1481446004}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 15.75, y: 0, z: -8.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 58
@@ -39649,7 +39649,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1481446010
 NavMeshObstacle:
@@ -39772,7 +39772,7 @@ Transform:
   m_GameObject: {fileID: 1484382398}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -8.75, y: 0, z: -1.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 75
@@ -39851,7 +39851,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1484382404
 NavMeshObstacle:
@@ -39974,7 +39974,7 @@ Transform:
   m_GameObject: {fileID: 1490742664}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -5.25, y: 0, z: 5.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 100
@@ -40053,7 +40053,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1490742670
 NavMeshObstacle:
@@ -40694,7 +40694,7 @@ Transform:
   m_GameObject: {fileID: 1503793121}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.75, y: 0, z: -15.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 30
@@ -40773,7 +40773,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1503793127
 NavMeshObstacle:
@@ -40890,7 +40890,7 @@ Transform:
   m_GameObject: {fileID: 1506734526}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 8.75, y: 0, z: -8.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 56
@@ -40969,7 +40969,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1506734532
 NavMeshObstacle:
@@ -41092,7 +41092,7 @@ Transform:
   m_GameObject: {fileID: 1508888716}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 15.75, y: 0, z: -5.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 70
@@ -41171,7 +41171,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1508888722
 NavMeshObstacle:
@@ -41519,7 +41519,7 @@ Transform:
   m_GameObject: {fileID: 1526361319}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -8.75, y: 0, z: 15.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 135
@@ -41598,7 +41598,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1526361325
 NavMeshObstacle:
@@ -41724,7 +41724,7 @@ Transform:
   m_GameObject: {fileID: 1528454942}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -15.749999, y: 0, z: -1.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 73
@@ -41803,7 +41803,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1528454948
 NavMeshObstacle:
@@ -42012,7 +42012,7 @@ Transform:
   m_GameObject: {fileID: 1543271413}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -19.25, y: 0, z: -8.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 48
@@ -42091,7 +42091,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1543271419
 NavMeshObstacle:
@@ -42288,7 +42288,7 @@ Transform:
   m_GameObject: {fileID: 1548303722}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -15.749999, y: 0, z: -22.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 1
@@ -42367,7 +42367,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1548303728
 NavMeshObstacle:
@@ -42906,7 +42906,7 @@ Transform:
   m_GameObject: {fileID: 1558875109}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.75, y: 0, z: 5.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 101
@@ -42985,7 +42985,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1558875115
 NavMeshObstacle:
@@ -43400,7 +43400,7 @@ Transform:
   m_GameObject: {fileID: 1580421329}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -15.749999, y: 0, z: 8.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 109
@@ -43479,7 +43479,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1580421335
 NavMeshObstacle:
@@ -44109,7 +44109,7 @@ Transform:
   m_GameObject: {fileID: 1601267117}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 12.25, y: 0, z: 19.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 153
@@ -44188,7 +44188,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1601267123
 NavMeshObstacle:
@@ -44467,7 +44467,7 @@ Transform:
   m_GameObject: {fileID: 1628525745}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -12.25, y: 0, z: 12.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 122
@@ -44546,7 +44546,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1628525751
 NavMeshObstacle:
@@ -44743,7 +44743,7 @@ Transform:
   m_GameObject: {fileID: 1637728050}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 19.25, y: 0, z: 12.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 131
@@ -44822,7 +44822,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1637728056
 NavMeshObstacle:
@@ -44870,7 +44870,7 @@ Transform:
   m_GameObject: {fileID: 1639627738}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -8.75, y: 0, z: 22.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 159
@@ -44949,7 +44949,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1639627744
 NavMeshObstacle:
@@ -45072,7 +45072,7 @@ Transform:
   m_GameObject: {fileID: 1642163597}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.75, y: 0, z: 15.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 137
@@ -45151,7 +45151,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1642163603
 NavMeshObstacle:
@@ -45417,7 +45417,7 @@ Transform:
   m_GameObject: {fileID: 1648045664}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 15.75, y: 0, z: -12.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 46
@@ -45496,7 +45496,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1648045670
 NavMeshObstacle:
@@ -45757,7 +45757,7 @@ Transform:
   m_GameObject: {fileID: 1664839769}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.75, y: 0, z: -19.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 17
@@ -45836,7 +45836,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1664839775
 NavMeshObstacle:
@@ -46015,7 +46015,7 @@ Transform:
   m_GameObject: {fileID: 1672617577}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -8.75, y: 0, z: -8.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 51
@@ -46094,7 +46094,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1672617583
 NavMeshObstacle:
@@ -46460,7 +46460,7 @@ Transform:
   m_GameObject: {fileID: 1696561662}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 8.75, y: 0, z: -15.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 32
@@ -46539,7 +46539,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1696561668
 NavMeshObstacle:
@@ -46593,7 +46593,7 @@ Transform:
   m_GameObject: {fileID: 1703083278}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 5.25, y: 0, z: -8.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 55
@@ -46672,7 +46672,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1703083284
 NavMeshObstacle:
@@ -46801,7 +46801,7 @@ Transform:
   m_GameObject: {fileID: 1711666858}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.75, y: 0, z: 19.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 149
@@ -46880,7 +46880,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1711666864
 NavMeshObstacle:
@@ -46928,7 +46928,7 @@ Transform:
   m_GameObject: {fileID: 1711708788}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.75, y: 0, z: 5.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 102
@@ -47007,7 +47007,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1711708794
 NavMeshObstacle:
@@ -47285,7 +47285,7 @@ Transform:
   m_GameObject: {fileID: 1724184916}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -5.25, y: 0, z: 1.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 88
@@ -47364,7 +47364,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1724184922
 NavMeshObstacle:
@@ -47637,7 +47637,7 @@ Transform:
   m_GameObject: {fileID: 1745100909}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.75, y: 0, z: -15.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 29
@@ -47716,7 +47716,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1745100915
 NavMeshObstacle:
@@ -47833,7 +47833,7 @@ Transform:
   m_GameObject: {fileID: 1749526761}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 5.25, y: 0, z: 12.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 127
@@ -47912,7 +47912,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1749526767
 NavMeshObstacle:
@@ -48316,7 +48316,7 @@ Transform:
   m_GameObject: {fileID: 1772938150}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.75, y: 0, z: -1.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 77
@@ -48395,7 +48395,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1772938156
 NavMeshObstacle:
@@ -48443,7 +48443,7 @@ Transform:
   m_GameObject: {fileID: 1774179676}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -19.25, y: 0, z: 5.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 96
@@ -48522,7 +48522,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1774179682
 NavMeshObstacle:
@@ -49081,7 +49081,7 @@ Transform:
   m_GameObject: {fileID: 1799386149}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 15.75, y: 0, z: 12.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 130
@@ -49160,7 +49160,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1799386155
 NavMeshObstacle:
@@ -49726,7 +49726,7 @@ Transform:
   m_GameObject: {fileID: 1815646667}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -5.25, y: 0, z: 8.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 112
@@ -49805,7 +49805,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1815646673
 NavMeshObstacle:
@@ -50232,7 +50232,7 @@ Transform:
   m_GameObject: {fileID: 1830775687}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -19.25, y: 0, z: -19.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 12
@@ -50311,7 +50311,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1830775693
 NavMeshObstacle:
@@ -50359,7 +50359,7 @@ Transform:
   m_GameObject: {fileID: 1832624231}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -5.25, y: 0, z: 22.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 160
@@ -50438,7 +50438,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1832624237
 NavMeshObstacle:
@@ -50578,7 +50578,7 @@ Transform:
   m_GameObject: {fileID: 1840259136}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -12.25, y: 0, z: 22.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 158
@@ -50657,7 +50657,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1840259142
 NavMeshObstacle:
@@ -50940,7 +50940,7 @@ Transform:
   m_GameObject: {fileID: 1850370329}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 19.25, y: 0, z: -15.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 35
@@ -51019,7 +51019,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1850370335
 NavMeshObstacle:
@@ -51459,7 +51459,7 @@ Transform:
   m_GameObject: {fileID: 1872927762}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 12.25, y: 0, z: -15.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 33
@@ -51538,7 +51538,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1872927768
 NavMeshObstacle:
@@ -51724,7 +51724,7 @@ Transform:
   m_GameObject: {fileID: 1887883995}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.75, y: 0, z: 19.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 150
@@ -51803,7 +51803,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1887884001
 NavMeshObstacle:
@@ -51937,7 +51937,7 @@ Transform:
   m_GameObject: {fileID: 1895374636}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 5.25, y: 0, z: 5.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 103
@@ -52016,7 +52016,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1895374642
 NavMeshObstacle:
@@ -52064,7 +52064,7 @@ Transform:
   m_GameObject: {fileID: 1895602384}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 12.25, y: 0, z: 15.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 141
@@ -52143,7 +52143,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1895602390
 NavMeshObstacle:
@@ -52271,7 +52271,7 @@ Transform:
   m_GameObject: {fileID: 1898576692}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -8.75, y: 0, z: -19.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 15
@@ -52350,7 +52350,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1898576698
 NavMeshObstacle:
@@ -52398,7 +52398,7 @@ Transform:
   m_GameObject: {fileID: 1898988916}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -12.25, y: 0, z: -19.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 14
@@ -52477,7 +52477,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1898988922
 NavMeshObstacle:
@@ -53207,7 +53207,7 @@ Transform:
   m_GameObject: {fileID: 1936379115}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 5.25, y: 0, z: -5.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 67
@@ -53286,7 +53286,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1936379121
 NavMeshObstacle:
@@ -54325,7 +54325,7 @@ Transform:
   m_GameObject: {fileID: 1988657516}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -8.75, y: 0, z: -12.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 39
@@ -54404,7 +54404,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &1988657522
 NavMeshObstacle:
@@ -54745,7 +54745,7 @@ Transform:
   m_GameObject: {fileID: 2010004270}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 5.25, y: 0, z: 22.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 163
@@ -54824,7 +54824,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &2010004276
 NavMeshObstacle:
@@ -55312,7 +55312,7 @@ Transform:
   m_GameObject: {fileID: 2038107517}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.75, y: 0, z: 22.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 161
@@ -55391,7 +55391,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &2038107523
 NavMeshObstacle:
@@ -55514,7 +55514,7 @@ Transform:
   m_GameObject: {fileID: 2046583865}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 5.25, y: 0, z: 8.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 115
@@ -55593,7 +55593,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &2046583871
 NavMeshObstacle:
@@ -55716,7 +55716,7 @@ Transform:
   m_GameObject: {fileID: 2052462943}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -5.25, y: 0, z: 19.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 148
@@ -55795,7 +55795,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &2052462949
 NavMeshObstacle:
@@ -55843,7 +55843,7 @@ Transform:
   m_GameObject: {fileID: 2054175975}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -15.749999, y: 0, z: -8.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 49
@@ -55922,7 +55922,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &2054175981
 NavMeshObstacle:
@@ -55970,7 +55970,7 @@ Transform:
   m_GameObject: {fileID: 2059221819}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 12.25, y: 0, z: 22.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 165
@@ -56049,7 +56049,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &2059221825
 NavMeshObstacle:
@@ -56097,7 +56097,7 @@ Transform:
   m_GameObject: {fileID: 2060962685}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -19.25, y: 0, z: -1.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 72
@@ -56176,7 +56176,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &2060962691
 NavMeshObstacle:
@@ -56230,7 +56230,7 @@ Transform:
   m_GameObject: {fileID: 2063352885}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 8.75, y: 0, z: -22.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 8
@@ -56309,7 +56309,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &2063352891
 NavMeshObstacle:
@@ -56762,7 +56762,7 @@ Transform:
   m_GameObject: {fileID: 2098492462}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 12.25, y: 0, z: -12.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 45
@@ -56841,7 +56841,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &2098492468
 NavMeshObstacle:
@@ -57024,7 +57024,7 @@ Transform:
   m_GameObject: {fileID: 2108833485}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -5.25, y: 0, z: -5.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 64
@@ -57103,7 +57103,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &2108833491
 NavMeshObstacle:
@@ -57151,7 +57151,7 @@ Transform:
   m_GameObject: {fileID: 2109782334}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -12.25, y: 0, z: -15.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 26
@@ -57230,7 +57230,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &2109782340
 NavMeshObstacle:
@@ -57278,7 +57278,7 @@ Transform:
   m_GameObject: {fileID: 2114782048}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 15.75, y: 0, z: 5.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 106
@@ -57357,7 +57357,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &2114782054
 NavMeshObstacle:
@@ -57805,7 +57805,7 @@ Transform:
   m_GameObject: {fileID: 2129416796}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -12.25, y: 0, z: 15.75}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 134
@@ -57884,7 +57884,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &2129416802
 NavMeshObstacle:
@@ -57938,7 +57938,7 @@ Transform:
   m_GameObject: {fileID: 2133478398}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 12.25, y: 0, z: 12.25}
-  m_LocalScale: {x: 3.395, y: 3.395, z: 3.395}
+  m_LocalScale: {x: 3.395, y: 7, z: 3.395}
   m_Children: []
   m_Father: {fileID: 1497411373}
   m_RootOrder: 129
@@ -58017,7 +58017,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.485, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &2133478404
 NavMeshObstacle:

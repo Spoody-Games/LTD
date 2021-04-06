@@ -39,30 +39,30 @@ public class Slot : MonoBehaviour
         isOccupied = false;
     }
 
-    // public Slot Left().up
-    // {
-    //     var matr = SlotGenerator.Instance.m_SlotsMatrix;
-    //     Vector2Int index = matr.FindSlotIndexInMatrix(this);
-    //     return matr[index.x - 1, index.y];
-    // }
-    // public Slot Right()
-    // {
-    //     var matr = SlotGenerator.Instance.m_SlotsMatrix;
-    //     Vector2Int index = matr.FindSlotIndexInMatrix(this);
-    //     return matr[index.x + 1, index.y];
-    // }
-    // public Slot Up()
-    // {
-    //     var matr = SlotGenerator.Instance.m_SlotsMatrix;
-    //     Vector2Int index = matr.FindSlotIndexInMatrix(this);
-    //     return matr[index.x, index.y + 1];
-    // }
-    // public Slot Down()
-    // {
-    //     var matr = SlotGenerator.Instance.m_SlotsMatrix;
-    //     Vector2Int index = matr.FindSlotIndexInMatrix(this);
-    //     return matr[index.x, index.y - 1];
-    // }
-    
+    public Slot Left()
+    {
+        var matr = SlotGenerator.Instance.m_SlotsMatrix;
+        Vector2Int index = matr.FindSlotIndexInMatrix(this);
+        return matr[index.x - 1, index.y];
+    }
+    public Slot Right()
+    {
+        var matr = SlotGenerator.Instance.m_SlotsMatrix;
+        Vector2Int index = matr.FindSlotIndexInMatrix(this);
+        return matr[index.x + 1, index.y];
+    }
+    public Slot Up()
+    {
+        var matr = SlotGenerator.Instance.m_SlotsMatrix;
+        Vector2Int index = matr.FindSlotIndexInMatrix(this);
+        return matr[index.x, index.y + 1];
+    }
+    public Slot Down()
+    {
+        var matr = SlotGenerator.Instance.m_SlotsMatrix;
+        Vector2Int index = matr.FindSlotIndexInMatrix(this);
+        return matr[index.x, index.y - 1];
+    }
+
     //recursively check neighboring slots for placement;
 }
