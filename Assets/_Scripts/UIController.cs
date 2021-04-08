@@ -11,6 +11,7 @@ public class UIController : MonoBehaviour
     public static UIController Instance;
     public GameObject m_VictoryPanel;
     public GameObject m_LossPanel;
+    public GameObject m_DebugBtns;
     public Text m_DrawText;
     private void Awake()
     {
@@ -18,7 +19,10 @@ public class UIController : MonoBehaviour
     }
     void Start()
     {
-
+        if (LevelConstructor.Instance.bDebugMode)
+        {
+            m_DebugBtns.SetActive(true);
+        }
     }
 
     public void GameOver(bool victory)

@@ -9,6 +9,7 @@ public class FigureSpawnSpot : MonoBehaviour
     {
         m_Figure = Instantiate(figure, transform.position, Quaternion.identity).GetComponent<Figure>();
         m_Figure.GetComponent<PlacementController>().SetSpot(this);
+        m_Figure.transform.localScale = m_Figure.transform.localScale * 0.8f;
     }
     public void RemoveFig()
     {

@@ -21,7 +21,10 @@ public class PlacementController : MonoBehaviour
     public Material m_HoloMat;
     public Material m_HoloCannotPlaceMat;
     public List<GameObject> m_MeshesToLift;
-    bool canPlace = true;
+    bool canPlace = false;
+    bool mustmerge = false;
+
+    Slot TmpSlot = null;
     private void Start()
     {
         m_Figure = GetComponent<Figure>();
@@ -37,6 +40,7 @@ public class PlacementController : MonoBehaviour
         screenPoint = CameraController.Instance.m_Camera.WorldToScreenPoint(gameObject.transform.position);
         hasPlaced = false;
         canPlace = true;
+        transform.localScale = new Vector3(3.5f, 3.5f, 3.5f);
         foreach (Slot slot in SlotGenerator.Instance.m_SlotsReferences)
         {
             if (slot.IsFree())
@@ -63,7 +67,6 @@ public class PlacementController : MonoBehaviour
             x.transform.DOLocalMoveY(pos.y + 1, 0.2f);
         });
     }
-    Slot TmpSlot = null;
 
     void OnMouseDrag()
     {
@@ -99,7 +102,7 @@ public class PlacementController : MonoBehaviour
                 {
                     if (SelectedSlot.m_OccupyingFigure)
                     {
-                        if (SelectedSlot.m_OccupyingFigure.m_Data == m_Figure.m_Data && SelectedSlot.m_OccupyingFigure.mergefactor == m_Figure.mergefactor)
+                        if (SelectedSlot.m_OccupyingFigure.m_Data == m_Figure.m_Data && SelectedSlot.m_OccupyingFigure.mergefactor == m_Figure.mergefactor && !m_Figure.m_Data.isTimed)
                         {
                             ghost.GetComponentsInChildren<MeshRenderer>().ToList().ForEach(x => x.material = m_HoloMat);
                         }
@@ -112,7 +115,9 @@ public class PlacementController : MonoBehaviour
             }
         }
         if (objectHit)
+        {
             ghost.transform.position = objectHit.position;
+        }
         else
         {
             SelectedSlot = null;
@@ -122,14 +127,13 @@ public class PlacementController : MonoBehaviour
     }
     private void OnMouseUp()
     {
-        #region BaseMerging
-        var spawnpoints = FigureSpawner.Instance.m_Spots;
-        FigureSpawnSpot closest = null;
-
         foreach (Slot slot in SlotGenerator.Instance.m_SlotsReferences)
         {
             slot.GetComponent<MeshRenderer>().enabled = false;
         }
+        #region BaseMerging
+        var spawnpoints = FigureSpawner.Instance.m_Spots;
+        FigureSpawnSpot closest = null;
         for (int i = 0; i < spawnpoints.Count; i++)
         {
             float dist = 9999;
@@ -148,13 +152,23 @@ public class PlacementController : MonoBehaviour
             {
                 if (closest.m_Figure.mergefactor == m_Figure.mergefactor)
                 {
+                    if (m_Figure.m_Data.isTimed)
+                    {
+                        WrongPlacement("Merging TimedTowers");
+                        Destroy(ghost.gameObject);
+                        return;
+                    }
                     ghost.transform.position = closest.transform.position;
                     transform.position = closest.transform.position;
-
                     closest.m_Figure.Merge();
                     StartCoroutine(DelayedDestroy(0.2f));
                     return;
                 }
+            }
+            else
+            {
+                WrongPlacement("Merging Different Figures");
+                return;
             }
         }
         #endregion
@@ -172,6 +186,7 @@ public class PlacementController : MonoBehaviour
             Vector2Int CoreIndex = SlotGenerator.Instance.m_SlotsMatrix.FindSlotIndexInMatrix(SelectedSlot);
             if (canPlace)
             {
+                Debug.LogWarning("Placing");
                 for (int i = 0; i < figureData.indexes.Count; i++)
                 {
                     var x = CoreIndex.x + figureData.indexes[i].x;
@@ -190,31 +205,52 @@ public class PlacementController : MonoBehaviour
             }
             else
             {
-                if (!SelectedSlot.m_OccupyingFigure)
+                Slot Tmps = CheckNeighboringSlots(SelectedSlot, m_Figure);
+                if (Tmps != null)
                 {
-                    WrongPlacement("Cannot Place");
-                    return;
-                }
-
-                //Merging Version 2 (no aliment + mergefactor equal)
-                if (SelectedSlot.m_OccupyingFigure.m_Data.figureType == m_Figure.m_Data.figureType)
-                {
-                    if (SelectedSlot.m_OccupyingFigure.mergefactor == m_Figure.mergefactor)
+                    CoreIndex = SlotGenerator.Instance.m_SlotsMatrix.FindSlotIndexInMatrix(Tmps);
+                    SelectedSlot = Tmps;
+                    if (mustmerge)
                     {
-                        SelectedSlot.m_OccupyingFigure.Merge();
-                        StartCoroutine(DelayedDestroy(0.2f));
-                        return;
+                        if (SelectedSlot.m_OccupyingFigure.mergefactor == m_Figure.mergefactor)
+                        {
+                            if (m_Figure.m_Data.isTimed)
+                            {
+                                WrongPlacement("Merging TimedTowers");
+                                return;
+                            }
+                            SelectedSlot.m_OccupyingFigure.Merge();
+                            StartCoroutine(DelayedDestroy(0.2f));
+                            return;
+                        }
+                        else
+                        {
+                            WrongPlacement("Merging different leveled figures");
+                            return;
+                        }
                     }
                     else
                     {
-                        WrongPlacement("Merging different leveled figures");
+                        ghost.transform.position = Tmps.transform.position;
+                        transform.position = ghost.transform.position;
+                        Debug.LogWarning("Placing");
+                        for (int i = 0; i < figureData.indexes.Count; i++)
+                        {
+                            var x = CoreIndex.x + figureData.indexes[i].x;
+                            var y = CoreIndex.y + figureData.indexes[i].y;
+                            var slot = SlotGenerator.Instance.m_SlotsMatrix[x, y];
+                            slot.Occupy(m_Figure);
+                            m_Figure.OccupyingSlots.Add(new Vector2Int(x, y));
+                            transform.GetComponentsInChildren<NavMeshObstacle>().ToList().ForEach(n => n.enabled = true);
+                        }
+                        hasPlaced = true;
+                        Debug.Log("Placed");
+                        if (!LevelConstructor.Instance.bDebugMode)
+                        {
+                            FigurePlaced?.Invoke(m_Spot, m_Figure);
+                        }
                         return;
                     }
-                }
-                else
-                {
-                    WrongPlacement("Merging different figures");
-                    return;
                 }
             }
         }
@@ -235,20 +271,29 @@ public class PlacementController : MonoBehaviour
             fig.Activate();
         }
     }
+
     public Slot CheckNeighboringSlots(Slot _Origin, Figure _fig)
     {
+        mustmerge = false;
         List<Slot> adjacentSlots = new List<Slot>();
         adjacentSlots.Add(_Origin.Left());
         adjacentSlots.Add(_Origin.Right());
         adjacentSlots.Add(_Origin.Up());
         adjacentSlots.Add(_Origin.Down());
-        adjacentSlots.Add(_Origin.Left().Up());
-        adjacentSlots.Add(_Origin.Left().Down());
-        adjacentSlots.Add(_Origin.Right().Up());
-        adjacentSlots.Add(_Origin.Right().Down());
+        if (_Origin.Left() != null)
+        {
+            adjacentSlots.Add(_Origin.Left().Up());
+            adjacentSlots.Add(_Origin.Left().Down());
+        }
+        if (_Origin.Right() != null)
+        {
+            adjacentSlots.Add(_Origin.Right().Up());
+            adjacentSlots.Add(_Origin.Right().Down());
+        }
         for (int i = 0; i < adjacentSlots.Count; i++)
         {
-            if (CheckSlot(adjacentSlots[i], m_Figure))
+            var check = CheckSlot(adjacentSlots[i], m_Figure);
+            if (check || mustmerge)
             {
                 return adjacentSlots[i];
             }
@@ -257,6 +302,8 @@ public class PlacementController : MonoBehaviour
     }
     public bool CheckSlot(Slot _slot, Figure _fig)
     {
+        if (_slot == null) return false;
+        Debug.LogWarning(_slot);
         Vector2Int CoreIndex = SlotGenerator.Instance.m_SlotsMatrix.FindSlotIndexInMatrix(_slot);
         if (_slot.IsFree())
         {
@@ -277,8 +324,15 @@ public class PlacementController : MonoBehaviour
             }
             return true;
         }
-        else return false;
+        else
+        {
+            if (_slot.m_OccupyingFigure)
+                if (_slot.m_OccupyingFigure.m_Data == m_Figure.m_Data)
+                    mustmerge = true;
+            return false;
+        }
     }
+
     IEnumerator DelayedDestroy(float time)
     {
         hasPlaced = true;
@@ -295,6 +349,7 @@ public class PlacementController : MonoBehaviour
         canPlace = false;
         Debug.LogWarning("WrongPlacement: " + reason);
         transform.position = StartPos;
+        transform.localScale = transform.localScale * 0.8f;
         //Destroy(gameObject);
     }
 }

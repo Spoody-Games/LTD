@@ -46,6 +46,7 @@ static class ExtensionMethods
                 }
             }
         }
+        Debug.LogWarning(ob);
         Debug.LogError("Not Found");
         return new Vector2Int(999, 999);
     }

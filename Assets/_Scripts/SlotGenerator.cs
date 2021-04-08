@@ -35,7 +35,6 @@ public class SlotGenerator : MonoBehaviour
         // }
 
         m_SlotsMatrix = m_SlotsReferences.ConvertMatrix(width, lenght);
-
         for (int i = 0; i < lenght; i++)
         {
             for (int j = 0; j < width; j++)
