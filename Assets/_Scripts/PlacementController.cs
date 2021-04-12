@@ -7,12 +7,12 @@ using DG.Tweening;
 
 public class PlacementController : MonoBehaviour
 {
+    #region Variables
     public static System.Action<FigureSpawnSpot, Figure> FigurePlaced;
     private Vector3 screenPoint;
     private Vector3 offset;
     Slot SelectedSlot;
     Vector3 StartPos;
-    bool hasPlaced;
     internal GameObject ghost;
     Figure m_Figure;
     FigureData figureData;
@@ -23,8 +23,8 @@ public class PlacementController : MonoBehaviour
     public List<GameObject> m_MeshesToLift;
     bool canPlace = false;
     bool mustmerge = false;
-
     Slot TmpSlot = null;
+    #endregion
     private void Start()
     {
         m_Figure = GetComponent<Figure>();
@@ -38,7 +38,6 @@ public class PlacementController : MonoBehaviour
     public void OnMouseDown()
     {
         screenPoint = CameraController.Instance.m_Camera.WorldToScreenPoint(gameObject.transform.position);
-        hasPlaced = false;
         canPlace = true;
         transform.localScale = new Vector3(3.5f, 3.5f, 3.5f);
         foreach (Slot slot in SlotGenerator.Instance.m_SlotsReferences)
@@ -48,10 +47,6 @@ public class PlacementController : MonoBehaviour
                 slot.GetComponent<MeshRenderer>().enabled = true;
             }
         }
-
-        // var prevobj = Instantiate(gameObject);
-        // prevobj.name = figureData.Name;
-
         ghost = new GameObject();
         ghost.transform.position = transform.position;
         ghost.transform.localScale = transform.localScale;
@@ -72,10 +67,10 @@ public class PlacementController : MonoBehaviour
     {
         Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
         Vector3 curPosition = CameraController.Instance.m_Camera.ScreenToWorldPoint(curScreenPoint) + offset;
-        curPosition.y = 0;
 
         var plane = GameController.Instance.m_RayPlane;
-        Vector3 inpoffset = new Vector3(0, 150, 0);
+        float moveY = Input.mousePosition.y / 2f;
+        Vector3 inpoffset = new Vector3(0, moveY, 0);
         Ray ray = CameraController.Instance.m_Camera.ScreenPointToRay(Input.mousePosition + inpoffset);
         float planeHit;
         if (plane.Raycast(ray, out planeHit))
@@ -127,11 +122,20 @@ public class PlacementController : MonoBehaviour
     }
     private void OnMouseUp()
     {
+        //unhighlight spots
         foreach (Slot slot in SlotGenerator.Instance.m_SlotsReferences)
         {
             slot.GetComponent<MeshRenderer>().enabled = false;
         }
+        //lower Meshes
+        m_MeshesToLift.ForEach(x =>
+        {
+            var pos = x.transform.localPosition;
+            x.transform.DOLocalMoveY(pos.y - 1, 0.2f);
+        });
+
         #region BaseMerging
+
         var spawnpoints = FigureSpawner.Instance.m_Spots;
         FigureSpawnSpot closest = null;
         for (int i = 0; i < spawnpoints.Count; i++)
@@ -146,8 +150,16 @@ public class PlacementController : MonoBehaviour
                 closest = spawnpoints[i];
             }
         }
+
         if (closest)
         {
+            if (closest.isTrash)
+            {
+                transform.position = closest.transform.position;
+                FigurePlaced?.Invoke(m_Spot, m_Figure);
+                StartCoroutine(DelayedDestroy(0.2f));
+                return;
+            }
             if (closest.m_Figure.m_Data.figureType == m_Figure.m_Data.figureType)
             {
                 if (closest.m_Figure.mergefactor == m_Figure.mergefactor)
@@ -155,12 +167,12 @@ public class PlacementController : MonoBehaviour
                     if (m_Figure.m_Data.isTimed)
                     {
                         WrongPlacement("Merging TimedTowers");
-                        Destroy(ghost.gameObject);
                         return;
                     }
                     ghost.transform.position = closest.transform.position;
                     transform.position = closest.transform.position;
                     closest.m_Figure.Merge();
+                    FigurePlaced?.Invoke(m_Spot, m_Figure);
                     StartCoroutine(DelayedDestroy(0.2f));
                     return;
                 }
@@ -174,11 +186,6 @@ public class PlacementController : MonoBehaviour
         #endregion
 
         transform.position = ghost.transform.position;
-        m_MeshesToLift.ForEach(x =>
-        {
-            var pos = x.transform.localPosition;
-            x.transform.DOLocalMoveY(pos.y - 1, 0.2f);
-        });
         Destroy(ghost);
 
         if (SelectedSlot)
@@ -196,8 +203,7 @@ public class PlacementController : MonoBehaviour
                     m_Figure.OccupyingSlots.Add(new Vector2Int(x, y));
                     transform.GetComponentsInChildren<NavMeshObstacle>().ToList().ForEach(n => n.enabled = true);
                 }
-                hasPlaced = true;
-                Debug.Log("Placed");
+                PlacedTower();
                 if (!LevelConstructor.Instance.bDebugMode)
                 {
                     FigurePlaced?.Invoke(m_Spot, m_Figure);
@@ -205,6 +211,7 @@ public class PlacementController : MonoBehaviour
             }
             else
             {
+                #region  ChekingNeighboringSlots
                 Slot Tmps = CheckNeighboringSlots(SelectedSlot, m_Figure);
                 if (Tmps != null)
                 {
@@ -219,7 +226,11 @@ public class PlacementController : MonoBehaviour
                                 WrongPlacement("Merging TimedTowers");
                                 return;
                             }
+                            ghost.transform.position = SelectedSlot.m_OccupyingFigure.transform.position;
+                            transform.position = SelectedSlot.m_OccupyingFigure.transform.position;
+
                             SelectedSlot.m_OccupyingFigure.Merge();
+                            FigurePlaced?.Invoke(m_Spot, m_Figure);
                             StartCoroutine(DelayedDestroy(0.2f));
                             return;
                         }
@@ -243,7 +254,7 @@ public class PlacementController : MonoBehaviour
                             m_Figure.OccupyingSlots.Add(new Vector2Int(x, y));
                             transform.GetComponentsInChildren<NavMeshObstacle>().ToList().ForEach(n => n.enabled = true);
                         }
-                        hasPlaced = true;
+                        PlacedTower();
                         Debug.Log("Placed");
                         if (!LevelConstructor.Instance.bDebugMode)
                         {
@@ -252,6 +263,11 @@ public class PlacementController : MonoBehaviour
                         return;
                     }
                 }
+                else
+                {
+                    WrongPlacement("Cannot Place");
+                }
+                #endregion
             }
         }
         else
@@ -259,17 +275,7 @@ public class PlacementController : MonoBehaviour
             WrongPlacement("Slot Not Found");
             return;
         }
-        if (!hasPlaced)
-        {
-            transform.position = StartPos;
-        }
-        else
-        {
-            var fig = GetComponent<Figure>();
-            Destroy(this);
-            GameController.Instance.m_Buildings.Add(transform);
-            fig.Activate();
-        }
+
     }
 
     public Slot CheckNeighboringSlots(Slot _Origin, Figure _fig)
@@ -335,10 +341,8 @@ public class PlacementController : MonoBehaviour
 
     IEnumerator DelayedDestroy(float time)
     {
-        hasPlaced = true;
+        //when merging
         yield return new WaitForSeconds(time);
-
-        FigurePlaced?.Invoke(m_Spot, m_Figure);
 
         Destroy(ghost);
         Destroy(gameObject);
@@ -350,6 +354,13 @@ public class PlacementController : MonoBehaviour
         Debug.LogWarning("WrongPlacement: " + reason);
         transform.position = StartPos;
         transform.localScale = transform.localScale * 0.8f;
-        //Destroy(gameObject);
+        Destroy(ghost);
+    }
+    public void PlacedTower()
+    {
+        var fig = GetComponent<Figure>();
+        GameController.Instance.m_Buildings.Add(transform);
+        fig.Activate();
+        Destroy(this);
     }
 }

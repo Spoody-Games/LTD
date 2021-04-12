@@ -11,7 +11,12 @@ public class FigureSpawner : MonoBehaviour
     public void SpawnFigures()
     {
         if (!LevelConstructor.Instance.bDebugMode)
-            m_Spots.ForEach(x => x.Spawnfigure(m_data.m_figures.GetRandom().m_Prefab));
+            m_Spots.ForEach(x =>
+            {
+                if (!x.isTrash)
+                    x.Spawnfigure(m_data.m_figures.GetRandom().m_Prefab);
+            });
+
     }
     private void Awake()
     {
