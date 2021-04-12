@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-//using UnityEditor;
+using UnityEditor;
 
 public class LevelConstructor : MonoBehaviour
 {
@@ -14,6 +14,7 @@ public class LevelConstructor : MonoBehaviour
     public LevelData leveltoload;
     public Material m_obstMat;
     public GameObject m_debugBtns;
+    public Transform m_Base;
 
     public bool bDebugMode = false;
     public bool bDrawRoad = false;
@@ -44,11 +45,12 @@ public class LevelConstructor : MonoBehaviour
     }
     public void SaveSlots()
     {
-        /*
+
         LevelData asset = ScriptableObject.CreateInstance<LevelData>();
         asset.m_Road = new List<RoadData>();
         asset.m_figures = new List<FigureData>();
         asset.m_Obstacles = new List<ObstacleData>();
+        asset.m_Baseposition = m_Base.transform.position;
 
         foreach (var slot in SlotGenerator.Instance.m_SlotsReferences)
         {
@@ -76,13 +78,14 @@ public class LevelConstructor : MonoBehaviour
                 asset.m_Obstacles.Add(data);
             }
         }
+
         AssetDatabase.CreateAsset(asset, "Assets/Data/LevelDataTest.asset");
         AssetDatabase.SaveAssets();
 
         EditorUtility.FocusProjectWindow();
 
         Selection.activeObject = asset;
-        */
+
     }
     public void Load()
     {

@@ -37,8 +37,7 @@ public class GameController : MonoBehaviour
             LevelConstructor.Instance.Load();
             FigureSpawner.Instance.SpawnFigures();
             yield return new WaitForSeconds(3);
-            StartCoroutine(Spawn(m_enemy));
-            InvokeRepeating("Spawn", 3, interval);
+            StartCoroutine(Spawn(m_enemy));            
         }
     }
     IEnumerator Spawn(GameObject _Prefab)

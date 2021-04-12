@@ -1651,7 +1651,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 974456036}
+      - m_Target: {fileID: 1534668265}
         m_MethodName: SaveSlots
         m_Mode: 1
         m_Arguments:
@@ -1799,7 +1799,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 75785884}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10, y: 0, z: -35}
+  m_LocalPosition: {x: 4.5, y: 0, z: -35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1058635012}
@@ -4174,7 +4174,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 974456036}
+      - m_Target: {fileID: 1534668265}
         m_MethodName: SpawnFigure
         m_Mode: 2
         m_Arguments:
@@ -5906,7 +5906,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 974456036}
+      - m_Target: {fileID: 1534668265}
         m_MethodName: SpawnFigure
         m_Mode: 2
         m_Arguments:
@@ -7577,7 +7577,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 974456036}
+      - m_Target: {fileID: 1534668265}
         m_MethodName: SpawnFigure
         m_Mode: 2
         m_Arguments:
@@ -9390,7 +9390,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 974456036}
+      - m_Target: {fileID: 1534668265}
         m_MethodName: SpawnFigure
         m_Mode: 2
         m_Arguments:
@@ -14014,7 +14014,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 974456036}
+      - m_Target: {fileID: 1534668265}
         m_MethodName: SpawnFigure
         m_Mode: 2
         m_Arguments:
@@ -14290,7 +14290,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 974456036}
+      - m_Target: {fileID: 1534668265}
         m_MethodName: DrawRoad
         m_Mode: 1
         m_Arguments:
@@ -14639,7 +14639,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 974456036}
+      - m_Target: {fileID: 1534668265}
         m_MethodName: SpawnFigure
         m_Mode: 2
         m_Arguments:
@@ -15768,7 +15768,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 974456036}
+      - m_Target: {fileID: 1534668265}
         m_MethodName: SpawnFigure
         m_Mode: 2
         m_Arguments:
@@ -23264,7 +23264,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 974456036}
+      - m_Target: {fileID: 1534668265}
         m_MethodName: SpawnFigure
         m_Mode: 2
         m_Arguments:
@@ -24213,7 +24213,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 974456036}
+      - m_Target: {fileID: 1534668265}
         m_MethodName: SpawnFigure
         m_Mode: 2
         m_Arguments:
@@ -25692,7 +25692,6 @@ GameObject:
   - component: {fileID: 974456033}
   - component: {fileID: 974456032}
   - component: {fileID: 974456031}
-  - component: {fileID: 974456036}
   - component: {fileID: 974456035}
   m_Layer: 5
   m_Name: Canvas
@@ -25799,30 +25798,6 @@ MonoBehaviour:
   m_LossPanel: {fileID: 25987531}
   m_DebugBtns: {fileID: 2033422748}
   m_DrawText: {fileID: 313609188}
---- !u!114 &974456036
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 974456030}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0db1c613c2deaa7489111666a81e2b08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leveltoload: {fileID: 0}
-  m_obstMat: {fileID: 0}
-  m_debugBtns: {fileID: 0}
-  bDebugMode: 0
-  bDrawRoad: 0
-  m_DebugBuildings: []
-  m_Roads: []
-  m_ObstaclesPrefabs:
-  - {fileID: 3650831933189051452, guid: 7a43a1dbe3e5d5344aec961daeafc8ae, type: 3}
-  - {fileID: 3650831933189051452, guid: 7a43a1dbe3e5d5344aec961daeafc8ae, type: 3}
-  m_roadPrefab: {fileID: 2084995012453153974, guid: 94042790cad63ac4c9cad624dbd6ca38,
-    type: 3}
 --- !u!1001 &976163412
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33127,7 +33102,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 974456036}
+      - m_Target: {fileID: 1534668265}
         m_MethodName: SpawnFigure
         m_Mode: 2
         m_Arguments:
@@ -33333,7 +33308,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 974456036}
+      - m_Target: {fileID: 1534668265}
         m_MethodName: SpawnFigure
         m_Mode: 2
         m_Arguments:
@@ -35761,7 +35736,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 974456036}
+      - m_Target: {fileID: 1534668265}
         m_MethodName: SpawnFigure
         m_Mode: 2
         m_Arguments:
@@ -37042,6 +37017,41 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1862745269}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1374478537 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5737984890333060103, guid: c6f7fdfcb6eb64d40b912e21dfbce352,
+    type: 3}
+  m_PrefabInstance: {fileID: 5737984889309704386}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1374478538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374478537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44910bd913b2a294f9cf50cab68a55b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Move: 1
+--- !u!54 &1374478539
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374478537}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!4 &1377098339 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 73e43bbbdee20704484e2d147c9d3bb4,
@@ -38483,7 +38493,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 974456036}
+      - m_Target: {fileID: 1534668265}
         m_MethodName: SpawnFigure
         m_Mode: 2
         m_Arguments:
@@ -40310,7 +40320,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1493522560}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10, y: 0, z: -35}
+  m_LocalPosition: {x: -4.5, y: 0, z: -35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1058635012}
@@ -42042,6 +42052,62 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 803220322}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1534668264
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1534668266}
+  - component: {fileID: 1534668265}
+  m_Layer: 0
+  m_Name: LevelConstructor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1534668265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534668264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0db1c613c2deaa7489111666a81e2b08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leveltoload: {fileID: 0}
+  m_obstMat: {fileID: 0}
+  m_debugBtns: {fileID: 0}
+  m_Base: {fileID: 0}
+  bDebugMode: 1
+  bDrawRoad: 0
+  m_DebugBuildings: []
+  m_Roads: []
+  m_ObstaclesPrefabs:
+  - {fileID: 3650831933189051452, guid: 7a43a1dbe3e5d5344aec961daeafc8ae, type: 3}
+  - {fileID: 3650831933189051452, guid: 7a43a1dbe3e5d5344aec961daeafc8ae, type: 3}
+  m_roadPrefab: {fileID: 2084995012453153974, guid: 94042790cad63ac4c9cad624dbd6ca38,
+    type: 3}
+--- !u!4 &1534668266
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534668264}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.17750458, y: 9.777048, z: -36.986588}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1539512352
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42693,7 +42759,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 974456036}
+      - m_Target: {fileID: 1534668265}
         m_MethodName: SpawnFigure
         m_Mode: 2
         m_Arguments:
@@ -42893,7 +42959,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 974456036}
+      - m_Target: {fileID: 1534668265}
         m_MethodName: SpawnFigure
         m_Mode: 2
         m_Arguments:
@@ -46082,7 +46148,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 974456036}
+      - m_Target: {fileID: 1534668265}
         m_MethodName: SpawnFigure
         m_Mode: 2
         m_Arguments:
@@ -46444,7 +46510,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 974456036}
+      - m_Target: {fileID: 1534668265}
         m_MethodName: RemoveRoad
         m_Mode: 1
         m_Arguments:
@@ -48774,7 +48840,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 974456036}
+      - m_Target: {fileID: 1534668265}
         m_MethodName: SpawnFigure
         m_Mode: 2
         m_Arguments:
@@ -54050,7 +54116,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 974456036}
+      - m_Target: {fileID: 1534668265}
         m_MethodName: Load
         m_Mode: 1
         m_Arguments:
@@ -54180,7 +54246,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 974456036}
+      - m_Target: {fileID: 1534668265}
         m_MethodName: SpawnFigure
         m_Mode: 2
         m_Arguments:
@@ -55268,7 +55334,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2033422749
 RectTransform:
   m_ObjectHideFlags: 0
@@ -57645,7 +57711,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 974456036}
+      - m_Target: {fileID: 1534668265}
         m_MethodName: SpawnFigure
         m_Mode: 2
         m_Arguments:
