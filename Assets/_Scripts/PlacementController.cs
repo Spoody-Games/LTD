@@ -24,6 +24,7 @@ public class PlacementController : MonoBehaviour
     bool canPlace = false;
     bool mustmerge = false;
     Slot TmpSlot = null;
+    public GameObject m_HandObject;
     #endregion
     private void Start()
     {
@@ -37,6 +38,7 @@ public class PlacementController : MonoBehaviour
     }
     public void OnMouseDown()
     {
+        m_HandObject.SetActive(true);
         screenPoint = CameraController.Instance.m_Camera.WorldToScreenPoint(gameObject.transform.position);
         canPlace = true;
         transform.localScale = new Vector3(3.5f, 3.5f, 3.5f);
@@ -122,6 +124,7 @@ public class PlacementController : MonoBehaviour
     }
     private void OnMouseUp()
     {
+        m_HandObject.SetActive(false);
         //unhighlight spots
         foreach (Slot slot in SlotGenerator.Instance.m_SlotsReferences)
         {
@@ -353,7 +356,7 @@ public class PlacementController : MonoBehaviour
         canPlace = false;
         Debug.LogWarning("WrongPlacement: " + reason);
         transform.position = StartPos;
-        transform.localScale = transform.localScale * 0.8f;
+        transform.localScale = transform.localScale * 0.6f;
         Destroy(ghost);
     }
     public void PlacedTower()

@@ -26,11 +26,15 @@ public class MovableObject : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        if (!Move) return;
+
         other.GetComponent<Slot>().isOccupied = true;
         other.GetComponent<MeshRenderer>().enabled = true;
     }
     private void OnTriggerExit(Collider other)
     {
+        if (!Move) return;
+
         other.GetComponent<Slot>().isOccupied = false;
         other.GetComponent<MeshRenderer>().enabled = false;
     }

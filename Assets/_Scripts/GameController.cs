@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour
     public GameObject m_MainBase;
     public List<Transform> m_Buildings;
     public List<Transform> m_SpawnPoints;
+    public List<Transform> m_ActiveSpawnPoints;
     public List<Transform> m_Enemies;
     bool started = false;
     public int EnemyCount;
@@ -35,18 +36,21 @@ public class GameController : MonoBehaviour
             EnemyCount = data.m_Enemies[0].Count;
 
             LevelConstructor.Instance.Load();
+            m_SpawnPoints.ForEach(x => { if (x.gameObject.activeInHierarchy) m_ActiveSpawnPoints.Add(x); });
+
             FigureSpawner.Instance.SpawnFigures();
             yield return new WaitForSeconds(3);
-            StartCoroutine(Spawn(m_enemy));            
+            StartCoroutine(Spawn(m_enemy));
         }
     }
+
     IEnumerator Spawn(GameObject _Prefab)
     {
 
         if (EnemyCount >= 0)
         {
             EnemyCount--;
-            var point = m_SpawnPoints.GetRandom();
+            var point = m_ActiveSpawnPoints.GetRandom();
             var enemy = Instantiate(m_enemy, point.position, Quaternion.identity);
             m_Enemies.Add(enemy.transform);
             started = true;
