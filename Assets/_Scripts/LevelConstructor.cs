@@ -100,15 +100,18 @@ public class LevelConstructor : MonoBehaviour
         m_SpawnPoints.ForEach(x => x.gameObject.SetActive(false));
         leveltoload.m_Road.ForEach(x =>
         {
+
             var slot = SlotGenerator.Instance.m_SlotsMatrix.GetSlotByIndex(x.index);
             slot.isRoad = true;
-            Instantiate(m_roadPrefab, slot.transform.position, Quaternion.identity);
+            var road = Instantiate(m_roadPrefab, slot.transform.position, Quaternion.identity);
+
         });
         leveltoload.m_Obstacles.ForEach(x =>
         {
             var slot = SlotGenerator.Instance.m_SlotsMatrix.GetSlotByIndex(x.index);
             slot.isObstacle = true;
             var obj = Instantiate(m_ObstaclesPrefabs[Random.Range(0, m_ObstaclesPrefabs.Count)], slot.transform.position, Quaternion.identity);
+            obj.transform.localScale += Vector3.up * Random.Range(-1f, 1f);
             obj.GetComponent<NavMeshObstacle>().enabled = true;
         });
         leveltoload.m_ActiveSpawnPointIndex.ForEach(x =>

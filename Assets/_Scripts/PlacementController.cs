@@ -67,6 +67,7 @@ public class PlacementController : MonoBehaviour
 
     void OnMouseDrag()
     {
+
         Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
         Vector3 curPosition = CameraController.Instance.m_Camera.ScreenToWorldPoint(curScreenPoint) + offset;
 
