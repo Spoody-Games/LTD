@@ -16,7 +16,6 @@ public class FigureSpawner : MonoBehaviour
                 if (!x.isTrash)
                     x.Spawnfigure(m_data.m_figures.GetRandom().m_Prefab);
             });
-
     }
     private void Awake()
     {
