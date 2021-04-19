@@ -21,9 +21,13 @@ public class GameController : MonoBehaviour
     {
         Instance = this;
     }
+    private void OnDrawGizmos()
+    {
+        
+    }
     private IEnumerator Start()
     {
-        m_RayPlane = new Plane(Vector3.up, Vector3.zero);
+        m_RayPlane = new Plane (Vector3.up, Vector3.zero);
 
         //getData
         if (!LevelConstructor.Instance.bDebugMode)

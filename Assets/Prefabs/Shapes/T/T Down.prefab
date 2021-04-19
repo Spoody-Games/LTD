@@ -1466,7 +1466,6 @@ MonoBehaviour:
   - {fileID: 8453780817503587823}
   - {fileID: 1752839531391062266}
   - {fileID: 2409956042118076523}
-  m_timedDamageMultipier: 4
 --- !u!1 &5459311229965564011
 GameObject:
   m_ObjectHideFlags: 0
@@ -3410,37 +3409,37 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 86ccf5f7eaef65746b90c71c8d676766,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.79556525
+      value: 0.9205049
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 86ccf5f7eaef65746b90c71c8d676766,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.06315142
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 86ccf5f7eaef65746b90c71c8d676766,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.6024168
+      value: -0.3907311
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 86ccf5f7eaef65746b90c71c8d676766,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.013485776
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 86ccf5f7eaef65746b90c71c8d676766,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 6.7030005
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 86ccf5f7eaef65746b90c71c8d676766,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -74.452
+      value: -46
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 86ccf5f7eaef65746b90c71c8d676766,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -3.153
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 86ccf5f7eaef65746b90c71c8d676766,
         type: 3}

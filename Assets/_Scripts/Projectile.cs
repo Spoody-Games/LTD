@@ -5,10 +5,13 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     public EnemyBehaviour m_Target;
+
     bool ready = false;
     Vector3 target;
-    public void Init(EnemyBehaviour target)
+    float Damage;
+    public void Init(EnemyBehaviour target, float _damage)
     {
+        Damage = _damage;
         m_Target = target;
         ready = true;
     }
@@ -29,7 +32,7 @@ public class Projectile : MonoBehaviour
             if (dist < 0.1f)
             {
                 if (m_Target)
-                    m_Target.Hit();
+                    m_Target.Hit(Damage);
                 Destroy(gameObject);
             }
         }

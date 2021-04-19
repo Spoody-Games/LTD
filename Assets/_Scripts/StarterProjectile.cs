@@ -32,7 +32,7 @@ public class StarterProjectile : MonoBehaviour
             rigid.useGravity = true;
             rigid.AddTorque(Vector3.left,ForceMode.Impulse);
             Destroy(rigid.gameObject,1f);
-            end.Hit();
+            end.Hit(1000f);
             Destroy(gameObject);
         }
     }

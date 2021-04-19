@@ -16,7 +16,8 @@ public class ShooterController : MonoBehaviour
         if (level >= 4) return;
         m_level[level].SetActive(false);
         level++;
-        m_level[level].SetActive(true);
+        if (level <= m_level.Count)
+            m_level[level].SetActive(true);
         GetComponentInChildren<Animator>().SetBool("Shooting", isShooting);
     }
     public void StartShooting()
@@ -78,7 +79,7 @@ public class ShooterController : MonoBehaviour
 
             var projectile = Instantiate(m_figParent.m_Projectile, m_ShootPos.position, Quaternion.identity);
             EnemyBehaviour target = m_Target.GetComponent<EnemyBehaviour>();
-            projectile.GetComponent<Projectile>().Init(target);
+            projectile.GetComponent<Projectile>().Init(target, m_figParent.m_Data.m_Damage);
         }
 
         yield return new WaitForSeconds(m_figParent.m_Data.m_ReloadTime / m_figParent.mergefactor);

@@ -8,6 +8,7 @@ public class EnemyBehaviour : MonoBehaviour
 {
 
     public EnemyData m_data;
+    public float m_Health;
     public NavMeshAgent m_NavAgent;
     public Transform m_Target;
     public Transform m_MainTarget;
@@ -36,18 +37,24 @@ public class EnemyBehaviour : MonoBehaviour
     {
         if (GameController.Instance.m_Buildings.Count > 0)
             m_MainTarget = GameController.Instance.m_Buildings[0];
-        FindNewTarget();
-        //m_NavAgent.speed = m_data.Speed;
+        if (m_MainTarget != null)
+            FindNewTarget();
+        m_Health = m_data.Health;
+        m_NavAgent.speed = m_data.Speed;
     }
-    public void Hit()
+    public void Hit(float Damage)
     {
-        GameController.Instance.m_Enemies.Remove(transform);
-        Destroy(gameObject);
+        m_Health -= Damage;
+        if (m_Health <= 0)
+        {
+            GameController.Instance.m_Enemies.Remove(transform);
+            Destroy(gameObject);
+        }
     }
 
     public void FindNewTarget()
     {
-
+        if (m_MainTarget == null) return;
         targetpos = m_MainTarget.GetComponent<Collider>().ClosestPoint(transform.position);
         m_Target = m_MainTarget;
         m_NavAgent.SetDestination(targetpos);
@@ -98,7 +105,6 @@ public class EnemyBehaviour : MonoBehaviour
         m_Alarm.SetActive(false);
     }
 
-
     void Update()
     {
 
@@ -108,30 +114,29 @@ public class EnemyBehaviour : MonoBehaviour
         {
             if (Vector3.Distance(transform.position, targetpos) < 2f)
             {
-                Debug.LogWarning("inRange");
                 inRange = true;
                 StartCoroutine("Attack");
             }
         }
 
         /*
-                if (m_NavAgent.path.status != prevStatus)
+            if (m_NavAgent.path.status != prevStatus)
+            {
+                prevStatus = m_NavAgent.path.status;
+                FindNewTarget();
+            }
+            if (!m_Target)
+            {
+                FindNewTarget();
+            }
+            if (!inRange)
+            {
+                if (Vector3.Distance(transform.position, targetpos) < 2f)
                 {
-                    prevStatus = m_NavAgent.path.status;
-                    FindNewTarget();
+                    inRange = true;
+                    StartCoroutine("Attack");
                 }
-                if (!m_Target)
-                {
-                    FindNewTarget();
-                }
-                if (!inRange)
-                {
-                    if (Vector3.Distance(transform.position, targetpos) < 2f)
-                    {
-                        inRange = true;
-                        StartCoroutine("Attack");
-                    }
-                }
+            }
         */
     }
     IEnumerator Attack()

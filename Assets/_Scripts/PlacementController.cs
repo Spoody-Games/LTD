@@ -83,10 +83,31 @@ public class PlacementController : MonoBehaviour
 
         RaycastHit hit;
         Transform objectHit = null;
+        closest = GetClosestSpot();
+        if (closest != null)
+        {
+            ghost.transform.position = closest.transform.position;
+            if (closest.isTrash)
+            {
+                ghost.GetComponentsInChildren<MeshRenderer>().ToList().ForEach(x => x.material = m_HoloMat);
+            }
+            else
+            if (closest.m_Figure.m_Data == m_Figure.m_Data && closest.m_Figure.mergefactor == m_Figure.mergefactor && !m_Figure.m_Data.isTimed)
+            {
+                ghost.GetComponentsInChildren<MeshRenderer>().ToList().ForEach(x => x.material = m_HoloMat);
+            }
+            else
+            {
+                ghost.GetComponentsInChildren<MeshRenderer>().ToList().ForEach(x => x.material = m_HoloCannotPlaceMat);
+            }
+            return;
+        }
         if (Physics.Raycast(ray, out hit, 1000, 1 << 8))
         {
             objectHit = hit.transform;
             SelectedSlot = hit.transform.GetComponent<Slot>();
+
+
             if (TmpSlot != SelectedSlot)
             {
                 TmpSlot = SelectedSlot;
@@ -107,11 +128,20 @@ public class PlacementController : MonoBehaviour
                         else
                             ghost.GetComponentsInChildren<MeshRenderer>().ToList().ForEach(x => x.material = m_HoloCannotPlaceMat);
                     }
-                    else
-                        ghost.GetComponentsInChildren<MeshRenderer>().ToList().ForEach(x => x.material = m_HoloCannotPlaceMat);
+                    else if (closest)
+                    {
+                        if (closest.m_Figure.m_Data.figureType == m_Figure.m_Data.figureType)
+                            ghost.GetComponentsInChildren<MeshRenderer>().ToList().ForEach(x => x.material = m_HoloMat);
+                        else ghost.GetComponentsInChildren<MeshRenderer>().ToList().ForEach(x => x.material = m_HoloCannotPlaceMat);
+
+                    }
+                    else ghost.GetComponentsInChildren<MeshRenderer>().ToList().ForEach(x => x.material = m_HoloCannotPlaceMat);
                 }
             }
         }
+
+
+
         if (objectHit)
         {
             ghost.transform.position = objectHit.position;
@@ -120,8 +150,30 @@ public class PlacementController : MonoBehaviour
         {
             SelectedSlot = null;
             objectHit = null;
+            curPosition.y = 0.5f;
             ghost.transform.position = curPosition;
         }
+    }
+    FigureSpawnSpot closest;
+    public FigureSpawnSpot GetClosestSpot()
+    {
+        var spawnpoints = FigureSpawner.Instance.m_Spots;
+        FigureSpawnSpot closest = null;
+        for (int i = 0; i < spawnpoints.Count; i++)
+        {
+            float dist = Mathf.Infinity;
+            var tmpdist = dist;
+            if (m_Spot != spawnpoints[i])
+            {
+                tmpdist = Vector3.Distance(transform.position, spawnpoints[i].transform.position);
+                if (tmpdist < dist && tmpdist < 10f)
+                {
+                    dist = tmpdist;
+                    closest = spawnpoints[i];
+                }
+            }
+        }
+        return closest;
     }
     private void OnMouseUp()
     {
@@ -140,20 +192,20 @@ public class PlacementController : MonoBehaviour
 
         #region BaseMerging
 
-        var spawnpoints = FigureSpawner.Instance.m_Spots;
-        FigureSpawnSpot closest = null;
-        for (int i = 0; i < spawnpoints.Count; i++)
-        {
-            float dist = 9999;
-            if (m_Spot != spawnpoints[i])
-            {
-                dist = Vector3.Distance(transform.position, spawnpoints[i].transform.position);
-            }
-            if (dist < 10f)
-            {
-                closest = spawnpoints[i];
-            }
-        }
+        // var spawnpoints = FigureSpawner.Instance.m_Spots;
+        // FigureSpawnSpot closest = null;
+        // for (int i = 0; i < spawnpoints.Count; i++)
+        // {
+        //     float dist = 9999;
+        //     if (m_Spot != spawnpoints[i])
+        //     {
+        //         dist = Vector3.Distance(transform.position, spawnpoints[i].transform.position);
+        //     }
+        //     if (dist < 10f)
+        //     {
+        //         closest = spawnpoints[i];
+        //     }
+        // }
 
         if (closest)
         {
@@ -313,11 +365,9 @@ public class PlacementController : MonoBehaviour
     public bool CheckSlot(Slot _slot, Figure _fig)
     {
         if (_slot == null) return false;
-        Debug.LogWarning(_slot);
         Vector2Int CoreIndex = SlotGenerator.Instance.m_SlotsMatrix.FindSlotIndexInMatrix(_slot);
         if (_slot.IsFree())
         {
-            Debug.LogWarning("CheckingSlot");
             for (int i = 0; i < _fig.m_Data.indexes.Count; i++)
             {
                 var x = CoreIndex.x + _fig.m_Data.indexes[i].x;

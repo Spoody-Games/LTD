@@ -44,7 +44,6 @@ public class Figure : MonoBehaviour
     public List<MeshRenderer> m_meshes;
     public List<Material> m_MergeMaterials;
     public List<GameObject> m_Levels;
-    public float m_timedDamageMultipier = 4;
 
     private IEnumerator Start()
     {
@@ -65,7 +64,7 @@ public class Figure : MonoBehaviour
     private void Update()
     {
         if (m_Data.isTimed)
-            TakeDamage(Time.deltaTime * m_timedDamageMultipier);
+            TakeDamage(Time.deltaTime);
     }
     public void Activate()
     {
@@ -111,7 +110,8 @@ public class Figure : MonoBehaviour
         Debug.LogWarning("Figures Merged");
         m_Levels[mergefactor - 1].SetActive(false);
         mergefactor++;
-        m_Levels[mergefactor - 1].SetActive(true);
+        if (mergefactor <= m_Levels.Count)
+            m_Levels[mergefactor - 1].SetActive(true);
 
         m_CurrentHealth = m_Data.m_Health;
         if (m_Data.isTurret)

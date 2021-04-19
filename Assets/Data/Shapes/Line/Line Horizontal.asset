@@ -22,7 +22,7 @@ MonoBehaviour:
   - {x: 2, y: 0}
   - {x: 3, y: 0}
   m_AttackRadius: 20
-  m_Damage: 1
+  m_Damage: 5
   m_ReloadTime: 1
-  m_Health: 20
+  m_Health: 5
   m_Prefab: {fileID: 344824083967908268, guid: c710bbed4c9094245922d70a34a21381, type: 3}
