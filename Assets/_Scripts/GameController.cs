@@ -16,6 +16,7 @@ public class GameController : MonoBehaviour
     public GameObject m_enemy;
     public Plane m_RayPlane;
     public float interval;
+    public bool GameOver = false;
 
     private void Awake()
     {
@@ -23,11 +24,11 @@ public class GameController : MonoBehaviour
     }
     private void OnDrawGizmos()
     {
-        
+
     }
     private IEnumerator Start()
     {
-        m_RayPlane = new Plane (Vector3.up, Vector3.zero);
+        m_RayPlane = new Plane(Vector3.up, Vector3.zero);
 
         //getData
         if (!LevelConstructor.Instance.bDebugMode)
@@ -71,7 +72,7 @@ public class GameController : MonoBehaviour
                 started = false;
                 LevelManager.AdvanceLevel();
                 UIController.Instance.GameOver(true);
-
+                GameOver = true;
             }
         }
 

@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-// using UnityEditor;
-
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 public class LevelConstructor : MonoBehaviour
 {
     public static LevelConstructor Instance;
@@ -45,7 +46,7 @@ public class LevelConstructor : MonoBehaviour
     }
     public void SaveSlots()
     {
-/*
+#if UNITY_EDITOR
         LevelData asset = ScriptableObject.CreateInstance<LevelData>();
         asset.m_Road = new List<RoadData>();
         asset.m_figures = new List<FigureData>();
@@ -92,7 +93,8 @@ public class LevelConstructor : MonoBehaviour
 
         EditorUtility.FocusProjectWindow();
 
-        Selection.activeObject = asset;*/
+        Selection.activeObject = asset;
+#endif
 
     }
     public void Load()

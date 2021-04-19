@@ -38,6 +38,7 @@ public class PlacementController : MonoBehaviour
     }
     public void OnMouseDown()
     {
+        if (GameController.Instance.GameOver) return;
         m_HandObject.SetActive(true);
         screenPoint = CameraController.Instance.m_Camera.WorldToScreenPoint(gameObject.transform.position);
         canPlace = true;
@@ -67,14 +68,22 @@ public class PlacementController : MonoBehaviour
 
     void OnMouseDrag()
     {
-
+        if (GameController.Instance.GameOver) return;
         Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
         Vector3 curPosition = CameraController.Instance.m_Camera.ScreenToWorldPoint(curScreenPoint) + offset;
 
         var plane = GameController.Instance.m_RayPlane;
         float moveY = Input.mousePosition.y / 2f;
-        Vector3 inpoffset = new Vector3(0, moveY, 0);
-        Ray ray = CameraController.Instance.m_Camera.ScreenPointToRay(Input.mousePosition + inpoffset);
+        Ray ray;
+        if (Input.mousePosition.y > Screen.height / 3.35)
+        {
+            Vector3 inpoffset = new Vector3(0, moveY, 0);
+            ray = CameraController.Instance.m_Camera.ScreenPointToRay(Input.mousePosition + inpoffset);
+        }
+        else
+        {
+            ray = CameraController.Instance.m_Camera.ScreenPointToRay(Input.mousePosition);
+        }
         float planeHit;
         if (plane.Raycast(ray, out planeHit))
         {
@@ -177,6 +186,7 @@ public class PlacementController : MonoBehaviour
     }
     private void OnMouseUp()
     {
+        if (GameController.Instance.GameOver) return;
         m_HandObject.SetActive(false);
         //unhighlight spots
         foreach (Slot slot in SlotGenerator.Instance.m_SlotsReferences)
@@ -400,7 +410,6 @@ public class PlacementController : MonoBehaviour
 
         Destroy(ghost);
         Destroy(gameObject);
-
     }
     void WrongPlacement(string reason)
     {

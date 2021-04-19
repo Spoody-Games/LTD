@@ -6,13 +6,14 @@ using UnityEngine.AI;
 
 public class EnemyBehaviour : MonoBehaviour
 {
-
     public EnemyData m_data;
     public float m_Health;
     public NavMeshAgent m_NavAgent;
     public Transform m_Target;
     public Transform m_MainTarget;
-    NavMeshPathStatus prevStatus = NavMeshPathStatus.PathComplete;
+
+    //NavMeshPathStatus prevStatus = NavMeshPathStatus.PathComplete;
+    
     NavMeshPath prevPath;
     Vector3 targetpos;
     bool inRange = false;
@@ -31,6 +32,7 @@ public class EnemyBehaviour : MonoBehaviour
     {
         if (Vector3.Distance(figurePlaced.transform.position, this.transform.position) < figurePlaced.m_Data.m_AttackRadius)
             ShowAlarm();
+        FindNewTarget();
     }
 
     void Start()

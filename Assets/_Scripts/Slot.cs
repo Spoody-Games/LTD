@@ -18,6 +18,7 @@ public class Slot : MonoBehaviour
             //GetComponent<MeshRenderer>().enabled = true;
             GetComponent<NavMeshObstacle>().enabled = true;
         }
+        
     }
     public void EnableMesh()
     {
