@@ -165,3 +165,7 @@ MonoBehaviour:
   - index: {x: 11, y: 13}
   m_Baseposition: {x: 18.231705, y: 0, z: -22.832142}
   m_ActiveSpawnPointIndex: 09000000
+  m_TowerDatas:
+  - Indexes:
+    - {x: 0, y: 0}
+    m_data: {fileID: 0}

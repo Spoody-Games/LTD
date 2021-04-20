@@ -11,6 +11,8 @@ public class Slot : MonoBehaviour
     public bool isObstacle = false;
     const int adjacentsSize = 4;
     public Figure m_OccupyingFigure;
+    public bool hasTower = false;
+
     private void Start()
     {
         if (isObstacle)
@@ -18,7 +20,6 @@ public class Slot : MonoBehaviour
             //GetComponent<MeshRenderer>().enabled = true;
             GetComponent<NavMeshObstacle>().enabled = true;
         }
-        
     }
     public void EnableMesh()
     {

@@ -11,6 +11,7 @@ public class LevelData : ScriptableObject
     public List<ObstacleData> m_Obstacles;
     public Vector3 m_Baseposition = new Vector3(0, 0.5f, -25.03f);
     public List<int> m_ActiveSpawnPointIndex;
+    public List<TowerLoadInfo> m_TowerDatas;
 }
 
 [System.Serializable]

@@ -21,6 +21,7 @@ public class LevelConstructor : MonoBehaviour
     public List<Slot> m_Roads;
     public List<GameObject> m_ObstaclesPrefabs;
     public List<Transform> m_SpawnPoints;
+    public List<TowerLoadInfo> m_towers;
 
     public GameObject m_roadPrefab;
     public void SpawnFigure(GameObject _figure)
@@ -53,6 +54,11 @@ public class LevelConstructor : MonoBehaviour
         asset.m_Obstacles = new List<ObstacleData>();
         asset.m_Baseposition = m_Base.transform.position;
         asset.m_ActiveSpawnPointIndex = new List<int>();
+        asset.m_TowerDatas = new List<TowerLoadInfo>();
+        for (int i = 0; i < m_towers.Count; i++)
+        {
+            asset.m_TowerDatas.Add(m_towers[i]);
+        }
 
         foreach (var slot in SlotGenerator.Instance.m_SlotsReferences)
         {

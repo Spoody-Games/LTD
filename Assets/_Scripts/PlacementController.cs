@@ -4,7 +4,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using DG.Tweening;
-
+[System.Serializable]
+public class TowerLoadInfo
+{
+    public TowerLoadInfo(Vector2Int index, FigureData _data)
+    {
+        CoreIndex = index;
+        m_data = _data;
+    }
+    public Vector2Int CoreIndex;
+    public FigureData m_data;
+}
 public class PlacementController : MonoBehaviour
 {
     #region Variables
@@ -43,13 +53,21 @@ public class PlacementController : MonoBehaviour
         screenPoint = CameraController.Instance.m_Camera.WorldToScreenPoint(gameObject.transform.position);
         canPlace = true;
         transform.localScale = new Vector3(3.5f, 3.5f, 3.5f);
-        foreach (Slot slot in SlotGenerator.Instance.m_SlotsReferences)
+        for (int i = 0; i < LevelConstructor.Instance.leveltoload.m_TowerDatas.Count; i++)
         {
-            if (slot.IsFree())
+            if (m_Figure.m_Data == LevelConstructor.Instance.leveltoload.m_TowerDatas[i].m_data)
             {
-                slot.GetComponent<MeshRenderer>().enabled = true;
+                HighLightSpots(LevelConstructor.Instance.leveltoload.m_TowerDatas[i].CoreIndex, m_Figure.m_Data, true);
+                break;
             }
         }
+        // foreach (Slot slot in SlotGenerator.Instance.m_SlotsReferences)
+        // {
+        //     if (slot.IsFree())
+        //     {
+        //         slot.GetComponent<MeshRenderer>().enabled = true;
+        //     }
+        // }
         ghost = new GameObject();
         ghost.transform.position = transform.position;
         ghost.transform.localScale = transform.localScale;
@@ -95,21 +113,24 @@ public class PlacementController : MonoBehaviour
         closest = GetClosestSpot();
         if (closest != null)
         {
-            ghost.transform.position = closest.transform.position;
-            if (closest.isTrash)
+            if (!LevelConstructor.Instance.bDebugMode)
             {
-                ghost.GetComponentsInChildren<MeshRenderer>().ToList().ForEach(x => x.material = m_HoloMat);
+                ghost.transform.position = closest.transform.position;
+                if (closest.isTrash)
+                {
+                    ghost.GetComponentsInChildren<MeshRenderer>().ToList().ForEach(x => x.material = m_HoloMat);
+                }
+                else
+                if (closest.m_Figure.m_Data == m_Figure.m_Data && closest.m_Figure.mergefactor == m_Figure.mergefactor && !m_Figure.m_Data.isTimed)
+                {
+                    ghost.GetComponentsInChildren<MeshRenderer>().ToList().ForEach(x => x.material = m_HoloMat);
+                }
+                else
+                {
+                    ghost.GetComponentsInChildren<MeshRenderer>().ToList().ForEach(x => x.material = m_HoloCannotPlaceMat);
+                }
+                return;
             }
-            else
-            if (closest.m_Figure.m_Data == m_Figure.m_Data && closest.m_Figure.mergefactor == m_Figure.mergefactor && !m_Figure.m_Data.isTimed)
-            {
-                ghost.GetComponentsInChildren<MeshRenderer>().ToList().ForEach(x => x.material = m_HoloMat);
-            }
-            else
-            {
-                ghost.GetComponentsInChildren<MeshRenderer>().ToList().ForEach(x => x.material = m_HoloCannotPlaceMat);
-            }
-            return;
         }
         if (Physics.Raycast(ray, out hit, 1000, 1 << 8))
         {
@@ -189,10 +210,18 @@ public class PlacementController : MonoBehaviour
         if (GameController.Instance.GameOver) return;
         m_HandObject.SetActive(false);
         //unhighlight spots
-        foreach (Slot slot in SlotGenerator.Instance.m_SlotsReferences)
+        for (int i = 0; i < LevelConstructor.Instance.leveltoload.m_TowerDatas.Count; i++)
         {
-            slot.GetComponent<MeshRenderer>().enabled = false;
+            if (m_Figure.m_Data == LevelConstructor.Instance.leveltoload.m_TowerDatas[i].m_data)
+            {
+                HighLightSpots(LevelConstructor.Instance.leveltoload.m_TowerDatas[i].CoreIndex, m_Figure.m_Data, false);
+                break;
+            }
         }
+        // foreach (Slot slot in SlotGenerator.Instance.m_SlotsReferences)
+        // {
+        //     slot.GetComponent<MeshRenderer>().enabled = false;
+        // }
         //lower Meshes
         m_MeshesToLift.ForEach(x =>
         {
@@ -202,20 +231,6 @@ public class PlacementController : MonoBehaviour
 
         #region BaseMerging
 
-        // var spawnpoints = FigureSpawner.Instance.m_Spots;
-        // FigureSpawnSpot closest = null;
-        // for (int i = 0; i < spawnpoints.Count; i++)
-        // {
-        //     float dist = 9999;
-        //     if (m_Spot != spawnpoints[i])
-        //     {
-        //         dist = Vector3.Distance(transform.position, spawnpoints[i].transform.position);
-        //     }
-        //     if (dist < 10f)
-        //     {
-        //         closest = spawnpoints[i];
-        //     }
-        // }
 
         if (closest)
         {
@@ -259,12 +274,21 @@ public class PlacementController : MonoBehaviour
             Vector2Int CoreIndex = SlotGenerator.Instance.m_SlotsMatrix.FindSlotIndexInMatrix(SelectedSlot);
             if (canPlace)
             {
+                if (LevelConstructor.Instance.bDebugMode)
+                {
+                    TowerLoadInfo newTowerData = new TowerLoadInfo(CoreIndex, m_Figure.m_Data);
+                    LevelConstructor.Instance.m_towers.Add(newTowerData);
+                }
+
                 Debug.LogWarning("Placing");
                 for (int i = 0; i < figureData.indexes.Count; i++)
                 {
                     var x = CoreIndex.x + figureData.indexes[i].x;
                     var y = CoreIndex.y + figureData.indexes[i].y;
                     var slot = SlotGenerator.Instance.m_SlotsMatrix[x, y];
+
+
+
                     slot.Occupy(m_Figure);
                     m_Figure.OccupyingSlots.Add(new Vector2Int(x, y));
                     transform.GetComponentsInChildren<NavMeshObstacle>().ToList().ForEach(n => n.enabled = true);
@@ -425,5 +449,22 @@ public class PlacementController : MonoBehaviour
         GameController.Instance.m_Buildings.Add(transform);
         fig.Activate();
         Destroy(this);
+    }
+
+    public void HighLightSpots(Vector2Int core, FigureData _data, bool state)
+    {
+        for (int i = 0; i < _data.indexes.Count; i++)
+        {
+            var x = core.x + _data.indexes[i].x;
+            var y = core.y + _data.indexes[i].y;
+            var slot = SlotGenerator.Instance.m_SlotsMatrix[x, y];
+            if (slot.isOccupied)
+            {
+                if (slot.m_OccupyingFigure.mergefactor == m_Figure.mergefactor)
+                    slot.GetComponent<MeshRenderer>().enabled = state;
+            }
+            else
+                slot.GetComponent<MeshRenderer>().enabled = state;
+        }
     }
 }
