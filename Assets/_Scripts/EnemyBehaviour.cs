@@ -13,7 +13,7 @@ public class EnemyBehaviour : MonoBehaviour
     public Transform m_MainTarget;
 
     //NavMeshPathStatus prevStatus = NavMeshPathStatus.PathComplete;
-    
+
     NavMeshPath prevPath;
     Vector3 targetpos;
     bool inRange = false;
@@ -32,7 +32,7 @@ public class EnemyBehaviour : MonoBehaviour
     {
         if (Vector3.Distance(figurePlaced.transform.position, this.transform.position) < figurePlaced.m_Data.m_AttackRadius)
             ShowAlarm();
-        FindNewTarget();
+        // FindNewTarget();
     }
 
     void Start()
@@ -40,9 +40,10 @@ public class EnemyBehaviour : MonoBehaviour
         if (GameController.Instance.m_Buildings.Count > 0)
             m_MainTarget = GameController.Instance.m_Buildings[0];
         if (m_MainTarget != null)
-            FindNewTarget();
+            InvokeRepeating("FindNewTarget", .1f, 2f);
         m_Health = m_data.Health;
         m_NavAgent.speed = m_data.Speed;
+
     }
     public void Hit(float Damage)
     {

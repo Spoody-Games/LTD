@@ -40,6 +40,12 @@ public class RoadData
 [System.Serializable]
 public class EnemiesData
 {
+    public EnemiesData() { }
+    public EnemiesData(GameObject _Prefab, int _Count)
+    {
+        Prefab = _Prefab;
+        Count = _Count;
+    }
     public GameObject Prefab;
     public int Count;
 

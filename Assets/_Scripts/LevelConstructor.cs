@@ -22,6 +22,8 @@ public class LevelConstructor : MonoBehaviour
     public List<GameObject> m_ObstaclesPrefabs;
     public List<Transform> m_SpawnPoints;
     public List<TowerLoadInfo> m_towers;
+    public GameObject m_EnemyPrefab;
+    public int EnemyCount = 150;
 
     public GameObject m_roadPrefab;
     public void SpawnFigure(GameObject _figure)
@@ -55,6 +57,8 @@ public class LevelConstructor : MonoBehaviour
         asset.m_Baseposition = m_Base.transform.position;
         asset.m_ActiveSpawnPointIndex = new List<int>();
         asset.m_TowerDatas = new List<TowerLoadInfo>();
+        asset.m_Enemies = new List<EnemiesData>();
+        asset.m_Enemies.Add(new EnemiesData(m_EnemyPrefab, EnemyCount));
         for (int i = 0; i < m_towers.Count; i++)
         {
             asset.m_TowerDatas.Add(m_towers[i]);
@@ -114,6 +118,7 @@ public class LevelConstructor : MonoBehaviour
             var road = Instantiate(m_roadPrefab, slot.transform.position, Quaternion.identity);
 
         });
+
         leveltoload.m_Obstacles.ForEach(x =>
         {
             var slot = SlotGenerator.Instance.m_SlotsMatrix.GetSlotByIndex(x.index);
@@ -122,6 +127,7 @@ public class LevelConstructor : MonoBehaviour
             obj.transform.localScale += Vector3.up * Random.Range(-1f, 1f);
             obj.GetComponent<NavMeshObstacle>().enabled = true;
         });
+
         leveltoload.m_ActiveSpawnPointIndex.ForEach(x =>
         {
             m_SpawnPoints[x].gameObject.SetActive(true);
