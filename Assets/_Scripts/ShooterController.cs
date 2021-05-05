@@ -11,6 +11,7 @@ public class ShooterController : MonoBehaviour
     public Transform m_ShootPos;
     public int level = 0;
     float damping = 5;
+    public AudioSource m_Audio;
     public void Upgrade()
     {
         if (level >= 4) return;
@@ -45,7 +46,6 @@ public class ShooterController : MonoBehaviour
         }
     }
 
-
     IEnumerator Shoot()
     {
         if (m_Target)
@@ -76,10 +76,10 @@ public class ShooterController : MonoBehaviour
         else
         {
             GetComponentInChildren<Animator>().SetBool("Shooting", true);
-
             var projectile = Instantiate(m_figParent.m_Projectile, m_ShootPos.position, Quaternion.identity);
             EnemyBehaviour target = m_Target.GetComponent<EnemyBehaviour>();
             projectile.GetComponent<Projectile>().Init(target, m_figParent.m_Data.m_Damage);
+            m_Audio.Play();
         }
 
         yield return new WaitForSeconds(m_figParent.m_Data.m_ReloadTime / m_figParent.mergefactor);

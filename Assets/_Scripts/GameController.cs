@@ -26,11 +26,9 @@ public class GameController : MonoBehaviour
     {
 
     }
-    private IEnumerator Start()
+    private void Start()
     {
         m_RayPlane = new Plane(Vector3.up, Vector3.zero);
-
-        //getData
         if (!LevelConstructor.Instance.bDebugMode)
         {
             if (LevelManager.m_Level == LevelDatas.Count)
@@ -42,11 +40,12 @@ public class GameController : MonoBehaviour
 
             LevelConstructor.Instance.Load();
             m_SpawnPoints.ForEach(x => { if (x.gameObject.activeInHierarchy) m_ActiveSpawnPoints.Add(x); });
-
-            FigureSpawner.Instance.SpawnFigures();
-            yield return new WaitForSeconds(3);
-            StartCoroutine(Spawn(m_enemy));
         }
+    }
+    public void StartGame()
+    {
+        FigureSpawner.Instance.SpawnFigures();
+        StartCoroutine(Spawn(m_enemy));
     }
 
     IEnumerator Spawn(GameObject _Prefab)

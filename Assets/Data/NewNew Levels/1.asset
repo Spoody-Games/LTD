@@ -81,7 +81,7 @@ MonoBehaviour:
   m_Enemies:
   - Prefab: {fileID: 8234059442578061104, guid: 79cf78abad8262f469040439466f894a,
       type: 3}
-    Count: 150
+    Count: 1
   m_Obstacles:
   - index: {x: 1, y: 1}
   - index: {x: 2, y: 1}
@@ -166,6 +166,5 @@ MonoBehaviour:
   m_Baseposition: {x: 18.231705, y: 0, z: -22.832142}
   m_ActiveSpawnPointIndex: 09000000
   m_TowerDatas:
-  - Indexes:
-    - {x: 0, y: 0}
+  - CoreIndex: {x: 0, y: 0}
     m_data: {fileID: 0}

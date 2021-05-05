@@ -82,6 +82,13 @@ public class PlacementController : MonoBehaviour
             var pos = x.transform.localPosition;
             x.transform.DOLocalMoveY(pos.y + 1, 0.2f);
         });
+        FigureSpawner.Instance.m_Spots.ForEach(x =>
+        {
+            if (!x.isTrash && x.m_Figure.m_Data == m_Figure.m_Data && m_Figure.mergefactor == x.m_Figure.mergefactor && !x.m_Figure.m_Data.isTimed)
+            {
+                x.m_Figure.HighLightmerge(true);
+            }
+        });
     }
 
     void OnMouseDrag()
@@ -136,7 +143,6 @@ public class PlacementController : MonoBehaviour
         {
             objectHit = hit.transform;
             SelectedSlot = hit.transform.GetComponent<Slot>();
-
 
             if (TmpSlot != SelectedSlot)
             {
@@ -196,17 +202,35 @@ public class PlacementController : MonoBehaviour
             if (m_Spot != spawnpoints[i])
             {
                 tmpdist = Vector3.Distance(transform.position, spawnpoints[i].transform.position);
-                if (tmpdist < dist && tmpdist < 10f)
+                if (m_Spot.isTrash)
                 {
-                    dist = tmpdist;
-                    closest = spawnpoints[i];
+                    if (tmpdist < dist && tmpdist < 3f)
+                    {
+                        Debug.LogWarning(123123123);
+                        dist = tmpdist;
+                        closest = spawnpoints[i];
+                    }
                 }
+                else
+                {
+                    if (tmpdist < dist && tmpdist < 10f)
+                    {
+                        dist = tmpdist;
+                        closest = spawnpoints[i];
+                    }
+                }
+
             }
         }
         return closest;
     }
     private void OnMouseUp()
     {
+        FigureSpawner.Instance.m_Spots.ForEach(x =>
+        {
+            if (!x.isTrash)
+                x.m_Figure.HighLightmerge(false);
+        });
         if (GameController.Instance.GameOver) return;
         m_HandObject.SetActive(false);
         //unhighlight spots
@@ -238,6 +262,7 @@ public class PlacementController : MonoBehaviour
             {
                 transform.position = closest.transform.position;
                 FigurePlaced?.Invoke(m_Spot, m_Figure);
+                m_Figure.PlayPlacedSound();
                 StartCoroutine(DelayedDestroy(0.2f));
                 return;
             }
@@ -254,6 +279,10 @@ public class PlacementController : MonoBehaviour
                     transform.position = closest.transform.position;
                     closest.m_Figure.Merge();
                     FigurePlaced?.Invoke(m_Spot, m_Figure);
+                    m_Figure.PlayPlacedSound();
+                    transform.DOScale(0.1f, 0.2f);
+
+                    Destroy(ghost);
                     StartCoroutine(DelayedDestroy(0.2f));
                     return;
                 }
@@ -297,6 +326,7 @@ public class PlacementController : MonoBehaviour
                 if (!LevelConstructor.Instance.bDebugMode)
                 {
                     FigurePlaced?.Invoke(m_Spot, m_Figure);
+                    m_Figure.PlayPlacedSound();
                 }
             }
             else
@@ -321,6 +351,8 @@ public class PlacementController : MonoBehaviour
 
                             SelectedSlot.m_OccupyingFigure.Merge();
                             FigurePlaced?.Invoke(m_Spot, m_Figure);
+                            m_Figure.PlayPlacedSound();
+                            transform.DOScale(0.1f, 0.2f);
                             StartCoroutine(DelayedDestroy(0.2f));
                             return;
                         }
@@ -431,8 +463,8 @@ public class PlacementController : MonoBehaviour
     {
         //when merging
         yield return new WaitForSeconds(time);
-
-        Destroy(ghost);
+        if (ghost)
+            Destroy(ghost);
         Destroy(gameObject);
     }
     void WrongPlacement(string reason)

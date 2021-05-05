@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Enemies:
   - Prefab: {fileID: 8234059442578061104, guid: 79cf78abad8262f469040439466f894a,
       type: 3}
-    Count: 50
+    Count: 1
   m_Obstacles:
   - index: {x: 0, y: 0}
   - index: {x: 9, y: 0}

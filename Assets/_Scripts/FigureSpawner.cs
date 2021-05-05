@@ -25,8 +25,6 @@ public class FigureSpawner : MonoBehaviour
         GameObject _fig = m_data.m_figures.GetRandom().m_Prefab;
         if (m_prevFig != null)
         {
-            Debug.LogWarning(m_prevFig);
-            Debug.LogWarning(_fig);
             if (_fig.GetComponent<Figure>().m_Data.isTimed && m_prevFig.m_Data.isTimed)
             {
                 return GetNewFigure();

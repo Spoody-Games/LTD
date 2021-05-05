@@ -21,7 +21,7 @@ MonoBehaviour:
   - {x: 1, y: 0}
   - {x: 2, y: 0}
   - {x: 2, y: -1}
-  m_AttackRadius: 20
+  m_AttackRadius: 25
   m_Damage: 5
   m_ReloadTime: 1
   m_Health: 100

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EnemyData
   m_EditorClassIdentifier: 
   Speed: 2
-  Health: 10
+  Health: 1
   Damage: 2
   ReloadTime: 1
   coinReward: 0

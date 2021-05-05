@@ -32,6 +32,7 @@ public class Figure : MonoBehaviour
 
     public float m_CurrentHealth;
     public GameObject m_Projectile;
+    public GameObject m_MergeObj;
     public FigureData m_Data;
     public GameObject m_HealtBar;
     public bool isActive = false;
@@ -44,7 +45,23 @@ public class Figure : MonoBehaviour
     public List<MeshRenderer> m_meshes;
     public List<Material> m_MergeMaterials;
     public List<GameObject> m_Levels;
+    public AudioSource m_Audio;
+    private void Awake()
+    {
+        PlacementController.FigurePlaced += OnFigurePlaced;
+    }
 
+    private void OnFigurePlaced(FigureSpawnSpot arg1, Figure arg2)
+    {
+        if (arg2 && arg2.m_Audio)
+            arg2.m_Audio.Play();
+    }
+
+    private void OnDestroy()
+    {
+        PlacementController.FigurePlaced -= OnFigurePlaced;
+
+    }
     private IEnumerator Start()
     {
         m_CurrentHealth = m_Data.m_Health;
@@ -52,7 +69,7 @@ public class Figure : MonoBehaviour
         m_HealtBar.transform.localScale = sc;
         m_Shooters = GetComponentsInChildren<ShooterController>().ToList();
 
-
+        m_Audio = GetComponent<AudioSource>();
         var list = GetComponentsInChildren<Animator>().ToList();
         foreach (var anim in list)
         {
@@ -61,6 +78,7 @@ public class Figure : MonoBehaviour
             anim.speed = 1;
         }
     }
+
     private void Update()
     {
         if (m_Data.isTimed)
@@ -105,6 +123,19 @@ public class Figure : MonoBehaviour
             }
         transform.DOMoveY(transform.position.y - 3, 0.5f).OnComplete(() => Destroy(gameObject));
     }
+    public void HighLightmerge(bool state)
+    {
+        m_MergeObj.SetActive(state);
+    }
+    public float PlayPlacedSound()
+    {
+        if (m_Audio != null)
+        {
+            m_Audio.Play();
+            return m_Audio.clip.length;
+        }
+        else return 0;
+    }
     public void Merge()
     {
         Debug.LogWarning("Figures Merged");
@@ -118,5 +149,6 @@ public class Figure : MonoBehaviour
             GetComponentsInChildren<ShooterController>().ToList().ForEach(x => x.Upgrade());
         Vector3 sc = new Vector3(m_CurrentHealth / m_Data.m_Health, 1, 1);
         m_HealtBar.transform.localScale = sc;
+        PlayPlacedSound();
     }
 }

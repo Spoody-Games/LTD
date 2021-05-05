@@ -11,6 +11,7 @@ public class EnemyBehaviour : MonoBehaviour
     public NavMeshAgent m_NavAgent;
     public Transform m_Target;
     public Transform m_MainTarget;
+    bool dead = false;
 
     //NavMeshPathStatus prevStatus = NavMeshPathStatus.PathComplete;
 
@@ -19,6 +20,7 @@ public class EnemyBehaviour : MonoBehaviour
     bool inRange = false;
     bool gameover = false;
     public GameObject m_Alarm;
+    public AudioSource m_AudioSource;
     private void Awake()
     {
         PlacementController.FigurePlaced += OnFigurePlaced;
@@ -50,9 +52,27 @@ public class EnemyBehaviour : MonoBehaviour
         m_Health -= Damage;
         if (m_Health <= 0)
         {
+            dead = true;
             GameController.Instance.m_Enemies.Remove(transform);
-            Destroy(gameObject);
+            Invoke("DestroyObj", PlayDeathSound());
         }
+    }
+    public float PlayDeathSound()
+    {
+        if (m_AudioSource != null)
+        {
+            m_AudioSource.Stop();
+            m_AudioSource.Play();
+            return m_AudioSource.clip.length;
+        }
+        else
+        {
+            return 0;
+        }
+    }
+    void DestroyObj()
+    {
+        Destroy(gameObject);
     }
 
     public void FindNewTarget()
@@ -110,7 +130,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     void Update()
     {
-
+        if (dead) return;
         if (gameover) return;
         if (m_MainTarget == null) gameover = true;
         if (!inRange)
